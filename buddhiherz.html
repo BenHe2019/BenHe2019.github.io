@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Buddhiherz — Cloud-Lagerverwaltungssystem: automatisierte Beleg-Extraktion, Auftragsverwaltung und Versand.">
+<title>Ben He – Buddhiherz</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ─── Project detail page (praktikum.html) ─── */
+  .pe-page {
+    padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  }
+  .pe-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+  .pe-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  .pe-header h1 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    color: var(--color-text);
+    line-height: 1.3;
+    margin-bottom: var(--space-sm);
+  }
+  .pe-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    align-items: center;
+    margin-bottom: var(--space-md);
+    color: var(--color-text-secondary);
+    font-size: 0.92rem;
+  }
+  .pe-section {
+    margin-top: var(--space-2xl);
+  }
+  .pe-section h2 {
+    font-size: 1.35rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+  .pe-section p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+  .pe-section ul {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0 0 var(--space-md) var(--space-md);
+    padding-left: var(--space-md);
+    list-style: disc;
+  }
+  .pe-section li {
+    margin-bottom: 0.4rem;
+  }
+  .pe-section code {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.9em;
+  }
+  .pe-footer {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+</style>
+  .pe-figure { margin: var(--space-md) 0; }
+  .pe-figure img { width: 100%; border-radius: 12px; border: 1px solid var(--color-border); display: block; }
+  .pe-figure figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--color-text-secondary); text-align: center; }
+
+</head>
+<body>
+<script>
+  /* Apply saved theme before paint to avoid flash */
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+<main class="pe-page">
+  <div class="pe-topbar">
+    <a class="pe-back" href="index.html">← <span data-i18n="bz-back">Zurück zur Website</span></a>
+    <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <button type="button" class="lang-option" data-lang="de">DE</button>
+      <button type="button" class="lang-option" data-lang="en">EN</button>
+      <button type="button" class="lang-option" data-lang="zh">中文</button>
+    </div>
+  </div>
+
+  <header class="pe-header">
+    <h1 data-i18n="bz-title">Buddhiherz — Cloud-Lagerverwaltungssystem</h1>
+    <div class="pe-meta"><span data-i18n="bz-meta">Persönliches Full-Stack-Projekt · 07/2026 – 10/2026 · ausgeliefert</span></div>
+  </header>
+
+  <section class="pe-section">
+    <h2 data-i18n="bz-s1-h">Überblick</h2>
+    <p data-i18n="bz-s1">…</p>
+    <p data-i18n="bz-s1b">…</p>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bz-s2-h">Systemarchitektur</h2>
+    <p data-i18n="bz-s2">…</p>
+    <figure class="pe-figure">
+      <img src="buddhiherz-arch-de.png" data-i18n-img="de" alt="Systemarchitektur">
+      <img src="buddhiherz-arch-en.png" data-i18n-img="en" alt="System architecture" style="display:none">
+      <img src="buddhiherz-arch-zh.png" data-i18n-img="zh" alt="系统架构" style="display:none">
+      <figcaption data-i18n="bz-cap">…</figcaption>
+    </figure>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bz-s3-h">Kernfunktionen</h2>
+    <ul>
+      <li data-i18n="bz-s3-1">…</li>
+      <li data-i18n="bz-s3-2">…</li>
+      <li data-i18n="bz-s3-3">…</li>
+      <li data-i18n="bz-s3-4">…</li>
+      <li data-i18n="bz-s3-5">…</li>
+      <li data-i18n="bz-s3-6">…</li>
+    </ul>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bz-s4-h">Technologie</h2>
+    <ul>
+      <li data-i18n="bz-s4-1">…</li>
+      <li data-i18n="bz-s4-2">…</li>
+      <li data-i18n="bz-s4-3">…</li>
+      <li data-i18n="bz-s4-4">…</li>
+    </ul>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bz-s5-h">Ergebnisse</h2>
+    <ul>
+      <li data-i18n="bz-s5-1">…</li>
+      <li data-i18n="bz-s5-2">…</li>
+      <li data-i18n="bz-s5-3">…</li>
+      <li data-i18n="bz-s5-4">…</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a class="pe-back" href="index.html">← <span data-i18n="bz-back">Zurück zur Website</span></a>
+  </footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var T = {
+    de: {
+      'bz-back': 'Zurück zur Website',
+      'bz-title': 'Buddhiherz — Cloud-Lagerverwaltungssystem',
+      'bz-meta': 'Persönliches Full-Stack-Projekt · 07/2026 – 10/2026 · ausgeliefert',
+      'bz-s1-h': 'Überblick',
+      'bz-s1': 'Ein selbst entwickeltes, cloud-basiertes Lager- und Versandverwaltungssystem für einen kleinen E-Commerce-Betrieb: Von der eingehenden Bestell-Mail über die Belege (Rechnung, Lieferschein, Versandlabel) bis zum fertigen Paket läuft der gesamte Ablauf digital und automatisiert. Die Anwendung ist mobile-first gestaltet — Lagerkräfte bedienen sie direkt am Smartphone.',
+      'bz-s1b': 'Das System ersetzte eine manuelle Excel- und Papier-Ablaufschaft und reduziert den manuellen Inventuraufwand um rund 80 %. Entwicklung und Auslieferung erfolgten innerhalb von vier Monaten (07/2026 – 10/2026).',
+      'bz-s2-h': 'Systemarchitektur',
+      'bz-s2': 'Die Daten laufen durch eine Pipeline: E-Mail-/Datei-Eingabe → dreistufige Extraktion (L1 Regeln → L2 KI → L3 manuelle Korrektur) → Kerngeschäft (Aufträge, Packplanung, Schichtplanung) → zentrale SQLite-Datenbank → Ausgabe (Belege, Sammel-Druckstücke, Versandlabel, mobile Web-Übersicht).',
+      'bz-cap': 'Anonymisierte technische Darstellung — ohne Kunden- und Deploymentsdaten.',
+      'bz-s3-h': 'Kernfunktionen',
+      'bz-s3-1': '<strong>Dreistufige Beleg-Extraktion:</strong> Offline-Regeln zuerst (null Kosten), dann multimodale KI für Text und Scans, bei Bedarf eine manuelle Korrektur-Oberfläche.',
+      'bz-s3-2': '<strong>Automatische Auftragsbildung:</strong> Adress-Clustering erzeugt Aufträge, Belege werden automatisch zugeordnet; die Vollständigkeit (Versandlabel / Lieferschein / Rechnung) wird geprüft.',
+      'bz-s3-3': '<strong>Beleg-Erzeugung:</strong> Rechnungen und Lieferscheine als PDF im nachgebauten Original-Layout, paketweise aufgeteilt, plus Sammel-Druckstück pro Auftrag.',
+      'bz-s3-4': '<strong>Versand-Integration:</strong> Versandlabel-API zur Online-Erzeugung von Paketlabels mit automatischer Zuordnung zum Auftrag.',
+      'bz-s3-5': '<strong>Lager-Alltag:</strong> Kalender-Schichtplanung, Zeiterfassung, Artikel- und Kundenverwaltung, Packplanung sowie die mobile Ansicht „Heute".',
+      'bz-s3-6': '<strong>Datenübersicht:</strong> Durchsuchbare Auftragsübersicht und Excel-Export für die Geschäftsleitung.',
+      'bz-s4-h': 'Technologie',
+      'bz-s4-1': 'Backend: Python · Flask · SQLite · REST-API (Waitress, systemd-Betrieb).',
+      'bz-s4-2': 'Dokumente: PDF-Analyse (Text + Bilderkennung), PDF-/Word-Erzeugung, Nachbau komplexer Drucklayouts.',
+      'bz-s4-3': 'KI: multimodale LLM-Extraktion mit Regel-Vorrang und Fallback-Kette; die Kosten werden durch L1-Regeln minimiert.',
+      'bz-s4-4': 'Betrieb & Sicherheit: nginx + HTTPS, rollenbasierte Anmeldung, tägliches Backup, fail2ban, 100+ automatisierte Tests.',
+      'bz-s5-h': 'Ergebnisse',
+      'bz-s5-1': '100+ automatisierte Regressionstests sichern jede Änderung ab.',
+      'bz-s5-2': 'Manueller Inventuraufwand um ca. 80 % reduziert; die manuelle Belegsuche entfällt vollständig.',
+      'bz-s5-3': '7×24 Cloud-Betrieb — mobil nutzbar direkt im Lager.',
+      'bz-s5-4': 'Lückenlose Nachvollziehbarkeit: Löschungen werden protokolliert, Änderungen über Snapshots zurückgesetzt.'
+    },
+    en: {
+      'bz-back': 'Back to website',
+      'bz-title': 'Buddhiherz — Cloud Warehouse Management System',
+      'bz-meta': 'Personal full-stack project · 07/2026 – 10/2026 · delivered',
+      'bz-s1-h': 'Overview',
+      'bz-s1': 'A self-developed, cloud-based warehouse and shipping management system for a small e-commerce business: from incoming order e-mails through business documents (invoice, delivery note, shipping label) to the finished package, the entire workflow runs digitally and automatically. The application is mobile-first — warehouse staff operate it directly on their phones.',
+      'bz-s1b': 'The system replaced a manual Excel-and-paper workflow and reduces manual inventory effort by about 80 %. Development and delivery were completed within four months (07/2026 – 10/2026).',
+      'bz-s2-h': 'System Architecture',
+      'bz-s2': 'Data flows through a pipeline: e-mail / file input → three-tier extraction (L1 rules → L2 AI → L3 manual review) → core business (orders, packing, scheduling) → central SQLite database → output (documents, merged print packs, shipping labels, mobile web dashboard).',
+      'bz-cap': 'Sanitized technical overview — no customer or deployment details.',
+      'bz-s3-h': 'Core Features',
+      'bz-s3-1': '<strong>Three-tier document extraction:</strong> offline rules first (zero cost), then multimodal AI for text and scans, with a manual review workbench as fallback.',
+      'bz-s3-2': '<strong>Automated order building:</strong> address clustering creates orders, documents are attached automatically; completeness (label / delivery note / invoice) is checked.',
+      'bz-s3-3': '<strong>Document generation:</strong> invoices and delivery notes as PDFs in a replicated original layout, split per package, plus a merged print pack per order.',
+      'bz-s3-4': '<strong>Shipping integration:</strong> shipping-label API for online label creation with automatic attachment to the order.',
+      'bz-s3-5': '<strong>Daily warehouse work:</strong> calendar shift planning, time tracking, product and customer management, packing plans and the mobile “Today” view.',
+      'bz-s3-6': '<strong>Data overview:</strong> searchable order overview and Excel export for management.',
+      'bz-s4-h': 'Technology',
+      'bz-s4-1': 'Backend: Python · Flask · SQLite · REST API (Waitress, systemd service).',
+      'bz-s4-2': 'Documents: PDF parsing (text + vision), PDF/Word generation, replication of complex print layouts.',
+      'bz-s4-3': 'AI: multimodal LLM extraction with rules-first priority and a fallback chain; costs minimized via L1 rules.',
+      'bz-s4-4': 'Operations & security: nginx + HTTPS, role-based login, daily backups, fail2ban, 100+ automated tests.',
+      'bz-s5-h': 'Results',
+      'bz-s5-1': '100+ automated regression tests guard every change.',
+      'bz-s5-2': 'Manual inventory effort reduced by about 80 %; manual document searching is fully eliminated.',
+      'bz-s5-3': '24/7 cloud operation — usable on mobile phones right in the warehouse.',
+      'bz-s5-4': 'Full traceability: deletions are logged, changes can be rolled back via snapshots.'
+    },
+    zh: {
+      'bz-back': '返回网站',
+      'bz-title': 'Buddhiherz —— 云端仓库管理系统',
+      'bz-meta': '个人全栈项目 · 2026 年 7 月 – 10 月 · 已交付',
+      'bz-s1-h': '项目概览',
+      'bz-s1': '为小型电商仓储自研的云端仓库与发货管理系统：从客户订单邮件、业务单据（发票/发货单/快递单）到打包出库，全流程数字化、自动化。应用采用移动端优先设计——仓库工人直接用手机操作。',
+      'bz-s1b': '系统替代了原来的手工 Excel + 纸质流程，人工盘点工时减少约 80%。开发与交付在四个月内完成（2026 年 7 月 – 10 月）。',
+      'bz-s2-h': '系统架构',
+      'bz-s2': '数据沿流水线运转：邮件/文件输入 → 三层提取（L1 规则 → L2 AI → L3 人工修正）→ 核心业务（订单、装箱、排班）→ 统一 SQLite 数据库 → 输出（单据、合成打印件、快递面单、手机看板）。',
+      'bz-cap': '脱敏技术示意图——不含客户数据与部署细节。',
+      'bz-s3-h': '核心功能',
+      'bz-s3-1': '<strong>三层单据提取：</strong>离线规则优先（零成本），其次多模态 AI 处理文本与扫描图，疑难件由人工修正工作台兜底。',
+      'bz-s3-2': '<strong>自动建单分拣：</strong>按地址聚类生成订单、自动挂载单据，并检查文件齐全度（快递单/发货单/发票）。',
+      'bz-s3-3': '<strong>单据生成：</strong>发票与发货单按复刻的原始版式输出 PDF，支持按包裹拆分，并为每单合成一键打印件。',
+      'bz-s3-4': '<strong>快递对接：</strong>面单 API 在线生成包裹标签，自动挂载到对应订单。',
+      'bz-s3-5': '<strong>仓库日常：</strong>日历排班、打卡计时、商品与客户管理、装箱方案，以及手机端「今日」视图。',
+      'bz-s3-6': '<strong>数据总览：</strong>可检索的订单总览与 Excel 导出，方便管理查看。',
+      'bz-s4-h': '技术栈',
+      'bz-s4-1': '后端：Python · Flask · SQLite · REST API（Waitress，systemd 服务）。',
+      'bz-s4-2': '文档：PDF 解析（文本 + 视觉识别）、PDF/Word 生成、复杂印刷版式复刻。',
+      'bz-s4-3': 'AI：多模态 LLM 结构化提取，规则优先 + 回退链，用 L1 规则把 AI 成本降到最低。',
+      'bz-s4-4': '运维与安全：nginx + HTTPS、分权登录、每日自动备份、fail2ban、100+ 自动化测试。',
+      'bz-s5-h': '成果',
+      'bz-s5-1': '100+ 自动化回归测试为每次改动保驾护航。',
+      'bz-s5-2': '人工盘点工时减少约 80%，单据查找彻底告别手工。',
+      'bz-s5-3': '7×24 云端运行，仓库现场手机即用。',
+      'bz-s5-4': '全流程可追溯：删除留痕，改动可通过快照回退。'
+    }
+  };
+
+  function apply(lang) {
+    var t = T[lang] || T.de;
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n');
+      if (t[k]) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('[data-i18n-img]').forEach(function (el) {
+      el.style.display = el.getAttribute('data-i18n-img') === lang ? '' : 'none';
+    });
+    document.title = t['bz-title'] + ' – Ben He';
+    document.querySelectorAll('.lang-option').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.lang === lang);
+    });
+  }
+
+  var lang = 'de';
+  try { lang = localStorage.getItem('lang') || 'de'; } catch (e) {}
+  if (!T[lang]) lang = 'de';
+
+  document.querySelectorAll('.lang-option').forEach(function (b) {
+    b.addEventListener('click', function () {
+      try { localStorage.setItem('lang', b.dataset.lang); } catch (e) {}
+      apply(b.dataset.lang);
+    });
+  });
+
+  apply(lang);
+})();
+</script>
+</body>
+</html>
