@@ -9,6 +9,7 @@
   // ─── Translations ──────────────────────────────────────
   const T = {
     de: {
+      'about-tag-msc': 'KIT · M.Sc. EEIT (laufend)',
       'meta-desc': 'Ben He — M.Sc. EEIT @ KIT. Spezialisiert auf KI, Robotik und intelligente Automatisierung. Erfahrung in Digital Twin, ROS 2, LLM-Agenten und Full-Stack-Entwicklung.',
       'nav-home': 'Zur Startseite',
       'nav-main': 'Hauptnavigation',
@@ -95,6 +96,7 @@
       'back-top': 'Zurück nach oben',
     },
     en: {
+      'about-tag-msc': 'KIT · M.Sc. EEIT (in progress)',
       'meta-desc': 'Ben He — M.Sc. EEIT @ KIT. Specialized in AI, robotics and intelligent automation. Experience in digital twins, ROS 2, LLM agents and full-stack development.',
       'nav-home': 'Home',
       'nav-main': 'Main navigation',
@@ -181,6 +183,7 @@
       'back-top': 'Back to top',
     },
     zh: {
+      'about-tag-msc': 'KIT · M.Sc. EEIT 在读',
       'meta-desc': 'Ben He — KIT EEIT 硕士。专注人工智能、机器人和智能自动化。具备数字孪生、ROS 2、LLM Agent 和全栈开发经验。',
       'nav-home': '返回首页',
       'nav-main': '主导航',
