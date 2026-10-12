@@ -82,6 +82,8 @@
   .pe-figure .diagram-dark { background: #020617; border: 1px solid var(--color-border); border-radius: 12px; padding: 12px; overflow-x: auto; }
   .pe-figure .diagram-dark svg { width: 100%; min-width: 780px; height: auto; display: block; }
   .pe-figure .diagram-dark svg text { font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, 'Microsoft YaHei', monospace; }
+
+  .pe-topbar-right { display: flex; align-items: center; gap: 0.7rem; }
 </style>
   .pe-figure { margin: var(--space-md) 0; }
   .pe-figure img { width: 100%; border-radius: 12px; border: 1px solid var(--color-border); display: block; }
@@ -90,21 +92,31 @@
 </head>
 <body>
 <script>
-  /* Apply saved theme before paint to avoid flash */
   (function () {
-    try {
-      var t = localStorage.getItem('theme');
-      if (t) document.documentElement.dataset.theme = t;
-    } catch (e) {}
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) { try { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { t = 'light'; } }
+    document.documentElement.setAttribute('data-theme', t);
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('themeToggle');
+      if (btn) btn.addEventListener('click', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    });
   })();
 </script>
 <main class="pe-page">
   <div class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="bn-back">Zurück zur Website</span></a>
-    <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+    <div class="pe-topbar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
       <button type="button" class="lang-option" data-lang="zh">中文</button>
+    </div>
     </div>
   </div>
 

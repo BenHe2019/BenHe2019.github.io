@@ -65,8 +65,26 @@
   /* ---------- Footer note ---------- */
   .entry p { margin-top: 1pt; }
 </style>
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) { try { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { t = 'light'; } }
+    document.documentElement.setAttribute('data-theme', t);
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('themeToggle');
+      if (btn) btn.addEventListener('click', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    });
+  })();
+</script>
 </head>
 <body>
+<button class="theme-toggle" id="themeToggle" style="position:fixed;top:14px;right:14px;z-index:99" aria-label="Toggle dark mode" title="Light/Dark mode"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+
 
   <!-- Header -->
   <div class="name">BEN HE</div>

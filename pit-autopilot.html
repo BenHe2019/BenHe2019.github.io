@@ -153,14 +153,23 @@
   .pe-code-cap { margin: var(--space-md) 0 0.4rem; font-weight: 600; color: var(--color-text); }
   .pe-code { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 0.9rem 1.1rem; overflow-x: auto; font-size: 0.82rem; line-height: 1.6; }
   .pe-code code { font-family: 'JetBrains Mono', Consolas, monospace; color: var(--color-text-secondary); }
+
+  .pe-topbar-right { display: flex; align-items: center; gap: 0.7rem; }
 </style>
 <script>
-  /* Apply saved theme before paint to avoid flash */
   (function () {
-    try {
-      var t = localStorage.getItem('theme');
-      if (t) document.documentElement.dataset.theme = t;
-    } catch (e) {}
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) { try { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { t = 'light'; } }
+    document.documentElement.setAttribute('data-theme', t);
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('themeToggle');
+      if (btn) btn.addEventListener('click', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    });
   })();
 </script>
 </head>
@@ -169,10 +178,13 @@
 
   <header class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="pit-back">Zurück zur Website</span></a>
-    <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+    <div class="pe-topbar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
       <button type="button" class="lang-option" data-lang="zh">中文</button>
+    </div>
     </div>
   </header>
 
