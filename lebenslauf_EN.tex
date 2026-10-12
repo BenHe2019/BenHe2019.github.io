@@ -13,13 +13,14 @@
 \usepackage{tabularx}
 \usepackage{etoolbox}
 \usepackage{graphicx}
+
 \emergencystretch=2em
 
 % =========================================================
 % Fonts & Colors
 % =========================================================
-\definecolor{darkblue}{RGB}{0, 77, 153}
-\definecolor{graytext}{RGB}{80, 80, 80}
+\definecolor{darkblue}{RGB}{0,77,153}
+\definecolor{graytext}{RGB}{80,80,80}
 
 \setmainfont{TeX Gyre Heros}
 \color{graytext}
@@ -28,206 +29,275 @@
     colorlinks=true,
     linkcolor=darkblue,
     urlcolor=darkblue,
-    pdftitle={Ben He - CV}
+    pdftitle={Ben He - Resume}
 }
 
 % =========================================================
 % Custom Commands
 % =========================================================
 
-% Section header
 \titleformat{\section}
-  {\Large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+{\Large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
 \titlespacing*{\section}{0pt}{10pt}{6pt}
 
-% Itemize
-\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, topsep=2pt,
-  label={\small\color{darkblue}\textbullet}}
-
-% Education entry: {School}{Degree/Program}{Period}{Location}
-\newcommand{\resumeEdu}[4]{
-  \vspace{1.2mm}
-  \noindent
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
-    \textbf{#1} & \textbf{\color{darkblue}#3} \\
-    \textit{#2} & \textit{\small #4} \\
-  \end{tabular*}
-  \par
+\setlist[itemize]{
+    leftmargin=1.5em,
+    itemsep=2pt,
+    topsep=2pt,
+    label={\small\color{darkblue}\textbullet}
 }
 
-% General entry: {Title}{Link}{Organisation}{Period}{Location/Tech}
+% Education
+\newcommand{\resumeEdu}[4]{
+\vspace{1.2mm}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
+\textbf{#1} & \textbf{\color{darkblue}#3} \\
+\textit{#2} & \textit{\small #4} \\
+\end{tabular*}
+\par
+}
+
+% General Entry
 \newcommand{\resumeEntry}[5]{
-  \vspace{1.5mm}
-  \noindent
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
-    \textbf{#1} & \textbf{\color{darkblue}#4} \\
-    \textit{#3} & \textit{\small #5} \\
-  \end{tabular*}
-  \par
-  \ifstrempty{#2}{}{%
-    \vspace{0.4mm}
-    \noindent
-    {\small \faGithub\ \href{https://#2}{#2}}
-    \par
-  }
+\vspace{1.5mm}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
+\textbf{#1} & \textbf{\color{darkblue}#4} \\
+\textit{#3} & \textit{\small #5} \\
+\end{tabular*}
+\par
+\ifstrempty{#2}{}{%
+\vspace{0.4mm}
+\noindent
+{\small \faGithub\ \href{https://#2}{#2}}
+\par
+}
 }
 
 \begin{document}
 
-% ---------------------------------------------------------
+% =========================================================
 % Header
-% ---------------------------------------------------------
+% =========================================================
+
 \noindent
 \begin{minipage}[c]{0.76\textwidth}
-    {\Huge \textbf{\color{darkblue}BEN HE}} \\[0.5em]
-    \small
-    \faMapMarker* Karlsruhe \quad|\quad
-    \faEnvelope\ \href{mailto:ben.he1999@outlook.com}{ben.he1999@outlook.com} \quad|\quad
-    \faPhone\ +49 155 68616003 \\[0.3em]
-    \faGithub\ \href{https://github.com/StUBenHe}{github.com/StUBenHe} \quad|\quad \faGlobe\ \href{https://stubenhe.github.io}{stubenhe.github.io}
+
+{\Huge\textbf{\color{darkblue}BEN HE}}\\[0.5em]
+
+\small
+\faMapMarker* Karlsruhe \quad|\quad
+\faEnvelope\ \href{mailto:ben.he1999@outlook.com}{ben.he1999@outlook.com}
+\quad|\quad
+\faPhone\ +49 155 68616003\\[0.3em]
+
+\faGithub\
+\href{https://github.com/BenHe2019}{github.com/BenHe2019}
+\quad|\quad
+\faGlobe\
+\href{https://benhe2019.github.io}{benhe2019.github.io}
+
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.20\textwidth}
-    \raggedleft
-    \includegraphics[width=2.4cm,height=3.2cm,keepaspectratio]{foto.jpg}
+\raggedleft
+\includegraphics[width=2.4cm,height=3.2cm,keepaspectratio]{foto.jpg}
 \end{minipage}
 
 \vspace{0.5em}
 
-% ---------------------------------------------------------
+% =========================================================
 % Education
-% ---------------------------------------------------------
+% =========================================================
+
 \section{Education}
 
 \resumeEdu
-  {Karlsruhe Institute of Technology (KIT)}
-  {B.Sc. Electrical Engineering and Information Technology \textbar{} Expected: 09/2026}
-  {10/2021 -- present}
-  {Karlsruhe}
+{Karlsruhe Institute of Technology (KIT)}
+{M.Sc. Electrical Engineering and Information Technology (EEIT)}
+{Oct. 2026 -- Present}
+{Karlsruhe, Germany}
 
 \resumeEdu
-  {Yangtze University}
-  {Information and Computing Science}
-  {09/2017 -- 09/2020}
-  {Jingzhou, China}
+{Karlsruhe Institute of Technology (KIT)}
+{B.Sc. Electrical Engineering and Information Technology}
+{Oct. 2021 -- Sept. 2026}
+{Karlsruhe, Germany}
 
-% ---------------------------------------------------------
+\resumeEdu
+{Yangtze University}
+{B.Sc. Information and Computing Science}
+{Sept. 2017 -- Sept. 2020}
+{Jingzhou, China}
+
+% =========================================================
 % Profile
-% ---------------------------------------------------------
+% =========================================================
+
 \section{Profile}
 
-Electrical engineering student at the Karlsruhe Institute of Technology (KIT) specializing in artificial intelligence, robotics and intelligent automation. Experience in LLM applications, computer vision, ROS~2, digital twins as well as hardware and software co-design. Aiming for a position as \textbf{AI Engineer} or \textbf{Robotics Engineer}.
+Master's student in Electrical Engineering and Information Technology at the Karlsruhe Institute of Technology (KIT), specializing in Artificial Intelligence, Robotics, and Intelligent Automation. Experienced in LLM applications, Computer Vision, ROS~2, Digital Twins, and hardware--software co-design. Seeking opportunities as an \textbf{AI Engineer} or \textbf{Robotics Engineer}.
 
-Project portfolio:
+\vspace{2mm}
 
-\href{https://stubenhe.github.io}{https://stubenhe.github.io}
+\textbf{Project Portfolio:}
+
+\href{https://benhe2019.github.io}{https://benhe2019.github.io}
+
+% =========================================================
+% Professional Experience
+% =========================================================
+
+\section{Professional Experience}
+
+\resumeEntry
+{Internship -- Embedded Systems \& Automotive Infotainment}
+{}
+{Dynavin, R\&D Department (Karlsruhe)}
+{Dec. 2025 -- Feb. 2026}
+{32-bit Microcontrollers, CAN Bus, Embedded Systems}
+
+\begin{itemize}
+\item Analysis of electronic circuits for automotive aftermarket systems (32-bit MCU, CAN interface, power supply, I/O stages).
+\item Hardware assembly, systematic troubleshooting and repair of control units; functional testing of navigation systems.
+\item Support for vehicle integration of aftermarket systems and CAN-bus diagnostics.
+\end{itemize}
+
+% =========================================================
+% University Projects
+% =========================================================
 
 \section{University Project Experience}
 
-% --- ETI ---
 \resumeEntry
-  {Hardware Design \& Power Electronics}
-  {}
-  {Institute of Electrical Engineering (ETI), KIT}
-  {05/2024 -- 09/2024}
-  {MATLAB/Simulink, Altium Designer}
+{Hardware Design \& Power Electronics}
+{}
+{Institute of Electrical Engineering (ETI), KIT}
+{May 2024 -- Sept. 2024}
+{MATLAB/Simulink, Altium Designer}
 
 \begin{itemize}
-\item Development of a buck converter with MATLAB/Simulink.
-\item PCB design with Altium Designer.
+\item Designed and simulated a Buck Converter using MATLAB/Simulink.
+\item Designed PCB layouts with Altium Designer.
 \end{itemize}
 
-% --- ITIV ---
 \resumeEntry
-  {Autonomous Driving Prototype}
-  {}
-  {Institute for Information Processing Technology (ITIV), KIT}
-  {05/2023 -- 07/2023}
-  {C++, Sensor Fusion}
+{Autonomous Driving Prototype}
+{}
+{Institute for Information Processing Technology (ITIV), KIT}
+{May 2023 -- July 2023}
+{C++, Sensor Fusion}
 
 \begin{itemize}
-\item Development of an autonomous vehicle prototype in C++.
+\item Developed an autonomous vehicle prototype in C++.
 \end{itemize}
 
-% ---------------------------------------------------------
-% Projects
-% ---------------------------------------------------------
-\section{Bachelor's Thesis}
+% =========================================================
+% Bachelor Thesis
+% =========================================================
 
-% --- Bachelor's Thesis ---
+\section{Bachelor Thesis}
+
 \resumeEntry
-  {Digital Twin Infrastructure for Robotics}
-  {}
-  {Bachelor Thesis | IRS, KIT}
-  {06/2025 -- 12/2025}
-  {Python, ROS 2, AAS (v3.0), XML}
+{Digital Twin Infrastructure for Robotics}
+{}
+{Bachelor Thesis | Institute for Anthropomatics and Robotics (IRS), KIT}
+{June 2025 -- Dec. 2025}
+{Python, ROS~2, AAS 3.0, XML}
 
 \begin{itemize}
-\item Development of a digital twin infrastructure for robotic systems.
-\item Automatic generation of AAS and ROS 2 models.
+\item Developed a Digital Twin infrastructure for robotic systems.
+\item Automated the generation of Asset Administration Shells (AAS) and ROS~2 models.
 \end{itemize}
 
+% =========================================================
+% AI & Software Projects
+% =========================================================
 
-\section{AI \& Software Projects}
+\section{AI and Software Projects}
 
-% --- AI Agent ---
 \resumeEntry
-  {LLM-based Customer Service Agent}
-  {}
-  {Personal AI Project}
-  {2025}
-  {Python, LLM, RAG, Prompt Engineering}
+{LLM-based Customer Service Agent}
+{}
+{Personal Project}
+{2025}
+{Python, LLM, RAG, Prompt Engineering}
 
 \begin{itemize}
-\item Development of an LLM-based customer service agent.
+\item Developed an intelligent customer service agent based on Large Language Models.
 \end{itemize}
 
-% --- Fitlog -- AI-powered Nutrition Tracking App ---
 \resumeEntry
-  {Fitlog -- AI-powered Nutrition Tracking App}
-  {}
-  {Personal AI Project}
-  {01/2025 -- present}
-  {Kotlin/Java, Python, Computer Vision, Android Studio}
+{Fitlog -- AI-powered Nutrition Tracking App}
+{}
+{Personal Project}
+{Jan. 2025 -- Present}
+{Kotlin, Java, Python, Computer Vision, Android Studio}
 
 \begin{itemize}
-\item Development of an AI-powered nutrition tracking app with computer vision.
+\item Developed an AI-powered nutrition tracking application using Computer Vision.
 \end{itemize}
 
-% --- Dream Cards -- Mobile Card Game ---
 \resumeEntry
-  {Dream Cards -- Mobile Card Game}
-  {}
-  {Personal AI Project}
-  {06/2026 -- present}
-  {Kotlin/Java, Python, Android Studio}
+{Bennu -- AI Home Robot}
+{}
+{Personal Project (in development, $\sim$1-year cycle)}
+{Sept. 2026 -- Present}
+{Python, LLM Agents, STT/TTS, Android, Smart Home}
 
 \begin{itemize}
-\item Development of a mobile card game with AI support.
+\item Building the ``brain'' of a home robot: voice assistant with LLM agent, long-term memory and multi-device data hub, leading to a robotic body.
 \end{itemize}
 
+\resumeEntry
+{Dream Cards -- Mobile Card Game}
+{}
+{Personal Project}
+{June 2026 -- Present}
+{Kotlin, Java, Python, Android Studio}
 
-% ---------------------------------------------------------
+\begin{itemize}
+\item Developed a mobile card game application with AI-assisted features.
+\end{itemize}
+
+% =========================================================
 % Skills
-% ---------------------------------------------------------
-\section{Skills}
+% =========================================================
+
+\section{Technical Skills}
 
 \begin{tabular}{@{}ll@{}}
-\textbf{AI} & LLM, RAG, Computer Vision \\
-\textbf{Robotics} & ROS~2, URDF/Xacro, Gazebo, AAS \\
-\textbf{Programming} & Python, C++, Kotlin, Java, MATLAB \\
-\textbf{Hardware} & Altium Designer, Simulink \\
-\textbf{Tools} & Git, Docker, Linux, \LaTeX \\
-\textbf{Languages} & German (C1), English (B2), Chinese (native) \\
+
+\textbf{Artificial Intelligence} &
+LLMs, Retrieval-Augmented Generation (RAG), Computer Vision \\
+
+\textbf{Robotics} &
+ROS~2, URDF/Xacro, Asset Administration Shell (AAS) \\
+
+\textbf{Programming} &
+Python, C++, Kotlin, Java, MATLAB \\
+
+\textbf{Hardware} &
+Altium Designer, MATLAB/Simulink \\
+
+\textbf{Tools} &
+Git, Docker, Linux, \LaTeX \\
+
+\textbf{Languages} &
+German (C1), English (B2), Chinese (Native) \\
+
 \end{tabular}
 
-% ---------------------------------------------------------
+% =========================================================
 % Awards
-% ---------------------------------------------------------
+% =========================================================
+
 \section{Awards}
+
 \begin{itemize}
-    \item \textbf{Top 10}, MATLAB Programming Competition, Yangtze University (2019)
-    \item \textbf{2nd Prize}, Mathematical Theorems Competition, Yangtze University (2018)
+\item Top 10, MATLAB Programming Competition, Yangtze University (2019)
+\item Second Prize, Mathematical Theorem Competition, Yangtze University (2018)
 \end{itemize}
 
 \end{document}
