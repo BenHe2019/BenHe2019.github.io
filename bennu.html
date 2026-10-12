@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bennu — KI-Hausroboter: von der Vision des Hausroboters zum selbstentwickelten Lebensassistenten.">
+<title>Ben He – Bennu</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ─── Project detail page (praktikum.html) ─── */
+  .pe-page {
+    padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  }
+  .pe-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+  .pe-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  .pe-header h1 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    color: var(--color-text);
+    line-height: 1.3;
+    margin-bottom: var(--space-sm);
+  }
+  .pe-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    align-items: center;
+    margin-bottom: var(--space-md);
+    color: var(--color-text-secondary);
+    font-size: 0.92rem;
+  }
+  .pe-section {
+    margin-top: var(--space-2xl);
+  }
+  .pe-section h2 {
+    font-size: 1.35rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+  .pe-section p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+  .pe-section ul {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0 0 var(--space-md) var(--space-md);
+    padding-left: var(--space-md);
+    list-style: disc;
+  }
+  .pe-section li {
+    margin-bottom: 0.4rem;
+  }
+  .pe-section code {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.9em;
+  }
+  .pe-footer {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .pe-figure .diagram-dark { background: #020617; border: 1px solid var(--color-border); border-radius: 12px; padding: 12px; overflow-x: auto; }
+  .pe-figure .diagram-dark svg { width: 100%; min-width: 780px; height: auto; display: block; }
+  .pe-figure .diagram-dark svg text { font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, 'Microsoft YaHei', monospace; }
+</style>
+  .pe-figure { margin: var(--space-md) 0; }
+  .pe-figure img { width: 100%; border-radius: 12px; border: 1px solid var(--color-border); display: block; }
+  .pe-figure figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--color-text-secondary); text-align: center; }
+
+</head>
+<body>
+<script>
+  /* Apply saved theme before paint to avoid flash */
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+<main class="pe-page">
+  <div class="pe-topbar">
+    <a class="pe-back" href="index.html">← <span data-i18n="bn-back">Zurück zur Website</span></a>
+    <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <button type="button" class="lang-option" data-lang="de">DE</button>
+      <button type="button" class="lang-option" data-lang="en">EN</button>
+      <button type="button" class="lang-option" data-lang="zh">中文</button>
+    </div>
+  </div>
+
+  <header class="pe-header">
+    <h1 data-i18n="bn-title">Bennu — KI-Hausroboter</h1>
+    <div class="pe-meta"><span data-i18n="bn-meta">Persönliches KI-Projekt · seit 09/2026 · Entwicklungszeitraum ~1 Jahr · in Entwicklung</span></div>
+  </header>
+
+  <section class="pe-section">
+    <h2 data-i18n="bn-s1-h">Die Vision</h2>
+    <p data-i18n="bn-s1">…</p>
+    <p data-i18n="bn-s1b">…</p>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bn-s2-h">Systemarchitektur</h2>
+    <p data-i18n="bn-s2">…</p>
+    <figure class="pe-figure">
+      <div class="diagram-dark" data-i18n-img="de">
+        <svg viewBox="0 0 1000 720">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrowhead-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrowhead-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <marker id="arrowhead-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ===== 连线（先画，压在盒子下） ===== -->
+        <!-- 输入层 → AI 大脑 -->
+        <line x1="212" y1="125" x2="330" y2="125" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="225" x2="330" y2="180" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="325" x2="330" y2="240" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="425" x2="330" y2="300" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <!-- AI 大脑 ↔ 数据库 -->
+        <line x1="580" y1="190" x2="648" y2="190" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <line x1="648" y1="220" x2="580" y2="220" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <text x="614" y="182" fill="#94a3b8" font-size="9" text-anchor="middle">lesen/schreiben</text>
+        <!-- AI 大脑 → 执行/输出 -->
+        <line x1="580" y1="110" x2="812" y2="110" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="696" y="103" fill="#94a3b8" font-size="9" text-anchor="middle">Befehle</text>
+        <!-- 数据库 → 执行/输出 -->
+        <line x1="730" y1="150" x2="812" y2="180" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-violet)"/>
+        <!-- 大脑 → 未来机器人本体 -->
+        <path d="M 455 372 L 455 520 Q 455 540 475 540 L 560 540" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6,5" marker-end="url(#arrowhead)"/>
+        <text x="470" y="470" fill="#fbbf24" font-size="9">Anschluss nächste Phase</text>
+
+        <!-- ===== 边界：输入/交互层 ===== -->
+        <rect x="30" y="60" width="182" height="430" rx="12" fill="rgba(8, 51, 68, 0.12)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">Eingabe / Interaktion</text>
+
+        <!-- 语音入口 -->
+        <rect x="42" y="95" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🎤 Sprach-Eingabe</text>
+        <text x="121" y="136" fill="#94a3b8" font-size="8.5" text-anchor="middle">Wake-Word → ASR → Dialog</text>
+        <!-- 网页看板 -->
+        <rect x="42" y="195" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="218" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖥️ Web-Dashboard</text>
+        <text x="121" y="236" fill="#94a3b8" font-size="8.5" text-anchor="middle">Kalender / Finanzen / Gesundheit / Vokabeln</text>
+        <!-- Android App -->
+        <rect x="42" y="295" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="318" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 Android App</text>
+        <text x="121" y="336" fill="#94a3b8" font-size="8.5" text-anchor="middle">Wecker / Kalender / Offline-Sync</text>
+        <!-- 传感器 -->
+        <rect x="42" y="395" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="418" fill="white" font-size="11" font-weight="600" text-anchor="middle">📡 Sensoren / Geräte</text>
+        <text x="121" y="436" fill="#94a3b8" font-size="8.5" text-anchor="middle">Körperwaage · smarte Steckdosen (BLE/UDP)</text>
+
+        <!-- ===== 边界：AI 大脑 ===== -->
+        <rect x="330" y="60" width="250" height="312" rx="12" fill="rgba(6, 78, 59, 0.12)" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="342" y="80" fill="#34d399" font-size="10" font-weight="600">KI-Kern (selbstentwickelter Assistent)</text>
+
+        <rect x="342" y="95" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧠 LLM-Agent</text>
+        <text x="455" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Intent · Task-Orchestrierung · Tool-Calls</text>
+
+        <rect x="342" y="170" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="193" fill="white" font-size="11" font-weight="600" text-anchor="middle">⚡ Schnellpfad</text>
+        <text x="455" y="210" fill="#94a3b8" font-size="8.5" text-anchor="middle">Direkte Befehle · sofortige Antwort</text>
+
+        <rect x="342" y="245" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="268" fill="white" font-size="11" font-weight="600" text-anchor="middle">💾 Langzeitgedächtnis</text>
+        <text x="455" y="285" fill="#94a3b8" font-size="8.5" text-anchor="middle">Präferenzen · Gewohnheiten · Kontext</text>
+
+        <rect x="342" y="312" width="226" height="44" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="339" fill="white" font-size="10.5" font-weight="600" text-anchor="middle">TTS-Sprachausgabe · Automatisierung</text>
+
+        <!-- ===== 数据库 ===== -->
+        <rect x="648" y="150" width="150" height="120" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="723" y="176" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ Zentrale Datenbank</text>
+        <text x="723" y="195" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite · lokal zuerst</text>
+        <text x="723" y="212" fill="#a78bfa" font-size="8" text-anchor="middle">Kalender · Finanzen · Fitness · Vokabeln</text>
+        <text x="723" y="226" fill="#a78bfa" font-size="8" text-anchor="middle">Ernährung · Geräte · Gedächtnis</text>
+        <text x="723" y="248" fill="#94a3b8" font-size="7.5" text-anchor="middle">Eine Datenbasis · Snapshots</text>
+
+        <!-- ===== Ausgabe / Ausführung ===== -->
+        <rect x="812" y="60" width="158" height="312" rx="12" fill="rgba(251, 146, 60, 0.08)" stroke="#fb923c" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="824" y="80" fill="#fb923c" font-size="10" font-weight="600">Ausgabe / Ausführung</text>
+
+        <rect x="824" y="95" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="117" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔊 Sprachausgabe</text>
+        <text x="891" y="133" fill="#94a3b8" font-size="8" text-anchor="middle">TTS-Antworten</text>
+
+        <rect x="824" y="170" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="192" fill="white" font-size="10" font-weight="600" text-anchor="middle">📅 Systemkalender / Wecker</text>
+        <text x="891" y="208" fill="#94a3b8" font-size="8" text-anchor="middle">Sichtbar & steuerbar</text>
+
+        <rect x="824" y="245" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="267" fill="white" font-size="10" font-weight="600" text-anchor="middle">🏠 Smart-Home-Steuerung</text>
+        <text x="891" y="283" fill="#94a3b8" font-size="8" text-anchor="middle">Licht / Steckdosen / Szenen</text>
+
+        <rect x="824" y="312" width="134" height="44" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="891" y="332" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ Cloud-Backup & Sync</text>
+        <text x="891" y="347" fill="#94a3b8" font-size="8" text-anchor="middle">Notfallbackup · mobil nutzbar</text>
+
+        <!-- ===== 未来阶段：机器人本体 ===== -->
+        <rect x="330" y="500" width="640" height="120" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="342" y="520" fill="#fbbf24" font-size="10" font-weight="600">Nächste Phase · Roboter-Body (geplant) — das heutige Gehirn schafft die Daten- und Gedächtnisbasis</text>
+
+        <rect x="342" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="414" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧭 Fahrbasis · Navigation</text>
+        <text x="414" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Autonom indoor</text>
+
+        <rect x="502" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="574" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🦾 Arm · Manipulation</text>
+        <text x="574" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Greifen · Hausarbeit</text>
+
+        <rect x="662" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="734" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">👁️ Vision · Wahrnehmung</text>
+        <text x="734" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Kollision · Objekterkennung</text>
+
+        <rect x="822" y="535" width="136" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="890" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🤖 Autonomes Verhalten</text>
+        <text x="890" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Proaktiv · Langzeitplanung</text>
+
+        <!-- ===== 图例 ===== -->
+        <text x="42" y="520" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="42" y="532" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="64" y="540" fill="#94a3b8" font-size="8">Eingabe / Interaktion (Frontend)</text>
+        <rect x="42" y="548" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="64" y="556" fill="#94a3b8" font-size="8">KI-Kern (Backend)</text>
+        <rect x="42" y="564" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="64" y="572" fill="#94a3b8" font-size="8">Speicher</text>
+        <rect x="42" y="580" width="16" height="10" rx="2" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1"/>
+        <text x="64" y="588" fill="#94a3b8" font-size="8">Ausgabe</text>
+        <rect x="42" y="596" width="16" height="10" rx="2" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="64" y="604" fill="#94a3b8" font-size="8">Cloud / Zukunft</text>
+      </svg>
+      </div>
+      <div class="diagram-dark" data-i18n-img="en" style="display:none">
+        <svg viewBox="0 0 1000 720">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrowhead-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrowhead-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <marker id="arrowhead-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ===== 连线（先画，压在盒子下） ===== -->
+        <!-- 输入层 → AI 大脑 -->
+        <line x1="212" y1="125" x2="330" y2="125" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="225" x2="330" y2="180" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="325" x2="330" y2="240" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="425" x2="330" y2="300" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <!-- AI 大脑 ↔ 数据库 -->
+        <line x1="580" y1="190" x2="648" y2="190" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <line x1="648" y1="220" x2="580" y2="220" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <text x="614" y="182" fill="#94a3b8" font-size="9" text-anchor="middle">read/write</text>
+        <!-- AI 大脑 → 执行/输出 -->
+        <line x1="580" y1="110" x2="812" y2="110" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="696" y="103" fill="#94a3b8" font-size="9" text-anchor="middle">commands</text>
+        <!-- 数据库 → 执行/输出 -->
+        <line x1="730" y1="150" x2="812" y2="180" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-violet)"/>
+        <!-- 大脑 → 未来机器人本体 -->
+        <path d="M 455 372 L 455 520 Q 455 540 475 540 L 560 540" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6,5" marker-end="url(#arrowhead)"/>
+        <text x="470" y="470" fill="#fbbf24" font-size="9">next phase</text>
+
+        <!-- ===== 边界：输入/交互层 ===== -->
+        <rect x="30" y="60" width="182" height="430" rx="12" fill="rgba(8, 51, 68, 0.12)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">Input / Interaction Layer</text>
+
+        <!-- 语音入口 -->
+        <rect x="42" y="95" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🎤 Voice interface</text>
+        <text x="121" y="136" fill="#94a3b8" font-size="8.5" text-anchor="middle">Wake word → ASR → dialogue</text>
+        <!-- 网页看板 -->
+        <rect x="42" y="195" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="218" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖥️ Web dashboard</text>
+        <text x="121" y="236" fill="#94a3b8" font-size="8.5" text-anchor="middle">Schedule / finance / health / vocabulary</text>
+        <!-- Android App -->
+        <rect x="42" y="295" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="318" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 Android App</text>
+        <text x="121" y="336" fill="#94a3b8" font-size="8.5" text-anchor="middle">Alarms / calendar / offline sync</text>
+        <!-- 传感器 -->
+        <rect x="42" y="395" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="418" fill="white" font-size="11" font-weight="600" text-anchor="middle">📡 Sensors / devices</text>
+        <text x="121" y="436" fill="#94a3b8" font-size="8.5" text-anchor="middle">Body scale · smart plugs (BLE/UDP)</text>
+
+        <!-- ===== 边界：AI 大脑 ===== -->
+        <rect x="330" y="60" width="250" height="312" rx="12" fill="rgba(6, 78, 59, 0.12)" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="342" y="80" fill="#34d399" font-size="10" font-weight="600">AI Core (self-built assistant)</text>
+
+        <rect x="342" y="95" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧠 LLM agent</text>
+        <text x="455" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Intent · task orchestration · tool calls</text>
+
+        <rect x="342" y="170" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="193" fill="white" font-size="11" font-weight="600" text-anchor="middle">⚡ Fast path</text>
+        <text x="455" y="210" fill="#94a3b8" font-size="8.5" text-anchor="middle">Common commands · instant response</text>
+
+        <rect x="342" y="245" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="268" fill="white" font-size="11" font-weight="600" text-anchor="middle">💾 Long-term memory</text>
+        <text x="455" y="285" fill="#94a3b8" font-size="8.5" text-anchor="middle">Preferences · habits · context</text>
+
+        <rect x="342" y="312" width="226" height="44" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="339" fill="white" font-size="10.5" font-weight="600" text-anchor="middle">TTS speech output · automated tasks</text>
+
+        <!-- ===== 数据库 ===== -->
+        <rect x="648" y="150" width="150" height="120" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="723" y="176" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ Unified Database</text>
+        <text x="723" y="195" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite · local-first</text>
+        <text x="723" y="212" fill="#a78bfa" font-size="8" text-anchor="middle">Schedule · finance · fitness · vocabulary</text>
+        <text x="723" y="226" fill="#a78bfa" font-size="8" text-anchor="middle">Diet · devices · memory</text>
+        <text x="723" y="248" fill="#94a3b8" font-size="7.5" text-anchor="middle">One dataset · snapshot rollback</text>
+
+        <!-- ===== Execution / Output Layer ===== -->
+        <rect x="812" y="60" width="158" height="312" rx="12" fill="rgba(251, 146, 60, 0.08)" stroke="#fb923c" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="824" y="80" fill="#fb923c" font-size="10" font-weight="600">Execution / Output Layer</text>
+
+        <rect x="824" y="95" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="117" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔊 Voice output</text>
+        <text x="891" y="133" fill="#94a3b8" font-size="8" text-anchor="middle">TTS spoken answers</text>
+
+        <rect x="824" y="170" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="192" fill="white" font-size="10" font-weight="600" text-anchor="middle">📅 System calendar / alarms</text>
+        <text x="891" y="208" fill="#94a3b8" font-size="8" text-anchor="middle">Visible & controllable</text>
+
+        <rect x="824" y="245" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="267" fill="white" font-size="10" font-weight="600" text-anchor="middle">🏠 Smart-home control</text>
+        <text x="891" y="283" fill="#94a3b8" font-size="8" text-anchor="middle">Lights / plugs / scenes</text>
+
+        <rect x="824" y="312" width="134" height="44" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="891" y="332" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ Cloud backup & sync</text>
+        <text x="891" y="347" fill="#94a3b8" font-size="8" text-anchor="middle">Off-site backup · usable on the go</text>
+
+        <!-- ===== 未来阶段：机器人本体 ===== -->
+        <rect x="330" y="500" width="640" height="120" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="342" y="520" fill="#fbbf24" font-size="10" font-weight="600">Next phase · robot body (planned) — today's core builds its data & memory foundation</text>
+
+        <rect x="342" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="414" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧭 Base · navigation</text>
+        <text x="414" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Indoor autonomy</text>
+
+        <rect x="502" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="574" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🦾 Arm · manipulation</text>
+        <text x="574" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Grasping · chores</text>
+
+        <rect x="662" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="734" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">👁️ Vision · perception</text>
+        <text x="734" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Avoidance · recognition</text>
+
+        <rect x="822" y="535" width="136" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="890" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🤖 Autonomous behavior</text>
+        <text x="890" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">Proactive · planning</text>
+
+        <!-- ===== 图例 ===== -->
+        <text x="42" y="520" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="42" y="532" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="64" y="540" fill="#94a3b8" font-size="8">Input / interaction (frontend)</text>
+        <rect x="42" y="548" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="64" y="556" fill="#94a3b8" font-size="8">AI core (backend)</text>
+        <rect x="42" y="564" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="64" y="572" fill="#94a3b8" font-size="8">Storage</text>
+        <rect x="42" y="580" width="16" height="10" rx="2" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1"/>
+        <text x="64" y="588" fill="#94a3b8" font-size="8">Output</text>
+        <rect x="42" y="596" width="16" height="10" rx="2" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="64" y="604" fill="#94a3b8" font-size="8">Cloud / future phase</text>
+      </svg>
+      </div>
+      <div class="diagram-dark" data-i18n-img="zh" style="display:none">
+        <svg viewBox="0 0 1000 720">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrowhead-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrowhead-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <marker id="arrowhead-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ===== 连线（先画，压在盒子下） ===== -->
+        <!-- 输入层 → AI 大脑 -->
+        <line x1="212" y1="125" x2="330" y2="125" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="225" x2="330" y2="180" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="325" x2="330" y2="240" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <line x1="212" y1="425" x2="330" y2="300" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <!-- AI 大脑 ↔ 数据库 -->
+        <line x1="580" y1="190" x2="648" y2="190" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <line x1="648" y1="220" x2="580" y2="220" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <text x="614" y="182" fill="#94a3b8" font-size="9" text-anchor="middle">读写</text>
+        <!-- AI 大脑 → 执行/输出 -->
+        <line x1="580" y1="110" x2="812" y2="110" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="696" y="103" fill="#94a3b8" font-size="9" text-anchor="middle">指令下发</text>
+        <!-- 数据库 → 执行/输出 -->
+        <line x1="730" y1="150" x2="812" y2="180" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-violet)"/>
+        <!-- 大脑 → 未来机器人本体 -->
+        <path d="M 455 372 L 455 520 Q 455 540 475 540 L 560 540" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6,5" marker-end="url(#arrowhead)"/>
+        <text x="470" y="470" fill="#fbbf24" font-size="9">下一阶段接入</text>
+
+        <!-- ===== 边界：输入/交互层 ===== -->
+        <rect x="30" y="60" width="182" height="430" rx="12" fill="rgba(8, 51, 68, 0.12)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">输入 / 交互层</text>
+
+        <!-- 语音入口 -->
+        <rect x="42" y="95" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🎤 语音入口</text>
+        <text x="121" y="136" fill="#94a3b8" font-size="8.5" text-anchor="middle">唤醒词 → ASR → 对话</text>
+        <!-- 网页看板 -->
+        <rect x="42" y="195" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="218" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖥️ 网页看板</text>
+        <text x="121" y="236" fill="#94a3b8" font-size="8.5" text-anchor="middle">日程/记账/健康/生词</text>
+        <!-- Android App -->
+        <rect x="42" y="295" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="318" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 Android App</text>
+        <text x="121" y="336" fill="#94a3b8" font-size="8.5" text-anchor="middle">闹钟/日历/离线同步</text>
+        <!-- 传感器 -->
+        <rect x="42" y="395" width="158" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="418" fill="white" font-size="11" font-weight="600" text-anchor="middle">📡 传感器 / 设备</text>
+        <text x="121" y="436" fill="#94a3b8" font-size="8.5" text-anchor="middle">体脂秤·智能插座 (BLE/UDP)</text>
+
+        <!-- ===== 边界：AI 大脑 ===== -->
+        <rect x="330" y="60" width="250" height="312" rx="12" fill="rgba(6, 78, 59, 0.12)" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="342" y="80" fill="#34d399" font-size="10" font-weight="600">AI 大脑（自研生活助手核心）</text>
+
+        <rect x="342" y="95" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧠 LLM 智能体</text>
+        <text x="455" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">意图理解 · 任务编排 · 工具调用</text>
+
+        <rect x="342" y="170" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="193" fill="white" font-size="11" font-weight="600" text-anchor="middle">⚡ 快通道</text>
+        <text x="455" y="210" fill="#94a3b8" font-size="8.5" text-anchor="middle">常用指令直达 · 秒级响应</text>
+
+        <rect x="342" y="245" width="226" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="268" fill="white" font-size="11" font-weight="600" text-anchor="middle">💾 长期记忆</text>
+        <text x="455" y="285" fill="#94a3b8" font-size="8.5" text-anchor="middle">个人偏好 · 习惯 · 上下文</text>
+
+        <rect x="342" y="312" width="226" height="44" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="455" y="339" fill="white" font-size="10.5" font-weight="600" text-anchor="middle">TTS 语音合成 · 自动化任务</text>
+
+        <!-- ===== 数据库 ===== -->
+        <rect x="648" y="150" width="150" height="120" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="723" y="176" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ 统一数据库</text>
+        <text x="723" y="195" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite 单库 · 本地优先</text>
+        <text x="723" y="212" fill="#a78bfa" font-size="8" text-anchor="middle">日程 · 记账 · 健身 · 生词</text>
+        <text x="723" y="226" fill="#a78bfa" font-size="8" text-anchor="middle">饮食 · 设备 · 记忆</text>
+        <text x="723" y="248" fill="#94a3b8" font-size="7.5" text-anchor="middle">多端一份 · 改前快照可回退</text>
+
+        <!-- ===== 执行 / 输出层 ===== -->
+        <rect x="812" y="60" width="158" height="312" rx="12" fill="rgba(251, 146, 60, 0.08)" stroke="#fb923c" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="824" y="80" fill="#fb923c" font-size="10" font-weight="600">执行 / 输出层</text>
+
+        <rect x="824" y="95" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="117" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔊 语音播报</text>
+        <text x="891" y="133" fill="#94a3b8" font-size="8" text-anchor="middle">TTS 外放回答</text>
+
+        <rect x="824" y="170" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="192" fill="white" font-size="10" font-weight="600" text-anchor="middle">📅 系统日历 / 闹钟</text>
+        <text x="891" y="208" fill="#94a3b8" font-size="8" text-anchor="middle">系统可见可干预</text>
+
+        <rect x="824" y="245" width="134" height="52" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="891" y="267" fill="white" font-size="10" font-weight="600" text-anchor="middle">🏠 智能家居控制</text>
+        <text x="891" y="283" fill="#94a3b8" font-size="8" text-anchor="middle">灯光 / 插座 / 场景</text>
+
+        <rect x="824" y="312" width="134" height="44" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="891" y="332" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ 云端备份同步</text>
+        <text x="891" y="347" fill="#94a3b8" font-size="8" text-anchor="middle">异地容灾 · 手机在外可用</text>
+
+        <!-- ===== 未来阶段：机器人本体 ===== -->
+        <rect x="330" y="500" width="640" height="120" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="342" y="520" fill="#fbbf24" font-size="10" font-weight="600">下一阶段 · 机器人本体（规划中）—— 现阶段的「大脑」为其奠定数据与记忆基础</text>
+
+        <rect x="342" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="414" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧭 移动底盘 · 导航</text>
+        <text x="414" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">室内自主移动</text>
+
+        <rect x="502" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="574" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🦾 机械臂 · 操作</text>
+        <text x="574" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">抓取 / 简单家务</text>
+
+        <rect x="662" y="535" width="145" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="734" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">👁️ 视觉 · 环境感知</text>
+        <text x="734" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">避障 / 物体识别</text>
+
+        <rect x="822" y="535" width="136" height="66" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="890" y="562" fill="white" font-size="10" font-weight="600" text-anchor="middle">🤖 自主行为</text>
+        <text x="890" y="580" fill="#94a3b8" font-size="8" text-anchor="middle">主动服务 · 长期规划</text>
+
+        <!-- ===== 图例 ===== -->
+        <text x="42" y="520" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="42" y="532" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="64" y="540" fill="#94a3b8" font-size="8">输入 / 交互（前端）</text>
+        <rect x="42" y="548" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="64" y="556" fill="#94a3b8" font-size="8">AI 核心（后端）</text>
+        <rect x="42" y="564" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="64" y="572" fill="#94a3b8" font-size="8">数据存储</text>
+        <rect x="42" y="580" width="16" height="10" rx="2" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1"/>
+        <text x="64" y="588" fill="#94a3b8" font-size="8">执行 / 输出</text>
+        <rect x="42" y="596" width="16" height="10" rx="2" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="64" y="604" fill="#94a3b8" font-size="8">云端 / 未来阶段</text>
+      </svg>
+      </div>
+      <figcaption data-i18n="bn-cap">…</figcaption>
+    </figure>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bn-s3-h">Entwicklungsroadmap</h2>
+    <ul>
+      <li data-i18n="bn-s3-1">…</li>
+      <li data-i18n="bn-s3-2">…</li>
+      <li data-i18n="bn-s3-3">…</li>
+      <li data-i18n="bn-s3-4">…</li>
+    </ul>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bn-s4-h">Technologie</h2>
+    <ul>
+      <li data-i18n="bn-s4-1">…</li>
+      <li data-i18n="bn-s4-2">…</li>
+      <li data-i18n="bn-s4-3">…</li>
+      <li data-i18n="bn-s4-4">…</li>
+    </ul>
+  </section>
+
+  <section class="pe-section">
+    <h2 data-i18n="bn-s5-h">Design-Prinzipien</h2>
+    <ul>
+      <li data-i18n="bn-s5-1">…</li>
+      <li data-i18n="bn-s5-2">…</li>
+      <li data-i18n="bn-s5-3">…</li>
+      <li data-i18n="bn-s5-4">…</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a class="pe-back" href="index.html">← <span data-i18n="bn-back">Zurück zur Website</span></a>
+  </footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var T = {
+    de: {
+      'bn-back': 'Zurück zur Website',
+      'bn-title': 'Bennu — KI-Hausroboter',
+      'bn-meta': 'Persönliches KI-Projekt · seit 09/2026 · Entwicklungszeitraum ~1 Jahr · in Entwicklung',
+      'bn-s1-h': 'Die Vision',
+      'bn-s1': 'Bennu ist die Vision eines autonomen Hausroboters: mit Umgebungswahrnehmung, Bewegung, langfristigem Gedächtnis und natürlicher Sprachinteraktion — ein Roboter, der den Alltag zuhause aktiv unterstützt.',
+      'bn-s1b': 'Aktuell entsteht sein „Gehirn": ein selbst gehostetes Lebensassistenz-System mit Sprachassistent, Kalender, Buchhaltung, Gesundheitsdaten und Smart-Home-Steuerung. Alle Eingänge — Stimme, Web-Dashboard, Android-App, Sensoren — laufen auf eine Datenbank zusammen. Dieses digitale Fundament (Daten, Gedächtnis, Verhalten) ist die direkte Grundlage für die spätere robotische Ausbaustufe. Die Entwicklung startete am 15.09.2026; der geschätzte Gesamtzeitraum beträgt rund ein Jahr.',
+      'bn-s2-h': 'Systemarchitektur',
+      'bn-s2': 'Eingabe (Stimme, Dashboard, App, Sensoren) → KI-Kern (LLM-Agent, Schnellpfad, Langzeitgedächtnis) → zentrale SQLite-Datenbank → Ausgabe (Sprachausgabe, Systemkalender, Smart-Home, Cloud-Backup). Die nächste Stufe — der Roboter-Body — wird an diesen Kern angebunden.',
+      'bn-cap': 'Anonymisierte technische Darstellung — ohne Deploymentsdaten.',
+      'bn-s3-h': 'Entwicklungsroadmap',
+      'bn-s3-1': '<strong>Phase ① — Gehirn:</strong> Sprachassistent + Lebensdaten-Hub (abgeschlossen).',
+      'bn-s3-2': '<strong>Phase ② — Multi-Device:</strong> Dashboard, App und Sensoren synchronisieren automatisch (abgeschlossen).',
+      'bn-s3-3': '<strong>Phase ③ — Wahrnehmung & Gedächtnis:</strong> Umgebungswahrnehmung und Langzeitgedächtnis (läuft).',
+      'bn-s3-4': '<strong>Phase ④ — Roboter-Body:</strong> Bewegung, Manipulation, autonomes Verhalten (Ziel).',
+      'bn-s4-h': 'Technologie',
+      'bn-s4-1': 'KI: Python · LLM-Agent mit Tool-Calls und Task-Orchestrierung.',
+      'bn-s4-2': 'Sprachkette: Wake-Word → STT → LLM → TTS, mit Schnellpfad für Standardbefehle.',
+      'bn-s4-3': 'Daten: SQLite als gemeinsame Datenbasis · REST-API · Hintergrund-Jobs.',
+      'bn-s4-4': 'Plattform: Kotlin/Android · BLE · UDP · systemd-Automatisierung.',
+      'bn-s5-h': 'Design-Prinzipien',
+      'bn-s5-1': 'Eine Datenbasis, überall sichtbar: jede Eingabe ist sofort in allen Oberflächen sichtbar.',
+      'bn-s5-2': 'Systemisch sichtbar und manuell abschaltbar — Automatisierung bleibt kontrollierbar.',
+      'bn-s5-3': 'Lokal zuerst: sensible Daten bleiben zuhause, Cloud nur als optionales Backup.',
+      'bn-s5-4': 'Automatische Erfassung mit manueller Reserve — Bedienknöpfe vor starren Timern.'
+    },
+    en: {
+      'bn-back': 'Back to website',
+      'bn-title': 'Bennu — AI Home Robot',
+      'bn-meta': 'Personal AI project · since 09/2026 · ~1-year development cycle · in development',
+      'bn-s1-h': 'The Vision',
+      'bn-s1': 'Bennu is the vision of an autonomous home robot: with environment perception, mobility, long-term memory and natural voice interaction — a robot that actively supports everyday life at home.',
+      'bn-s1b': 'Its “brain” is currently taking shape: a self-hosted life-assistance system with a voice assistant, calendar, bookkeeping, health data and smart-home control. All inputs — voice, web dashboard, Android app, sensors — converge into a single database. This digital foundation (data, memory, behavior) is the direct basis for the later robotic stage. Development started on 15.09.2026; the estimated total duration is about one year.',
+      'bn-s2-h': 'System Architecture',
+      'bn-s2': 'Input (voice, dashboard, app, sensors) → AI core (LLM agent, fast path, long-term memory) → central SQLite database → output (speech, system calendar, smart home, cloud backup). The next stage — the robot body — will plug into this core.',
+      'bn-cap': 'Sanitized technical overview — no deployment details.',
+      'bn-s3-h': 'Development Roadmap',
+      'bn-s3-1': '<strong>Phase ① — Core:</strong> voice assistant + life-data hub (done).',
+      'bn-s3-2': '<strong>Phase ② — Multi-device:</strong> dashboard, app and sensors sync automatically (done).',
+      'bn-s3-3': '<strong>Phase ③ — Perception & memory:</strong> environment perception and long-term memory (in progress).',
+      'bn-s3-4': '<strong>Phase ④ — Robot body:</strong> movement, manipulation, autonomous behavior (goal).',
+      'bn-s4-h': 'Technology',
+      'bn-s4-1': 'AI: Python · LLM agent with tool calls and task orchestration.',
+      'bn-s4-2': 'Voice chain: wake word → STT → LLM → TTS, with a fast path for standard commands.',
+      'bn-s4-3': 'Data: SQLite as the shared dataset · REST API · background jobs.',
+      'bn-s4-4': 'Platform: Kotlin/Android · BLE · UDP · systemd automation.',
+      'bn-s5-h': 'Design Principles',
+      'bn-s5-1': 'One dataset, visible everywhere: any input shows up instantly on every surface.',
+      'bn-s5-2': 'System-visible and manually controllable — automation stays under control.',
+      'bn-s5-3': 'Local first: sensitive data stays at home, cloud only as optional backup.',
+      'bn-s5-4': 'Automatic capture with manual fallback — buttons over rigid timers.'
+    },
+    zh: {
+      'bn-back': '返回网站',
+      'bn-title': 'Bennu —— AI 智能机器人',
+      'bn-meta': '个人 AI 项目 · 2026 年 9 月起 · 开发周期约 1 年 · 开发中',
+      'bn-s1-h': '构想',
+      'bn-s1': 'Bennu 的目标是一台家庭智能机器人：具备环境感知、自主移动、长期记忆与自然语音交互能力——主动协助家中日常生活的机器人。',
+      'bn-s1b': '目前正在打造它的「大脑」：自托管的生活助手系统，涵盖语音助手、日程、记账、健康数据与智能家居控制。所有入口——语音、网页看板、Android App、传感器——汇入同一份数据库。这个数字底座（数据、记忆、行为）就是未来机器人形态的直接基础。开发于 2026 年 9 月 15 日启动，预计总开发周期约一年。',
+      'bn-s2-h': '系统架构',
+      'bn-s2': '输入（语音、看板、App、传感器）→ AI 大脑（LLM 智能体、快通道、长期记忆）→ 统一 SQLite 数据库 → 输出（语音播报、系统日历、智能家居、云端备份）。下一阶段的机器人本体将直接接入这个核心。',
+      'bn-cap': '脱敏技术示意图——不含部署细节。',
+      'bn-s3-h': '开发路线',
+      'bn-s3-1': '<strong>阶段 ① — 大脑：</strong>语音助手 + 生活数据中枢（已完成）。',
+      'bn-s3-2': '<strong>阶段 ② — 多端融合：</strong>看板、App、传感器全自动同步（已完成）。',
+      'bn-s3-3': '<strong>阶段 ③ — 感知与记忆：</strong>环境感知 + 长期记忆（进行中）。',
+      'bn-s3-4': '<strong>阶段 ④ — 机器人本体：</strong>移动、操作、自主行为（目标）。',
+      'bn-s4-h': '技术栈',
+      'bn-s4-1': 'AI：Python · LLM 智能体（工具调用 + 任务编排）。',
+      'bn-s4-2': '语音链：唤醒词 → STT → LLM → TTS，常用指令走快通道。',
+      'bn-s4-3': '数据：SQLite 统一数据库 · REST API · 后台任务队列。',
+      'bn-s4-4': '平台：Kotlin/Android · BLE · UDP · systemd 自动化。',
+      'bn-s5-h': '设计原则',
+      'bn-s5-1': '一份数据、多端复用：任何入口录入，所有界面立即可见。',
+      'bn-s5-2': '系统可见、人工可干预：自动化始终可控。',
+      'bn-s5-3': '本地优先：敏感数据不出家门，云端只做可选备份。',
+      'bn-s5-4': '全自动采集 + 手动兜底：按钮优于死板的定时任务。'
+    }
+  };
+
+  function apply(lang) {
+    var t = T[lang] || T.de;
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n');
+      if (t[k]) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('[data-i18n-img]').forEach(function (el) {
+      el.style.display = el.getAttribute('data-i18n-img') === lang ? '' : 'none';
+    });
+    document.title = t['bn-title'] + ' – Ben He';
+    document.querySelectorAll('.lang-option').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.lang === lang);
+    });
+  }
+
+  var lang = 'de';
+  try { lang = localStorage.getItem('lang') || 'de'; } catch (e) {}
+  if (!T[lang]) lang = 'de';
+
+  document.querySelectorAll('.lang-option').forEach(function (b) {
+    b.addEventListener('click', function () {
+      try { localStorage.setItem('lang', b.dataset.lang); } catch (e) {}
+      apply(b.dataset.lang);
+    });
+  });
+
+  apply(lang);
+})();
+</script>
+</body>
+</html>

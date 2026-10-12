@@ -78,6 +78,10 @@
     padding-top: var(--space-lg);
     border-top: 1px solid var(--color-border);
   }
+
+  .pe-figure .diagram-dark { background: #020617; border: 1px solid var(--color-border); border-radius: 12px; padding: 12px; overflow-x: auto; }
+  .pe-figure .diagram-dark svg { width: 100%; min-width: 780px; height: auto; display: block; }
+  .pe-figure .diagram-dark svg text { font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, 'Microsoft YaHei', monospace; }
 </style>
   .pe-figure { margin: var(--space-md) 0; }
   .pe-figure img { width: 100%; border-radius: 12px; border: 1px solid var(--color-border); display: block; }
@@ -119,9 +123,501 @@
     <h2 data-i18n="bz-s2-h">Systemarchitektur</h2>
     <p data-i18n="bz-s2">…</p>
     <figure class="pe-figure">
-      <img src="buddhiherz-arch-de.png" data-i18n-img="de" alt="Systemarchitektur">
-      <img src="buddhiherz-arch-en.png" data-i18n-img="en" alt="System architecture" style="display:none">
-      <img src="buddhiherz-arch-zh.png" data-i18n-img="zh" alt="系统架构" style="display:none">
+      <div class="diagram-dark" data-i18n-img="de">
+        <svg viewBox="0 0 1000 720">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrowhead-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrowhead-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <marker id="arrowhead-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ===== 连线（先画，压在盒子下） ===== -->
+        <!-- 输入 → 三层提取 -->
+        <line x1="212" y1="230" x2="248" y2="230" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <text x="230" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">Datenfluss</text>
+        <!-- 三层内部降级链 -->
+        <line x1="360" y1="151" x2="360" y2="183" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="375" y="171" fill="#94a3b8" font-size="8">Rückfall</text>
+        <line x1="360" y1="241" x2="360" y2="273" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="375" y="261" fill="#94a3b8" font-size="8">Eskalation</text>
+        <!-- 三层提取 → 核心业务 -->
+        <line x1="470" y1="230" x2="508" y2="230" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <text x="489" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">Strukturiert</text>
+        <!-- 核心业务 → 输出 -->
+        <line x1="730" y1="230" x2="768" y2="230" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="749" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">Versand</text>
+        <!-- 核心业务 ↔ 数据库 -->
+        <line x1="590" y1="400" x2="590" y2="428" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <line x1="680" y1="428" x2="680" y2="400" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <text x="635" y="420" fill="#94a3b8" font-size="8.5" text-anchor="middle">lesen/schreiben</text>
+        <!-- 数据库 → 输出（虚线） -->
+        <path d="M 770 460 Q 830 460 830 400 L 830 388" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-violet)"/>
+        <text x="845" y="430" fill="#94a3b8" font-size="8">Export</text>
+
+        <!-- ===== 边界：Dateneingabe ===== -->
+        <rect x="30" y="60" width="182" height="340" rx="12" fill="rgba(8, 51, 68, 0.12)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">Dateneingabe</text>
+
+        <rect x="42" y="95" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📧 Kundenbestellungen</text>
+        <text x="121" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">IMAP-Abruf · Anhänge archiviert</text>
+
+        <rect x="42" y="175" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">📄 Geschäftsbelege</text>
+        <text x="121" y="215" fill="#94a3b8" font-size="8.5" text-anchor="middle">Rechnung / Lieferschein / Versandlabel</text>
+
+        <rect x="42" y="255" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">📝 Auftragserfassung</text>
+        <text x="121" y="295" fill="#94a3b8" font-size="8.5" text-anchor="middle">Mobiles Formular · Auto-Ausfüllen</text>
+
+        <rect x="42" y="335" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📊 Excel-Import</text>
+        <text x="121" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Historische Aufträge · Katalog</text>
+
+        <!-- ===== 边界：三层智能提取 ===== -->
+        <rect x="250" y="60" width="220" height="340" rx="12" fill="rgba(136, 19, 55, 0.10)" stroke="#fb7185" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="262" y="80" fill="#fb7185" font-size="10" font-weight="600">Drei-Stufen-Extraktion (Kostenkern)</text>
+
+        <rect x="262" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">L1 · Regel-Extraktion</text>
+        <text x="360" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Offline-Regex · kostenlos · sofort</text>
+
+        <rect x="262" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">L2 · KI-Extraktion</text>
+        <text x="360" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">LLM-Text + Scan-Bilderkennung</text>
+
+        <rect x="262" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">L3 · Manuelle Korrektur</text>
+        <text x="360" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Visuelle Nachprüfung · Neu-Sortierung</text>
+
+        <text x="360" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">Treffer = fertig · wenig KI-Kosten</text>
+
+        <!-- ===== 边界：核心业务 ===== -->
+        <rect x="510" y="60" width="220" height="340" rx="12" fill="rgba(6, 78, 59, 0.12)" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="522" y="80" fill="#34d399" font-size="10" font-weight="600">Kerngeschäft</text>
+
+        <rect x="522" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📦 Aufträge · Auto-Sortierung</text>
+        <text x="620" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Adress-Clustering · Belegzuordnung</text>
+
+        <rect x="522" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧺 Packplan · Vollständigkeit</text>
+        <text x="620" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">Auto-Pakete · Belegprüfung</text>
+
+        <rect x="522" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">📅 Schichten · Stammdaten</text>
+        <text x="620" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Kalender / Artikel / Kunden / Personal</text>
+
+        <text x="620" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">Heute-Ansicht · Statusfluss</text>
+
+        <!-- ===== 边界：输出交付层 ===== -->
+        <rect x="770" y="60" width="200" height="340" rx="12" fill="rgba(251, 146, 60, 0.08)" stroke="#fb923c" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="782" y="80" fill="#fb923c" font-size="10" font-weight="600">Ausgabe / Auslieferung</text>
+
+        <rect x="782" y="95" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧾 Beleg-Erzeugung</text>
+        <text x="870" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Rechnung / Lieferschein PDF · paketweise</text>
+
+        <rect x="782" y="185" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖨️ Sammel-Druckstück</text>
+        <text x="870" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">Ein-Klick-Merge · feste Seitenfolge</text>
+
+        <rect x="782" y="275" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">🚚 Versand-API</text>
+        <text x="870" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Online-Label · automatisch zugeordnet</text>
+
+        <rect x="782" y="335" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 Mobile Web-Übersicht</text>
+        <text x="870" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Im Lager nutzbar · Excel-Export</text>
+
+        <!-- ===== 数据库 ===== -->
+        <rect x="560" y="430" width="210" height="110" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ Zentrale Datenbank</text>
+        <text x="665" y="475" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite · Backup = eine Datei</text>
+        <text x="665" y="493" fill="#a78bfa" font-size="8" text-anchor="middle">Aufträge · Belege · Artikel · Pakete</text>
+        <text x="665" y="507" fill="#a78bfa" font-size="8" text-anchor="middle">Schichten · Kunden · Audit-Log</text>
+        <text x="665" y="527" fill="#94a3b8" font-size="7.5" text-anchor="middle">Löschungen protokolliert · Snapshots</text>
+
+        <!-- ===== 图例 ===== -->
+        <text x="42" y="450" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="42" y="462" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="64" y="470" fill="#94a3b8" font-size="8">Eingabe</text>
+        <rect x="42" y="478" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="64" y="486" fill="#94a3b8" font-size="8">Verarbeitung / KI</text>
+        <rect x="42" y="494" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="64" y="502" fill="#94a3b8" font-size="8">Speicher</text>
+        <rect x="42" y="510" width="16" height="10" rx="2" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1"/>
+        <text x="64" y="518" fill="#94a3b8" font-size="8">Ausgabe</text>
+
+        <!-- ===== 边界：Betrieb & Sicherheit ===== -->
+        <rect x="30" y="580" width="940" height="110" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="600" fill="#fbbf24" font-size="10" font-weight="600">Betrieb & Sicherheit</text>
+
+        <rect x="42" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ Cloud-Server</text>
+        <text x="128" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Linux · 24/7 online</text>
+
+        <rect x="226" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔒 HTTPS + Login</text>
+        <text x="312" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">TLS-Verschlüsselung · Rollenrechte</text>
+
+        <rect x="410" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">💾 Tägliches Backup</text>
+        <text x="496" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Zeitgesteuert · 14 Rotationen</text>
+
+        <rect x="594" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🛡️ Angriffsschutz</text>
+        <text x="680" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">fail2ban · minimale offene Ports</text>
+
+        <rect x="778" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧪 Automatisierte Tests</text>
+        <text x="864" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">100+ Regressionstests · laufende Prüfung</text>
+      </svg>
+      </div>
+      <div class="diagram-dark" data-i18n-img="en" style="display:none">
+        <svg viewBox="0 0 1000 720">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrowhead-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrowhead-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <marker id="arrowhead-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ===== 连线（先画，压在盒子下） ===== -->
+        <!-- 输入 → 三层提取 -->
+        <line x1="212" y1="230" x2="248" y2="230" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <text x="230" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">files</text>
+        <!-- 三层内部降级链 -->
+        <line x1="360" y1="151" x2="360" y2="183" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="375" y="171" fill="#94a3b8" font-size="8">fallback</text>
+        <line x1="360" y1="241" x2="360" y2="273" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="375" y="261" fill="#94a3b8" font-size="8">escalate</text>
+        <!-- 三层提取 → 核心业务 -->
+        <line x1="470" y1="230" x2="508" y2="230" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <text x="489" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">structured</text>
+        <!-- 核心业务 → 输出 -->
+        <line x1="730" y1="230" x2="768" y2="230" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="749" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">ship</text>
+        <!-- 核心业务 ↔ 数据库 -->
+        <line x1="590" y1="400" x2="590" y2="428" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <line x1="680" y1="428" x2="680" y2="400" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <text x="635" y="420" fill="#94a3b8" font-size="8.5" text-anchor="middle">read/write</text>
+        <!-- 数据库 → 输出（虚线） -->
+        <path d="M 770 460 Q 830 460 830 400 L 830 388" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-violet)"/>
+        <text x="845" y="430" fill="#94a3b8" font-size="8">export</text>
+
+        <!-- ===== 边界：Data Input Layer ===== -->
+        <rect x="30" y="60" width="182" height="340" rx="12" fill="rgba(8, 51, 68, 0.12)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">Data Input Layer</text>
+
+        <rect x="42" y="95" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📧 Customer order e-mails</text>
+        <text x="121" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">IMAP fetch · attachments archived</text>
+
+        <rect x="42" y="175" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">📄 Business documents</text>
+        <text x="121" y="215" fill="#94a3b8" font-size="8.5" text-anchor="middle">Invoice / delivery note / shipping label</text>
+
+        <rect x="42" y="255" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">📝 Manual order entry</text>
+        <text x="121" y="295" fill="#94a3b8" font-size="8.5" text-anchor="middle">Mobile form · smart autofill</text>
+
+        <rect x="42" y="335" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📊 Excel bulk import</text>
+        <text x="121" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Historical orders · catalog</text>
+
+        <!-- ===== 边界：三层智能提取 ===== -->
+        <rect x="250" y="60" width="220" height="340" rx="12" fill="rgba(136, 19, 55, 0.10)" stroke="#fb7185" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="262" y="80" fill="#fb7185" font-size="10" font-weight="600">Three-tier extraction (cost core)</text>
+
+        <rect x="262" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">L1 · Rule extraction</text>
+        <text x="360" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Offline regex · zero cost · instant</text>
+
+        <rect x="262" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">L2 · AI extraction</text>
+        <text x="360" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">LLM text + scan image vision</text>
+
+        <rect x="262" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">L3 · Manual review workbench</text>
+        <text x="360" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Visual check of edge cases · re-sort</text>
+
+        <text x="360" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">Hit = done · minimal AI usage</text>
+
+        <!-- ===== 边界：核心业务 ===== -->
+        <rect x="510" y="60" width="220" height="340" rx="12" fill="rgba(6, 78, 59, 0.12)" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="522" y="80" fill="#34d399" font-size="10" font-weight="600">Core Business Logic</text>
+
+        <rect x="522" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📦 Orders · auto sorting</text>
+        <text x="620" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Cluster by address · attach docs</text>
+
+        <rect x="522" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧺 Packing plan · completeness</text>
+        <text x="620" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">Smart boxing · document check</text>
+
+        <rect x="522" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">📅 Scheduling · master data</text>
+        <text x="620" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Calendar / products / customers / staff</text>
+
+        <text x="620" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">Today view · status flow</text>
+
+        <!-- ===== 边界：输出交付层 ===== -->
+        <rect x="770" y="60" width="200" height="340" rx="12" fill="rgba(251, 146, 60, 0.08)" stroke="#fb923c" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="782" y="80" fill="#fb923c" font-size="10" font-weight="600">Output / Delivery Layer</text>
+
+        <rect x="782" y="95" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧾 Document generation</text>
+        <text x="870" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Invoice / delivery note PDF · per box</text>
+
+        <rect x="782" y="185" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖨️ Merged print pack</text>
+        <text x="870" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">One-click merge · fixed page order</text>
+
+        <rect x="782" y="275" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">🚚 Shipping label API</text>
+        <text x="870" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Online labels · auto-attach to order</text>
+
+        <rect x="782" y="335" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 Mobile web dashboard</text>
+        <text x="870" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Shop-floor ready · export</text>
+
+        <!-- ===== 数据库 ===== -->
+        <rect x="560" y="430" width="210" height="110" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ Unified Database</text>
+        <text x="665" y="475" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite single DB · one-file backup</text>
+        <text x="665" y="493" fill="#a78bfa" font-size="8" text-anchor="middle">Orders · docs · products · boxes</text>
+        <text x="665" y="507" fill="#a78bfa" font-size="8" text-anchor="middle">Scheduling · customers · audit trail</text>
+        <text x="665" y="527" fill="#94a3b8" font-size="7.5" text-anchor="middle">Deletions logged · snapshots rollback</text>
+
+        <!-- ===== 图例 ===== -->
+        <text x="42" y="450" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="42" y="462" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="64" y="470" fill="#94a3b8" font-size="8">Input</text>
+        <rect x="42" y="478" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="64" y="486" fill="#94a3b8" font-size="8">Processing / AI</text>
+        <rect x="42" y="494" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="64" y="502" fill="#94a3b8" font-size="8">Storage</text>
+        <rect x="42" y="510" width="16" height="10" rx="2" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1"/>
+        <text x="64" y="518" fill="#94a3b8" font-size="8">Output</text>
+
+        <!-- ===== 边界：Deployment & Security ===== -->
+        <rect x="30" y="580" width="940" height="110" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="600" fill="#fbbf24" font-size="10" font-weight="600">Deployment & Security</text>
+
+        <rect x="42" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ Cloud server</text>
+        <text x="128" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Linux · 24/7 online</text>
+
+        <rect x="226" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔒 HTTPS + authentication</text>
+        <text x="312" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">TLS encryption · admin/staff roles</text>
+
+        <rect x="410" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">💾 Daily automated backup</text>
+        <text x="496" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Scheduled snapshots · 14 kept</text>
+
+        <rect x="594" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🛡️ Intrusion protection</text>
+        <text x="680" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">fail2ban · minimal open ports</text>
+
+        <rect x="778" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧪 Automated tests</text>
+        <text x="864" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">100+ regression cases · continuous</text>
+      </svg>
+      </div>
+      <div class="diagram-dark" data-i18n-img="zh" style="display:none">
+        <svg viewBox="0 0 1000 720">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrowhead-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrowhead-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <marker id="arrowhead-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ===== 连线（先画，压在盒子下） ===== -->
+        <!-- 输入 → 三层提取 -->
+        <line x1="212" y1="230" x2="248" y2="230" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <text x="230" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">文件流</text>
+        <!-- 三层内部降级链 -->
+        <line x1="360" y1="151" x2="360" y2="183" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="375" y="171" fill="#94a3b8" font-size="8">缺字段降级</text>
+        <line x1="360" y1="241" x2="360" y2="273" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="375" y="261" fill="#94a3b8" font-size="8">疑难兜底</text>
+        <!-- 三层提取 → 核心业务 -->
+        <line x1="470" y1="230" x2="508" y2="230" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrowhead-cyan)"/>
+        <text x="489" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">结构化</text>
+        <!-- 核心业务 → 输出 -->
+        <line x1="730" y1="230" x2="768" y2="230" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowhead-emerald)"/>
+        <text x="749" y="222" fill="#94a3b8" font-size="8.5" text-anchor="middle">出货</text>
+        <!-- 核心业务 ↔ 数据库 -->
+        <line x1="590" y1="400" x2="590" y2="428" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <line x1="680" y1="428" x2="680" y2="400" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowhead-violet)"/>
+        <text x="635" y="420" fill="#94a3b8" font-size="8.5" text-anchor="middle">读写</text>
+        <!-- 数据库 → 输出（虚线） -->
+        <path d="M 770 460 Q 830 460 830 400 L 830 388" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,5" marker-end="url(#arrowhead-violet)"/>
+        <text x="845" y="430" fill="#94a3b8" font-size="8">导出</text>
+
+        <!-- ===== 边界：数据输入层 ===== -->
+        <rect x="30" y="60" width="182" height="340" rx="12" fill="rgba(8, 51, 68, 0.12)" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">数据输入层</text>
+
+        <rect x="42" y="95" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📧 客户订单邮件</text>
+        <text x="121" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">IMAP 手动拉取 · 附件归档</text>
+
+        <rect x="42" y="175" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">📄 业务单据文件</text>
+        <text x="121" y="215" fill="#94a3b8" font-size="8.5" text-anchor="middle">发票 / 发货单 / 快递单</text>
+
+        <rect x="42" y="255" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">📝 管理员填表建单</text>
+        <text x="121" y="295" fill="#94a3b8" font-size="8.5" text-anchor="middle">移动端表单 · 智能填充</text>
+
+        <rect x="42" y="335" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📊 Excel 批量导入</text>
+        <text x="121" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">历史订单 · 商品名录</text>
+
+        <!-- ===== 边界：三层智能提取 ===== -->
+        <rect x="250" y="60" width="220" height="340" rx="12" fill="rgba(136, 19, 55, 0.10)" stroke="#fb7185" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="262" y="80" fill="#fb7185" font-size="10" font-weight="600">三层智能提取（成本优化核心）</text>
+
+        <rect x="262" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">L1 · 规则提取</text>
+        <text x="360" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">离线正则 · 零成本 · 秒回</text>
+
+        <rect x="262" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">L2 · AI 提取</text>
+        <text x="360" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">LLM 文本 + 扫描图视觉识别</text>
+
+        <rect x="262" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="360" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">L3 · 人工修正工作台</text>
+        <text x="360" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">疑难件可视化校对 · 再分拣</text>
+
+        <text x="360" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">命中即返回 · 逐层降级 · AI 调用量最小化</text>
+
+        <!-- ===== 边界：核心业务 ===== -->
+        <rect x="510" y="60" width="220" height="340" rx="12" fill="rgba(6, 78, 59, 0.12)" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="522" y="80" fill="#34d399" font-size="10" font-weight="600">核心业务逻辑</text>
+
+        <rect x="522" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📦 订单管理 · 自动分拣</text>
+        <text x="620" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">按地址聚类建单 · 单据挂载</text>
+
+        <rect x="522" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧺 装箱方案 · 齐全度</text>
+        <text x="620" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">智能配箱 · 文件齐全检查</text>
+
+        <rect x="522" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">📅 排班打卡 · 基础数据</text>
+        <text x="620" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">日历排班 / 商品 / 客户 / 员工</text>
+
+        <text x="620" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">今日待处理视图 · 状态流转 · 危险操作隔离</text>
+
+        <!-- ===== 边界：输出交付层 ===== -->
+        <rect x="770" y="60" width="200" height="340" rx="12" fill="rgba(251, 146, 60, 0.08)" stroke="#fb923c" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="782" y="80" fill="#fb923c" font-size="10" font-weight="600">输出 / 交付层</text>
+
+        <rect x="782" y="95" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧾 单据自动生成</text>
+        <text x="870" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">发票 / 发货单 PDF · 拆箱套打</text>
+
+        <rect x="782" y="185" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖨️ 合成打印件</text>
+        <text x="870" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">单订单一键合并 · 页序固定</text>
+
+        <rect x="782" y="275" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">🚚 快递面单 API</text>
+        <text x="870" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">在线出单 · 自动挂载订单</text>
+
+        <rect x="782" y="335" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 手机网页看板</text>
+        <text x="870" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">仓库现场即用 · Excel 导出</text>
+
+        <!-- ===== 数据库 ===== -->
+        <rect x="560" y="430" width="210" height="110" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ 统一数据库</text>
+        <text x="665" y="475" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite 单库 · 单文件即备份</text>
+        <text x="665" y="493" fill="#a78bfa" font-size="8" text-anchor="middle">订单 · 文档 · 商品 · 装箱</text>
+        <text x="665" y="507" fill="#a78bfa" font-size="8" text-anchor="middle">排班 · 客户 · 操作留痕</text>
+        <text x="665" y="527" fill="#94a3b8" font-size="7.5" text-anchor="middle">删除留痕 · 改前快照可回退</text>
+
+        <!-- ===== 图例 ===== -->
+        <text x="42" y="450" fill="white" font-size="10" font-weight="600">Legend</text>
+        <rect x="42" y="462" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="64" y="470" fill="#94a3b8" font-size="8">数据输入</text>
+        <rect x="42" y="478" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="64" y="486" fill="#94a3b8" font-size="8">业务处理 / AI 提取</text>
+        <rect x="42" y="494" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+        <text x="64" y="502" fill="#94a3b8" font-size="8">数据存储</text>
+        <rect x="42" y="510" width="16" height="10" rx="2" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1"/>
+        <text x="64" y="518" fill="#94a3b8" font-size="8">输出 / 交付</text>
+
+        <!-- ===== 边界：部署与安全 ===== -->
+        <rect x="30" y="580" width="940" height="110" rx="12" fill="rgba(251, 191, 36, 0.05)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+        <text x="42" y="600" fill="#fbbf24" font-size="10" font-weight="600">部署与安全</text>
+
+        <rect x="42" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ 云服务器</text>
+        <text x="128" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Linux · 7×24 在线</text>
+
+        <rect x="226" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔒 HTTPS + 登录鉴权</text>
+        <text x="312" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">证书加密 · 管理员/员工分权</text>
+
+        <rect x="410" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">💾 每日自动备份</text>
+        <text x="496" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">定时快照 · 14 份轮换</text>
+
+        <rect x="594" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🛡️ 入侵防护</text>
+        <text x="680" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">fail2ban · 端口最小化</text>
+
+        <rect x="778" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧪 自动化测试</text>
+        <text x="864" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">100+ 用例回归 · 持续验证</text>
+      </svg>
+      </div>
       <figcaption data-i18n="bz-cap">…</figcaption>
     </figure>
   </section>
