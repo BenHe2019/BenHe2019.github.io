@@ -2015,3 +2015,18 @@ a.contact-card:hover {
     transition: none !important;
   }
 }
+
+/* Awards */
+.awards-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 720px;
+}
+.awards-list li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 0.85rem 1.15rem;
+  box-shadow: var(--shadow-sm);
+}
