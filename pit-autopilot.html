@@ -179,8 +179,8 @@
   <header class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="pit-back">Zurück zur Website</span></a>
     <div class="pe-topbar-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
-      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <div class="lang-switcher" role="group" data-i18n-aria="lang-switch" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
       <button type="button" class="lang-option" data-lang="zh">中文</button>
@@ -189,10 +189,10 @@
   </header>
 
   <header class="pe-header">
-    <h1 data-i18n="pit-title">Werkstudent – Autonomes Fahren (Prototyping)</h1>
+    <h1 data-i18n="pit-title">Autonomes Fahren (Prototyp)</h1>
     <div class="pe-meta">
       <span class="exp-date">05/2023 – 07/2023</span>
-      <span>Institut für Technik der Informationsverarbeitung (ITIV), KIT</span>
+      <span data-i18n="pit-org">Institut für Technik der Informationsverarbeitung (ITIV), KIT</span>
     </div>
     <div class="exp-tags">
       <span class="tag">C++</span>
@@ -205,7 +205,7 @@
 
   <section class="pe-section">
     <h2 data-i18n="pit-s1-h">Überblick</h2>
-    <p data-i18n="pit-s1">Im Rahmen meiner Tätigkeit als Werkstudent am Institut für Technik der Informationsverarbeitung (ITIV) habe ich an einem autonomen Modellfahrzeug auf Basis des TI-Mikrocontrollers Tiva C (TM4C123GH6PM) mitgewirkt. Sämtliche Peripherie-Treiber wurden als modulare C++-Klassenbibliothek (Common_Classes) implementiert — jede Klasse mit eigenem Testprogramm. Meine Aufgabe umfasste die Ultraschall-Distanzmessung (HC-SR04) und die Lenkungssteuerung über den Joystick.</p>
+    <p data-i18n="pit-s1">Im Rahmen meiner Tätigkeit am Institut für Technik der Informationsverarbeitung (ITIV) habe ich an einem autonomen Modellfahrzeug auf Basis des TI-Mikrocontrollers Tiva C (TM4C123GH6PM) mitgewirkt. Sämtliche Peripherie-Treiber wurden als modulare C++-Klassenbibliothek (Common_Classes) implementiert — jede Klasse mit eigenem Testprogramm. Meine Aufgabe umfasste die Ultraschall-Distanzmessung (HC-SR04) und die Lenkungssteuerung über den Joystick.</p>
   </section>
 
   <section class="pe-section">
@@ -360,6 +360,8 @@ else                     LED = RED;     // Bremsen</code></pre>
 
   var T = {
     de: {
+      'lang-switch': 'Sprache wählen',
+      'theme-switch': 'Design umschalten',
       'pit-back': 'Zurück zur Website',
       'pit-demo-h': 'Live-Demo',
       'pit-demo-cap': 'Echtzeit-Hinderniserkennung & Steuerlogik-Prototyp (Ultraschall + MCU)',
@@ -367,9 +369,10 @@ else                     LED = RED;     // Bremsen</code></pre>
       'pit-demo-2': '<strong>Steuerlogik & Status-Feedback:</strong> Das MCU löst je nach Distanzschwelle eine mehrstufige LED-Warnung aus (sicher / Warnung / Bremsen).',
       'pit-demo-3': '<strong>Soft-/Hardware-Zusammenspiel (HIL / Prototyping):</strong> Validierung des vollständigen Regelkreises — von der Signalerfassung bis zur Aktorik.',
       'pit-demo-code': 'Kernlogik (Pseudocode):',
-      'pit-title': 'Werkstudent – Autonomes Fahren (Prototyping)',
+      'pit-title': 'Autonomes Fahren (Prototyp)',
+      'pit-org': 'Institut für Technik der Informationsverarbeitung (ITIV), KIT',
       'pit-s1-h': 'Überblick',
-      'pit-s1': 'Im Rahmen meiner Tätigkeit als Werkstudent am Institut für Technik der Informationsverarbeitung (ITIV) habe ich an einem autonomen Modellfahrzeug auf Basis des TI-Mikrocontrollers Tiva C (TM4C123GH6PM) mitgewirkt. Sämtliche Peripherie-Treiber wurden als modulare C++-Klassenbibliothek (Common_Classes) implementiert — jede Klasse mit eigenem Testprogramm. Meine Aufgabe umfasste die Ultraschall-Distanzmessung (HC-SR04) und die Lenkungssteuerung über den Joystick.',
+      'pit-s1': 'Im Rahmen meiner Tätigkeit am Institut für Technik der Informationsverarbeitung (ITIV) habe ich an einem autonomen Modellfahrzeug auf Basis des TI-Mikrocontrollers Tiva C (TM4C123GH6PM) mitgewirkt. Sämtliche Peripherie-Treiber wurden als modulare C++-Klassenbibliothek (Common_Classes) implementiert — jede Klasse mit eigenem Testprogramm. Meine Aufgabe umfasste die Ultraschall-Distanzmessung (HC-SR04) und die Lenkungssteuerung über den Joystick.',
       'pit-map-h': 'Modulübersicht',
       'pit-map-intro': 'Die System-Klasse bildet das Fundament, auf dem die Treiber-, Funktions- und Steuerungsklassen aufbauen. Die mit ★ markierten Module habe ich selbst implementiert.',
       'pit-map-cat1': 'Treiberklassen',
@@ -387,6 +390,8 @@ else                     LED = RED;     // Bremsen</code></pre>
       'pit-s6': 'Die übrigen Module (Remote, MPU6050, Display, Compare u. a.) stammen von den Teammitgliedern; integriert und getestet wurde im gemeinsamen Git-Repository des Teams mit einem Testprogramm je Klasse. Lernziele: eingebettete C++-Entwicklung, hardwarenahe Treiberprogrammierung (Timer, Interrupts, ADC), Debugging auf Zielhardware sowie teamorientierte Softwareentwicklung.'
     },
     en: {
+      'lang-switch': 'Choose language',
+      'theme-switch': 'Toggle theme',
       'pit-back': 'Back to website',
       'pit-demo-h': 'Live Demo',
       'pit-demo-cap': 'Real-time obstacle detection & control logic prototype (ultrasonic + MCU)',
@@ -394,9 +399,10 @@ else                     LED = RED;     // Bremsen</code></pre>
       'pit-demo-2': '<strong>Control logic & status feedback:</strong> the MCU triggers multi-level LED warnings based on distance thresholds (safe / warning / stop).',
       'pit-demo-3': '<strong>Hardware/software co-design (HIL / prototyping):</strong> validation of the complete control loop — from signal acquisition to actuator response.',
       'pit-demo-code': 'Core logic (pseudocode):',
-      'pit-title': 'Research Assistant – Autonomous Driving (Prototyping)',
+      'pit-title': 'Autonomous Driving Prototype',
+      'pit-org': 'Institute for Information Processing Technology (ITIV), KIT',
       'pit-s1-h': 'Overview',
-      'pit-s1': 'As part of my work as a research assistant at the Institute for Information Processing Technology (ITIV), I contributed to an autonomous model vehicle based on the TI Tiva C microcontroller (TM4C123GH6PM). All peripheral drivers were implemented as a modular C++ class library (Common_Classes) — each class with its own test program. My responsibility covered ultrasonic distance measurement (HC-SR04) and joystick-based steering control.',
+      'pit-s1': 'As part of my work at the Institute for Information Processing Technology (ITIV), I contributed to an autonomous model vehicle based on the TI Tiva C microcontroller (TM4C123GH6PM). All peripheral drivers were implemented as a modular C++ class library (Common_Classes) — each class with its own test program. My responsibility covered ultrasonic distance measurement (HC-SR04) and joystick-based steering control.',
       'pit-map-h': 'Module Overview',
       'pit-map-intro': 'The System class forms the foundation on which the driver, functional and control classes are built. The modules marked with ★ were implemented by me.',
       'pit-map-cat1': 'Driver Classes',
@@ -414,6 +420,8 @@ else                     LED = RED;     // Bremsen</code></pre>
       'pit-s6': 'The remaining modules (Remote, MPU6050, Display, Compare, etc.) were contributed by team members; integration and testing took place in the shared Git repository of the team with one test program per class. Learning goals: embedded C++ development, low-level driver programming (timers, interrupts, ADC), debugging on target hardware, and team-oriented software development.'
     },
     zh: {
+      'lang-switch': '选择语言',
+      'theme-switch': '切换主题',
       'pit-back': '返回网站',
       'pit-demo-h': '实时演示',
       'pit-demo-cap': '实时障碍物检测与控制逻辑原型演示（基于超声波传感器与 MCU）',
@@ -421,9 +429,10 @@ else                     LED = RED;     // Bremsen</code></pre>
       'pit-demo-2': '<strong>控制逻辑与状态反馈：</strong>MCU 根据距离阈值实时触发 LED 多级预警（安全 / 预警 / 制动状态映射）。',
       'pit-demo-3': '<strong>软硬件协同（HIL / Prototyping）：</strong>验证了从底层信号采集到执行层响应的完整自动驾驶控制闭环。',
       'pit-demo-code': '核心逻辑（伪代码）：',
-      'pit-title': '学生助研 – 自动驾驶（原型开发）',
+      'pit-title': '自动驾驶（原型）',
+      'pit-org': '信息技术处理研究所（ITIV），KIT',
       'pit-s1-h': '项目概览',
-      'pit-s1': '作为信息技术处理研究所（ITIV）的学生助研，我参与开发了一辆基于 TI Tiva C 微控制器（TM4C123GH6PM）的自动驾驶模型车。所有外设驱动均以模块化 C++ 类库（Common_Classes）的形式实现——每个类配有独立测试程序。我负责超声波测距（HC-SR04）与摇杆转向控制。',
+      'pit-s1': '在信息技术处理研究所（ITIV）工作期间，我参与开发了一辆基于 TI Tiva C 微控制器（TM4C123GH6PM）的自动驾驶模型车。所有外设驱动均以模块化 C++ 类库（Common_Classes）的形式实现——每个类配有独立测试程序。我负责超声波测距（HC-SR04）与摇杆转向控制。',
       'pit-map-h': '模块总览',
       'pit-map-intro': 'System 类是全部模块的基础，驱动类、功能类与控制类构建于其上。标有 ★ 的模块由我独立实现。',
       'pit-map-cat1': '驱动类',
@@ -448,6 +457,10 @@ else                     LED = RED;     // Bremsen</code></pre>
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
       if (t[k]) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-aria');
+      if (t[k]) el.setAttribute('aria-label', t[k]);
     });
     document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
       var k = el.getAttribute('data-i18n-alt');

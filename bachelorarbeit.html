@@ -147,8 +147,8 @@
   <header class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="ba-back">Zurück zur Website</span></a>
     <div class="pe-topbar-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
-      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <div class="lang-switcher" role="group" data-i18n-aria="lang-switch" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
       <button type="button" class="lang-option" data-lang="zh">中文</button>
@@ -160,7 +160,7 @@
     <h1 data-i18n="ba-title">Bachelorarbeit: Digital-Twin-Infrastruktur für die industrielle Produktion</h1>
     <div class="pe-meta">
       <span class="exp-date">06/2025 – 12/2025</span>
-      <span>Institut für Regelungs- und Steuerungssysteme (IRS), KIT</span>
+      <span data-i18n="ba-org">Institut für Regelungs- und Steuerungssysteme (IRS), KIT</span>
     </div>
     <div class="exp-tags">
       <span class="tag">Python</span>
@@ -247,8 +247,11 @@
 
   var T = {
     de: {
+      'lang-switch': 'Sprache wählen',
+      'theme-switch': 'Design umschalten',
       'ba-back': 'Zurück zur Website',
       'ba-title': 'Bachelorarbeit: Digital-Twin-Infrastruktur für die industrielle Produktion',
+      'ba-org': 'Institut für Regelungs- und Steuerungssysteme (IRS), KIT',
       'ba-s1-h': 'Überblick',
       'ba-s1': 'Meine Bachelorarbeit am Institut für Regelungs- und Steuerungssysteme (IRS, Professur für Vernetzte Sichere Automatisierungstechnik, Betreuer M.Sc. Witucki) trägt den Titel „Design and Implementation of an AAS Submodel for Industrial Robotic Systems“. Im Mittelpunkt steht eine Digital-Twin-Infrastruktur für die industrielle Produktion: Asset Administration Shells (AAS) als standardisierte, semantische Repräsentation von Industrierobotern — automatisch generiert aus bestehenden Robotik-Beschreibungen (URDF/XACRO/YAML) und direkt weiterverwendbar für die ROS-2-Simulation.',
       'ba-s2-h': 'Ziel & Konzept',
@@ -274,8 +277,11 @@
       'ba-dl-gh-sub': 'Vollständiger Quellcode der Toolchain (Submodel- & Multi-Robot-Generator)'
     },
     en: {
+      'lang-switch': 'Choose language',
+      'theme-switch': 'Toggle theme',
       'ba-back': 'Back to website',
       'ba-title': "Bachelor's Thesis: Digital Twin Infrastructure for Industrial Production",
+      'ba-org': 'Institute of Control Systems (IRS), KIT',
       'ba-s1-h': 'Overview',
       'ba-s1': 'My bachelor\u2019s thesis at the Institute for Control Systems (IRS, Chair of Networked Secure Automation Technology, supervisor M.Sc. Witucki) is titled "Design and Implementation of an AAS Submodel for Industrial Robotic Systems". At its core is a digital twin infrastructure for industrial production: Asset Administration Shells (AAS) as a standardized, semantic representation of industrial robots — automatically generated from existing robot descriptions (URDF/XACRO/YAML) and directly reusable for ROS 2 simulation.',
       'ba-s2-h': 'Goal & Concept',
@@ -301,8 +307,11 @@
       'ba-dl-gh-sub': 'Full source code of the toolchain (submodel & multi-robot generator)'
     },
     zh: {
+      'lang-switch': '选择语言',
+      'theme-switch': '切换主题',
       'ba-back': '返回网站',
       'ba-title': '本科毕业论文：面向工业生产的数字孪生基础设施',
+      'ba-org': '控制与调节系统研究所（IRS），KIT',
       'ba-s1-h': '项目概览',
       'ba-s1': '我的本科毕业论文在卡尔斯鲁厄理工学院控制与调节系统研究所（IRS，网络化安全自动化技术教席，导师 M.Sc. Witucki）完成，题目为《Design and Implementation of an AAS Submodel for Industrial Robotic Systems》。论文核心是一套面向工业生产的数字孪生基础设施：以资产管理壳（AAS）作为工业机器人的标准化、语义化表示——从现有机器人描述（URDF/XACRO/YAML）中自动生成，并可直接复用于 ROS 2 仿真。',
       'ba-s2-h': '目标与构想',
@@ -335,6 +344,10 @@
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
       if (t[k]) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-aria');
+      if (t[k]) el.setAttribute('aria-label', t[k]);
     });
     document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
       var k = el.getAttribute('data-i18n-alt');

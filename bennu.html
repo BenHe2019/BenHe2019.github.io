@@ -84,10 +84,10 @@
   .pe-figure .diagram-dark svg text { font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, 'Microsoft YaHei', monospace; }
 
   .pe-topbar-right { display: flex; align-items: center; gap: 0.7rem; }
-</style>
   .pe-figure { margin: var(--space-md) 0; }
   .pe-figure img { width: 100%; border-radius: 12px; border: 1px solid var(--color-border); display: block; }
   .pe-figure figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--color-text-secondary); text-align: center; }
+</style>
 
 </head>
 <body>
@@ -111,8 +111,8 @@
   <div class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="bn-back">Zurück zur Website</span></a>
     <div class="pe-topbar-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
-      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <div class="lang-switcher" role="group" data-i18n-aria="lang-switch" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
       <button type="button" class="lang-option" data-lang="zh">中文</button>
@@ -608,6 +608,8 @@
   'use strict';
   var T = {
     de: {
+      'lang-switch': 'Sprache wählen',
+      'theme-switch': 'Design umschalten',
       'bn-back': 'Zurück zur Website',
       'bn-title': 'Bennu — KI-Hausroboter',
       'bn-meta': 'Persönliches KI-Projekt · seit 09/2026 · Entwicklungszeitraum ~1 Jahr · in Entwicklung',
@@ -634,6 +636,8 @@
       'bn-s5-4': 'Automatische Erfassung mit manueller Reserve — Bedienknöpfe vor starren Timern.'
     },
     en: {
+      'lang-switch': 'Choose language',
+      'theme-switch': 'Toggle theme',
       'bn-back': 'Back to website',
       'bn-title': 'Bennu — AI Home Robot',
       'bn-meta': 'Personal AI project · since 09/2026 · ~1-year development cycle · in development',
@@ -660,6 +664,8 @@
       'bn-s5-4': 'Automatic capture with manual fallback — buttons over rigid timers.'
     },
     zh: {
+      'lang-switch': '选择语言',
+      'theme-switch': '切换主题',
       'bn-back': '返回网站',
       'bn-title': 'Bennu —— AI 智能机器人',
       'bn-meta': '个人 AI 项目 · 2026 年 9 月起 · 开发周期约 1 年 · 开发中',
@@ -693,6 +699,10 @@
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
       if (t[k]) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-aria');
+      if (t[k]) el.setAttribute('aria-label', t[k]);
     });
     document.querySelectorAll('[data-i18n-img]').forEach(function (el) {
       el.style.display = el.getAttribute('data-i18n-img') === lang ? '' : 'none';

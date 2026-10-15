@@ -104,8 +104,8 @@
   <header class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="pk-back">Zurück zur Website</span></a>
     <div class="pe-topbar-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
-      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <div class="lang-switcher" role="group" data-i18n-aria="lang-switch" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
       <button type="button" class="lang-option" data-lang="zh">中文</button>
@@ -178,6 +178,8 @@
 
   var T = {
     de: {
+      'lang-switch': 'Sprache wählen',
+      'theme-switch': 'Design umschalten',
       'pk-back': 'Zurück zur Website',
       'pk-title': 'Praktikum: Embedded Systems in der Fahrzeug-Elektronik',
       'pk-company': 'Dynavin – F&E-Abteilung (Karlsruhe)',
@@ -203,6 +205,8 @@
       'pk-s5': 'Das Praktikum gab mir fundierte Einblicke in die Entwicklung, Fertigung und Instandsetzung moderner Fahrzeug-Elektronik — von der Schaltplananalyse über die CAN-Bus-Kommunikation bis zur praktischen Fahrzeugintegration. Als Student aus China war es zugleich meine erste längere Zusammenarbeit mit deutschen Kollegen; die Erfahrung hat mir gezeigt, wie wichtig Kommunikation und Teamarbeit am Arbeitsplatz sind. Der breite Einsatz eingebetteter Systeme in der Industrie hat mich motiviert, mich in meinem weiteren Studium intensiver mit Embedded Systems zu beschäftigen.'
     },
     en: {
+      'lang-switch': 'Choose language',
+      'theme-switch': 'Toggle theme',
       'pk-back': 'Back to website',
       'pk-title': 'Internship: Embedded Systems in Automotive Electronics',
       'pk-company': 'Dynavin – R&D Department (Karlsruhe)',
@@ -228,6 +232,8 @@
       'pk-s5': 'The internship gave me a solid insight into the development, manufacturing and repair of modern automotive electronics — from schematic analysis through CAN-bus communication to hands-on vehicle integration. As a student from China, it was also my first longer collaboration with German colleagues; the experience showed me how important communication and teamwork are in the workplace. The widespread use of embedded systems in industry motivated me to focus more deeply on embedded systems in my further studies.'
     },
     zh: {
+      'lang-switch': '选择语言',
+      'theme-switch': '切换主题',
       'pk-back': '返回网站',
       'pk-title': '实习：车载电子中的嵌入式系统',
       'pk-company': 'Dynavin 公司 – 研发部（卡尔斯鲁厄）',
@@ -260,6 +266,10 @@
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
       if (t[k]) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-aria');
+      if (t[k]) el.setAttribute('aria-label', t[k]);
     });
     document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
       var k = el.getAttribute('data-i18n-alt');

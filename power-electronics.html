@@ -112,8 +112,8 @@
   <header class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="pe-back">Zurück zur Website</span></a>
     <div class="pe-topbar-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
-      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <div class="lang-switcher" role="group" data-i18n-aria="lang-switch" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
       <button type="button" class="lang-option" data-lang="zh">中文</button>
@@ -122,10 +122,10 @@
   </header>
 
   <header class="pe-header">
-    <h1 data-i18n="pe-title">Werkstudent – Leistungselektronik &amp; Hardware-Design</h1>
+    <h1 data-i18n="pe-title">Hardware-Design &amp; Leistungselektronik</h1>
     <div class="pe-meta">
       <span class="exp-date">05/2024 – 09/2024</span>
-      <span>Institut für Technische Elektronik (ETI), KIT</span>
+      <span data-i18n="pe-org">Elektrotechnisches Institut (ETI), KIT</span>
     </div>
     <div class="exp-tags">
       <span class="tag">MATLAB/Simulink</span>
@@ -209,8 +209,11 @@
 
   var T = {
     de: {
+      'lang-switch': 'Sprache wählen',
+      'theme-switch': 'Design umschalten',
       'pe-back': 'Zurück zur Website',
-      'pe-title': 'Werkstudent – Leistungselektronik & Hardware-Design',
+      'pe-title': 'Hardware-Design & Leistungselektronik',
+      'pe-org': 'Elektrotechnisches Institut (ETI), KIT',
       'pe-s1-h': 'Überblick',
       'pe-s1': 'Im Rahmen des Praktikums „Hard- und Software in leistungselektronischen Systemen“ (HSLS) am Elektrotechnischen Institut wurde ein kompletter DC-DC-Tiefsetzsteller (Buck-Wandler) entwickelt — von der Auslegung und Simulation der Leistungselektronik über Schaltplan, Layout und Aufbau bis zur digitalen Regelung auf einem STM32-Mikrocontroller. Die Platine vereint Leistungsteil, Mess- und Ansteuerschaltungen sowie die Bedienschnittstelle (Taster, Potentiometer, Status-LEDs) in einem mehrlagigen Design.',
       'pe-s2-h': 'Leistungsteil & Spezifikationen',
@@ -237,8 +240,11 @@
       'pe-g5': 'Digitales Regelsystem'
     },
     en: {
+      'lang-switch': 'Choose language',
+      'theme-switch': 'Toggle theme',
       'pe-back': 'Back to website',
-      'pe-title': 'Research Assistant – Power Electronics & Hardware Design',
+      'pe-title': 'Hardware Design & Power Electronics',
+      'pe-org': 'Institute of Electrical Engineering (ETI), KIT',
       'pe-s1-h': 'Overview',
       'pe-s1': 'As part of the lab course “Hardware and Software in Power Electronic Systems” (HSLS) at the Institute of Electrical Engineering (ETI), a complete DC-DC buck converter was developed — from power electronics design and simulation, through schematic, PCB layout and assembly, to digital control on an STM32 microcontroller. The board combines the power stage, measurement and gate-drive circuits, and the user interface (push button, potentiometer, status LEDs) in a multilayer design.',
       'pe-s2-h': 'Power Stage & Specifications',
@@ -265,8 +271,11 @@
       'pe-g5': 'Digital Control System'
     },
     zh: {
+      'lang-switch': '选择语言',
+      'theme-switch': '切换主题',
       'pe-back': '返回网站',
-      'pe-title': '学生助研 – 电力电子与硬件设计',
+      'pe-title': '硬件设计与电力电子',
+      'pe-org': '电气工程研究所（ETI），KIT',
       'pe-s1-h': '项目概览',
       'pe-s1': '作为电气工程研究所（ETI）"电力电子系统中的硬件与软件"（HSLS）实验课程的一部分，完整开发了一款 DC-DC Buck 降压变换器——从电力电子设计与仿真，经原理图、PCB 布局与装配，到基于 STM32 的数字控制。电路板将功率级、测量与栅极驱动电路以及人机接口（按键、电位器、状态 LED）集成于多层板设计之中。',
       'pe-s2-h': '功率级与规格',
@@ -300,6 +309,10 @@
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
       if (t[k]) el.innerHTML = t[k];
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-aria');
+      if (t[k]) el.setAttribute('aria-label', t[k]);
     });
     document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
       var k = el.getAttribute('data-i18n-alt');
