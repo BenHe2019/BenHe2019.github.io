@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" data-i18n="meta-desc" content="Ben He — AI Engineer & Robotics Engineer. Elektrotechnik-Student am KIT mit Schwerpunkt auf KI, Robotik und intelligenter Automatisierung.">
-  <title>Ben He | Portfolio</title>
+  <meta name="description" data-i18n="meta-desc" content="Ben He — M.Sc.-Student EEIT am KIT. Robotik-Software und angewandte LLM-Systeme: ROS 2, Digital Twins, LLM-Agenten und Embedded Systems. Offen für Werkstudentenstellen, Praktika und Abschlussarbeiten.">
+  <title>Ben He | Robotics Software &amp; Applied LLM</title>
+  <link rel="canonical" href="https://benhe2019.github.io/">
+  <link rel="alternate" hreflang="de" href="https://benhe2019.github.io/?lang=de">
+  <link rel="alternate" hreflang="en" href="https://benhe2019.github.io/?lang=en">
+  <link rel="alternate" hreflang="zh-CN" href="https://benhe2019.github.io/?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://benhe2019.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ben He | Robotics Software &amp; Applied LLM">
+  <meta property="og:description" content="M.Sc.-Student EEIT am KIT. Robotik-Software und angewandte LLM-Systeme. Offen für Werkstudentenstellen, Praktika und Abschlussarbeiten.">
+  <meta property="og:url" content="https://benhe2019.github.io/">
+  <meta property="og:image" content="https://benhe2019.github.io/portrait.jpg">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,8 +46,8 @@
           <button class="lang-option" data-lang="zh" aria-checked="false" role="radio">中文</button>
         </div>
         <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus">
-          <span class="theme-icon-light">☀️</span>
-          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+          <span class="theme-icon-dark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
         </button>
         <button class="hamburger" id="hamburger" data-i18n-aria="menu-open" aria-label="Menü öffnen" aria-expanded="false">
           <span></span>
@@ -55,10 +66,19 @@
       <div class="container hero-content">
         <p class="hero-greeting" data-i18n="hero-greeting">Hallo, ich bin</p>
         <h1 class="hero-name">Ben He</h1>
-        <p class="hero-title" id="heroTitle"></p>
-        <p class="hero-subtitle" data-i18n="hero-subtitle">M.Sc. Elektrotechnik und Informationstechnik (EEIT) · KI · Robotik · Intelligente Automatisierung</p>
+        <p class="hero-title" data-i18n="hero-title">Robotik-Software &amp; angewandte LLM-Systeme</p>
+        <p class="hero-subtitle" data-i18n="hero-subtitle">M.Sc.-Student Elektrotechnik und Informationstechnik am KIT · Offen für Werkstudentenstellen, Praktika und Abschlussarbeiten</p>
+        <ul class="hero-proof">
+          <li><a href="buddhiherz.html" data-i18n="hero-proof-1">Ausgeliefertes Lagerverwaltungssystem mit LLM-Dokumentenextraktion</a></li>
+          <li><a href="bachelorarbeit.html" data-i18n="hero-proof-2">ROS-2-/AAS-Toolchain für Multi-Robot-Digital-Twins (Bachelorarbeit)</a></li>
+          <li><a href="bennu.html" data-i18n="hero-proof-3">Selbst gehosteter LLM-Sprachassistent als Gehirn für einen künftigen Hausroboter</a></li>
+        </ul>
         <div class="hero-cta">
-          <a href="https://github.com/BenHe2019" target="_blank" rel="noopener" class="btn btn-primary">
+          <a href="cv/Ben_He_Lebenslauf.pdf" class="btn btn-primary" data-cv-link>
+            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            <span data-i18n="hero-cv">Lebenslauf (PDF)</span>
+          </a>
+          <a href="https://github.com/BenHe2019" target="_blank" rel="noopener" class="btn btn-outline">
             <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
@@ -79,9 +99,7 @@
         <h2 class="section-title"><span class="section-num">01</span> <span data-i18n="about-title">Über mich</span></h2>
         <div class="about-layout">
           <div class="about-content">
-            <p data-i18n="about-text">
-              Ingenieur am KIT mit Schwerpunkt auf <strong>KI, Robotik und intelligenter Automatisierung</strong>. Ich strebe eine Tätigkeit als <strong>AI Engineer</strong> oder <strong>Robotics Engineer</strong> an — mit Erfahrung in Digital-Twin-Systemen, ROS&nbsp;2, LLM-Agenten, Computer Vision und Hard- und Software-Co-Design.
-            </p>
+            <p data-i18n="about-text">M.Sc.-Student der Elektrotechnik und Informationstechnik am KIT mit Schwerpunkt auf <strong>Robotik-Software und angewandten LLM-Systemen</strong>. Mein Hintergrund reicht von Mikrocontrollern und CAN-Bus über ROS&nbsp;2 und Digital Twins bis zu LLM-Agenten im praktischen Einsatz. Ich suche eine <strong>Werkstudentenstelle, ein Praktikum oder eine Abschlussarbeit</strong> in diesem Bereich.</p>
           </div>
           <aside class="about-photo-card" data-i18n-aria="about-photo" aria-label="Persönliche Vorstellung">
             <div class="photo-frame">
@@ -120,11 +138,21 @@
             <div class="timeline-card">
               <div class="timeline-header">
                 <h3 data-i18n="edu-kit-name">Karlsruher Institut für Technologie (KIT)</h3>
-                <span class="timeline-date">10/2021 – 09/2026</span>
+                <span class="timeline-date">10/2021 – 06/2026</span>
               </div>
               <p class="timeline-subtitle" data-i18n="edu-kit-degree">B.Sc. Elektrotechnik und Informationstechnik</p>
               <p class="timeline-location"><svg class="loc-pin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Karlsruhe</p>
-              <p class="timeline-note" data-i18n="edu-kit-note">Abschluss: 09/2026</p>
+              <p class="timeline-note" data-i18n="edu-kit-note">Abschluss: 06/2026 · Bachelorarbeit: Note 2,3</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 data-i18n="edu-prep-name">Studienvorbereitung in Deutschland</h3>
+                <span class="timeline-date">10/2020 – 09/2021</span>
+              </div>
+              <p class="timeline-subtitle" data-i18n="edu-prep-degree">telc Deutsch C1 Hochschule (04/2021)</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -160,13 +188,14 @@
               <span class="tag">Python</span>
               <span class="tag">Flask</span>
               <span class="tag">SQLite</span>
-              <span class="tag">Docker</span>
-                <span class="tag">GLS API</span>
+              <span class="tag">LLM</span>
+              <span class="tag">nginx</span>
+              <span class="tag">GLS API</span>
             </div>
             <ul class="exp-details">
-              <li data-i18n="exp-buddhiherz-1">Cloud-basiertes WMS mit dreistufiger Architektur (L1-Regelwerk → L2-KI-Assistent → L3-Datenkorrektur), deployiert auf VPS mit Docker und Flask + SQLite Backend.</li>
-              <li data-i18n="exp-buddhiherz-2">Integration der GLS REST API zur automatischen Erzeugung von Versandlabels, Lieferscheinen und Rechnungen.</li>
-              <li data-i18n="exp-buddhiherz-3">Entwicklung eines PIN-basierten Authentifizierungsmoduls und Optimierung der Fulfillment-Prozesse; Reduzierung der Auftragsbearbeitungszeit um 80 %. 54/54 Tests bestanden.</li>
+              <li data-i18n="exp-buddhiherz-1">Dreistufige Dokumentenextraktion: Offline-Regeln (≈0,02 s, keine API-Kosten), danach LLM-Text- und Bildextraktion mit Fallback-Modell; Problemfälle landen in einem manuellen Korrektur-Workflow.</li>
+              <li data-i18n="exp-buddhiherz-2">Auslieferung mit Flask, SQLite, Waitress, systemd und nginx auf einem Linux-VPS; Anbindung der GLS-API für Versandlabels sowie PDF-Erzeugung für Rechnungen und Lieferscheine.</li>
+              <li data-i18n="exp-buddhiherz-3">Ersetzt den manuellen Excel- und Papierprozess im Lager; rollenbasierter Login (Mitarbeitende per E-Mail + PIN), tägliche Backups und 100+ automatisierte Regressionstests.</li>
             </ul>
             <span class="exp-card-more" data-i18n="exp-buddhiherz-more">Projektdetails →</span>
             </a>
@@ -182,7 +211,6 @@
               <div class="exp-tags">
                 <span class="tag">MCU</span>
                 <span class="tag">CAN-Bus</span>
-                <span class="tag">C/C++</span>
                 <span class="tag">Debugging</span>
               </div>
               <ul class="exp-details">
@@ -204,25 +232,23 @@
         <div class="exp-grid">
           <!-- Bachelor Thesis -->
           <article class="exp-card">
-            <a href="bachelorarbeit.html" class="exp-card-link" aria-label="Bachelorarbeit: Digital-Twin-Infrastruktur – Details">
+            <a href="bachelorarbeit.html" class="exp-card-link" aria-label="Bachelorarbeit: AAS-Submodell für industrielle Robotersysteme – Details">
               <div class="exp-card-header">
-                <h3 data-i18n="exp-thesis-title">Bachelorarbeit: Design einer Digital-Twin-Infrastruktur für Robotik</h3>
+                <h3 data-i18n="exp-thesis-title">Bachelorarbeit: Entwurf und Implementierung eines AAS-Submodells für industrielle Robotersysteme</h3>
                 <span class="exp-date">06/2025 – 12/2025</span>
               </div>
-              <p class="exp-company" data-i18n="exp-thesis-company">Institut für Regelungs- und Steuerungssysteme (IRS), KIT</p>
+              <p class="exp-company" data-i18n="exp-thesis-company">Institut für Regelungs- und Steuerungssysteme (IRS), KIT · Note 2,3</p>
               <div class="exp-tags">
                 <span class="tag">Python</span>
                 <span class="tag">ROS 2</span>
                 <span class="tag">AAS (v3.0)</span>
-                <span class="tag">URDF</span>
-                <span class="tag">XML</span>
+                <span class="tag">URDF/Xacro</span>
               </div>
               <ul class="exp-details">
-                <li data-i18n="exp-thesis-1">Entwicklung einer Python-Toolchain (Submodel Generator) zur automatischen Extraktion von URDF-/YAML-Daten in sechs semantische AAS-Teilmodelle: <em>Struktur, Kinematik, Dynamik, Steuerung, Sicherheit, Visualisierung</em>.</li>
-                <li data-i18n="exp-thesis-2">Multi-Robot-Generator instanziiert vollautomatisch komplexe ROS-2-Simulationsszenarien aus AAS-Daten — ohne manuelle Konfiguration.</li>
-                <li data-i18n="exp-thesis-3">Validierung der plattformübergreifenden Interoperabilität auf heterogenen Robotersystemen (Universal Robots &amp; igus ReBeL): URDF → AAS → Simulation, Ende-zu-Ende.</li>
-                <li data-i18n="exp-thesis-4">Formalisierung der AAS-Spezifikation (v3.0) als XML-Schemata und Ableitung einer domänenspezifischen Sprache (DSL) für die semantische Robotmodellierung.</li>
-                <li data-i18n="exp-thesis-5">Ergebnis: Vollautomatisierter <em>Digital-Twin-Generator</em>, der aus einer einzigen URDF-Datei eine deploybare ROS-2-Simulation mit AAS-Integration erzeugt.</li>
+                <li data-i18n="exp-thesis-1">Python-Toolchain (Submodel Generator), die URDF-/YAML-Daten automatisch in sechs semantische AAS-Teilmodelle überführt: <em>Struktur, Kinematik, Dynamik, Steuerung, Sicherheit, Visualisierung</em> — für 12 UR-Modelle und den igus ReBeL.</li>
+                <li data-i18n="exp-thesis-2">Multi-Robot-Generator erzeugt aus einer Konfigurationsdatei (Typ, Position, Gelenkgrenzen) und den AAS-Daten automatisch ROS-2-Simulationsszenarien.</li>
+                <li data-i18n="exp-thesis-3">Ende-zu-Ende-Validierung in der Simulation: Universal Robots (UR3/UR5) über den Standard-Generator, igus ReBeL über eine erweiterte Pipeline.</li>
+                <li data-i18n="exp-thesis-4">Ergebnis: <em>Digital-Twin-Generator</em>, der aus URDF-Beschreibungen und einer Konfigurationsdatei eine ROS-2-Simulation mit AAS-Integration erzeugt.</li>
               </ul>
               <span class="exp-card-more" data-i18n="exp-thesis-more">Projektdetails →</span>
             </a>
@@ -238,29 +264,33 @@
               <div class="exp-tags">
                 <span class="tag">MATLAB/Simulink</span>
                 <span class="tag">Altium Designer</span>
+                <span class="tag">STM32</span>
+                <span class="tag">Embedded Coder</span>
               </div>
               <ul class="exp-details">
-                <li data-i18n="exp-eti-1">Entwurf und Simulation eines Buck-Wandlers in MATLAB/Simulink; Erzielung einer Ausgangsspannungswelligkeit &lt;5% unter variablen Lastbedingungen.</li>
-                <li data-i18n="exp-eti-2">Vollständige PCB-Schaltplanerstellung, Layout und elektrische Regelprüfung in Altium Designer.</li>
+                <li data-i18n="exp-eti-1">Buck-Wandler von der Auslegung bis zur Inbetriebnahme: 40 V Eingang, 1–36 V Ausgang, bis 50 W; Simulation in MATLAB/Simulink (Simscape), Auslegungsziel für den Ausgangsrippel ≤ 0,5 % von U<sub>E</sub>.</li>
+                <li data-i18n="exp-eti-2">Mehrlagiges PCB in Altium Designer (Schaltplan, Layout, DRC), manuelle Bestückung und systematische Inbetriebnahme.</li>
+                <li data-i18n="exp-eti-3">Kaskadierte PI-Regelung (Strom und Spannung) mit Stateflow-Fehlerabschaltung auf einem STM32; C++-Code per Embedded Coder generiert.</li>
               </ul>
               <span class="exp-card-more" data-i18n="exp-eti-more">Projektdetails →</span>
             </a>
           </article>
           <!-- ITIV -->
           <article class="exp-card">
-            <a href="pit-autopilot.html" class="exp-card-link" aria-label="Autonomes Fahren (Prototyp) – Details">
+            <a href="pit-autopilot.html" class="exp-card-link" aria-label="Embedded-Modellfahrzeug – Details">
               <div class="exp-card-header">
-                <h3 data-i18n="exp-itiv-title">Autonomes Fahren (Prototyp)</h3>
+                <h3 data-i18n="exp-itiv-title">Embedded-Modellfahrzeug: Distanzmessung &amp; Lenkung</h3>
                 <span class="exp-date">05/2023 – 07/2023</span>
               </div>
               <p class="exp-company" data-i18n="exp-itiv-company">Institut für Technik der Informationsverarbeitung (ITIV), KIT</p>
               <div class="exp-tags">
                 <span class="tag">C++</span>
-                <span class="tag" data-i18n="exp-itiv-tag">Sensorfusion</span>
-              <span class="tag">Embedded Systems</span>
+                <span class="tag">Embedded Systems</span>
+                <span class="tag">Tiva C</span>
+                <span class="tag">HC-SR04</span>
               </div>
               <ul class="exp-details">
-                <li data-i18n="exp-itiv-1">Entwicklung eingebetteter C++-Software für einen autonomen Fahrzeugprototyp (Maßstab 1:10) mit Echtzeit-Hinderniserkennung und -vermeidung auf einem Dual-Core ARM MCU.</li>
+                <li data-i18n="exp-itiv-1">Teamprojekt im Praktikum Informationstechnik I: eigene C++-Module für Ultraschall-Distanzmessung (HC-SR04, Timer-Capture) mit mehrstufiger LED-Warnung und für die Joystick-Lenkung (ADC, Differenzialantrieb) auf einem Tiva-C-Mikrocontroller (TM4C123).</li>
               </ul>
               <span class="exp-card-more" data-i18n="exp-itiv-more">Projektdetails →</span>
             </a>
@@ -276,10 +306,10 @@
         <div class="projects-grid">
 
           <article class="project-card">
-            <div class="project-icon">🤖</div>
-            <h3 data-i18n="proj-bennu-title">Bennu — AI-Hausroboter</h3>
-            <p class="project-meta" data-i18n="proj-bennu-meta">Persönliches KI-Projekt · seit 09/2026 · Entwicklungszeitraum ~1 Jahr</p>
-            <p class="project-desc" data-i18n="proj-bennu-desc">Die Vision: ein autonomer Hausroboter mit Umgebungswahrnehmung, Bewegung, langfristigem Gedächtnis und natürlicher Sprachinteraktion. Aktuell entsteht sein „Gehirn": ein selbst gehostetes Lebensassistenz-System mit Sprachassistent (Wake-Word → ASR → LLM-Agent → TTS), Kalender, Buchhaltung, Gesundheitsdaten und Smart-Home-Steuerung — alle Eingänge (Stimme, Web-Dashboard, Android-App, Sensoren) laufen auf eine Datenbank zusammen. Entwicklung seit dem 15.09.2026; der geschätzte Gesamtzeitraum beträgt rund ein Jahr.</p>
+            <div class="project-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></div>
+            <h3 data-i18n="proj-bennu-title">Bennu — Selbst gehosteter LLM-Sprachassistent (Roboter-Gehirn)</h3>
+            <p class="project-meta" data-i18n="proj-bennu-meta">Persönliches Projekt · seit 09/2026 · in Entwicklung</p>
+            <p class="project-desc" data-i18n="proj-bennu-desc">Selbst gehostetes Lebensassistenz-System: Sprachkette (Wake-Word → ASR → LLM-Agent → TTS) mit Schnellpfad für häufige Befehle, dazu Kalender, Buchhaltung, Gesundheitsdaten und Smart-Home-Steuerung. Stimme, Web-Dashboard, Android-App und Sensoren laufen auf eine Datenbank zusammen. Langfristiges Ziel: das Gehirn eines Hausroboters; der Roboter-Körper ist noch in Planung.</p>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">LLM Agents</span>
@@ -293,20 +323,17 @@
           </article>
 
           <article class="project-card">
-            <div class="project-icon">📱</div>
+            <div class="project-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div>
             <h3 data-i18n="proj-fitlog-title">Full-Stack Gesundheits-App „Fitlog"</h3>
             <p class="project-meta" data-i18n="proj-fitlog-meta">Persönliches KI-Projekt · 01/2025 – 06/2026</p>
-            <p class="project-desc" data-i18n="proj-fitlog-desc">Full-Stack-System mit Android-Client (MVVM) und serverseitiger KI-Pipeline zur automatisierten Kalorienschätzung von Lebensmitteln durch Bilderkennung. REST API + lokale/entfernte Datenbanksynchronisation (Room + Remote DB) mit offlinefähiger Architektur.</p>
+            <p class="project-desc" data-i18n="proj-fitlog-desc">Android-App (Kotlin/Java, MVVM) mit Room-Datenbank, REST-API und offlinefähiger Synchronisation. Kalorienschätzung aus Essensfotos über ein multimodales LLM; die Ergebnisse werden vor dem Speichern manuell geprüft.</p>
             <div class="project-tags">
               <span class="tag">Kotlin/Java</span>
               <span class="tag">Python</span>
-              <span class="tag">Computer Vision</span>
+              <span class="tag">Multimodal LLM</span>
               <span class="tag">Android Studio</span>
             </div>
-            <a href="https://github.com/BenHe2019/Fitlog" target="_blank" rel="noopener" class="project-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              github.com/BenHe2019/Fitlog
-            </a>
+            <p class="project-note" data-i18n="proj-fitlog-note">Repository privat · Einblick auf Anfrage</p>
           </article>
         </div>
       </div>
@@ -318,16 +345,15 @@
         <h2 class="section-title"><span class="section-num">06</span> <span data-i18n="skills-title">Kompetenzen</span></h2>
         <div class="skills-grid">
           <div class="skill-group">
-            <h3 data-i18n="skills-ai">🤖 KI &amp; LLM</h3>
+            <h3><svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg><span data-i18n="skills-ai">KI &amp; LLM</span></h3>
             <div class="skill-tags">
-              <span class="tag tag-skill">LLM-Agenten</span>
-              <span class="tag tag-skill">RAG</span>
+              <span class="tag tag-skill" data-i18n="skill-llm">LLM-Agenten</span>
+              <span class="tag tag-skill" data-i18n="skill-mm">Multimodale LLMs</span>
               <span class="tag tag-skill">Prompt Engineering</span>
-              <span class="tag tag-skill">Computer Vision</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3 data-i18n="skills-prog">💻 Programmierung</h3>
+            <h3><svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span data-i18n="skills-prog">Programmierung</span></h3>
             <div class="skill-tags">
               <span class="tag tag-skill">Python</span>
               <span class="tag tag-skill">Kotlin/Java</span>
@@ -336,15 +362,15 @@
             </div>
           </div>
           <div class="skill-group">
-            <h3 data-i18n="skills-robo">🦾 Robotik</h3>
+            <h3><svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg><span data-i18n="skills-robo">Robotik</span></h3>
             <div class="skill-tags">
-              <span class="tag tag-skill">ROS2</span>
+              <span class="tag tag-skill">ROS 2</span>
               <span class="tag tag-skill">URDF/Xacro</span>
               <span class="tag tag-skill">AAS / Digital Twin</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3 data-i18n="skills-mobile">📱 Mobile &amp; Web</h3>
+            <h3><svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg><span data-i18n="skills-mobile">Mobile &amp; Web</span></h3>
             <div class="skill-tags">
               <span class="tag tag-skill">Android SDK</span>
               <span class="tag tag-skill">MVVM</span>
@@ -353,14 +379,16 @@
             </div>
           </div>
           <div class="skill-group">
-            <h3 data-i18n="skills-hw">⚙️ Hardware</h3>
+            <h3><svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg><span data-i18n="skills-hw">Hardware</span></h3>
             <div class="skill-tags">
               <span class="tag tag-skill">Altium Designer</span>
               <span class="tag tag-skill">MATLAB/Simulink</span>
+              <span class="tag tag-skill">STM32</span>
+              <span class="tag tag-skill">CAN-Bus</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3 data-i18n="skills-tools">🛠 Tools &amp; DevOps</h3>
+            <h3><svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span data-i18n="skills-tools">Tools &amp; DevOps</span></h3>
             <div class="skill-tags">
               <span class="tag tag-skill">Git</span>
               <span class="tag tag-skill">Docker</span>
@@ -369,11 +397,11 @@
             </div>
           </div>
           <div class="skill-group">
-            <h3 data-i18n="skills-lang">🌐 Sprachen</h3>
+            <h3><svg class="skill-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span data-i18n="skills-lang">Sprachen</span></h3>
             <div class="skill-tags">
               <span class="tag tag-skill" data-i18n="lang-zh">Chinesisch (Muttersprache)</span>
-              <span class="tag tag-skill" data-i18n="lang-de">Deutsch (C1 / DSH-3)</span>
-              <span class="tag tag-skill" data-i18n="lang-en">Englisch (B2 / Fachkundig)</span>
+              <span class="tag tag-skill" data-i18n="lang-de">Deutsch (C1, telc C1 Hochschule)</span>
+              <span class="tag tag-skill" data-i18n="lang-en">Englisch (B2 / Gute Kenntnisse)</span>
             </div>
           </div>
         </div>
@@ -382,32 +410,21 @@
 
 
 
-    <!-- Awards Section -->
-    <section class="section" id="awards">
-      <div class="container">
-        <h2 class="section-title"><span class="section-num">07</span> <span data-i18n="awards-title">Auszeichnungen</span></h2>
-        <ul class="awards-list">
-          <li data-i18n="award-1">Top 10, MATLAB-Programmierwettbewerb, Yangtze-Universität (2019)</li>
-          <li data-i18n="award-2">Zweiter Preis, Mathematischer Theorem-Wettbewerb, Yangtze-Universität (2018)</li>
-        </ul>
-      </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="section" id="contact">
       <div class="container">
-        <h2 class="section-title"><span class="section-num">08</span> <span data-i18n="contact-title">Kontakt</span></h2>
-        <p class="contact-intro" data-i18n="contact-intro">Ich bin immer offen für neue Möglichkeiten und spannende Projekte. Sprechen Sie mich gerne an!</p>
+        <h2 class="section-title"><span class="section-num">07</span> <span data-i18n="contact-title">Kontakt</span></h2>
+        <p class="contact-intro" data-i18n="contact-intro">Für Werkstudentenstellen, Praktika und Abschlussarbeiten erreichen Sie mich am besten per E-Mail.</p>
         <div class="contact-grid">
           <a href="mailto:ben.he1999@outlook.com" class="contact-card">
-            <div class="contact-icon">✉️</div>
+            <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
             <h3 data-i18n="contact-email">E-Mail</h3>
             <p>ben.he1999@outlook.com</p>
           </a>
-          <a href="tel:+4915568616003" class="contact-card">
-            <div class="contact-icon">📞</div>
-            <h3 data-i18n="contact-phone">Telefon</h3>
-            <p>+49 155 68616003</p>
+          <a href="cv/Ben_He_Lebenslauf.pdf" class="contact-card" data-cv-link>
+            <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+            <h3 data-i18n="contact-cv">Lebenslauf</h3>
+            <p data-i18n="contact-cv-val">PDF herunterladen</p>
           </a>
           <a href="https://github.com/BenHe2019" target="_blank" rel="noopener" class="contact-card">
             <div class="contact-icon">
@@ -429,7 +446,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p data-i18n="footer-text">&copy; 2026 Ben He. Alle Rechte vorbehalten.</p>
+      <p data-i18n="footer-text">© 2026 Ben He. Alle Rechte vorbehalten.</p>
       <a href="#hero" class="back-to-top" data-i18n-aria="back-top" aria-label="Zurück nach oben">↑</a>
     </div>
   </footer>

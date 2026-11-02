@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Buck-Wandler am ETI (KIT): Auslegung, Simulation, PCB in Altium Designer und digitale Regelung auf einem STM32.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ben He – Buck-Wandler &amp; Leistungselektronik">
+<meta property="og:description" content="Buck-Wandler am ETI (KIT): Auslegung, Simulation, PCB in Altium Designer und digitale Regelung auf einem STM32.">
+<meta property="og:url" content="https://benhe2019.github.io/power-electronics.html">
+<meta property="og:image" content="https://benhe2019.github.io/portrait.jpg">
 <title>Ben He – Power Electronics &amp; Hardware Design</title>
 <link rel="stylesheet" href="styles.css">
 <style>
@@ -112,7 +118,7 @@
   <header class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="pe-back">Zurück zur Website</span></a>
     <div class="pe-topbar-right">
-      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span><span class="theme-icon-dark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span></button>
       <div class="lang-switcher" role="group" data-i18n-aria="lang-switch" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
@@ -190,7 +196,7 @@
 
   <section class="pe-section">
     <h2 data-i18n="pe-s6-h">Digitale Regelung</h2>
-    <p data-i18n="pe-s6">Auf dem STM32 (NUCLEO-G431KB) wurde eine kaskadierte Regelung implementiert: ein schneller Stromregler (PI, ausgelegt nach dem Betragsoptimum) mit Anti-Windup und Vorsteuerung sowie ein überlagerter Spannungsregler (PI, symmetrisches Optimum), dessen Ausgang den Stromsollwert begrenzt. Eine Ablaufsteuerung in Stateflow bildet die Zustände Inaktiv / Normalbetrieb / Fehler ab — bei Überstrom (&gt; 10 A) wird in den Fehlerzustand gewechselt und der Gatetreiber gesperrt. Der C++-Code wurde automatisch mit Embedded Coder erzeugt und auf den Mikrocontroller geflasht; zur Überwachung diente LabMCT.</p>
+    <p data-i18n="pe-s6">Auf dem STM32 (NUCLEO-G431KB) wurde eine kaskadierte Regelung implementiert: ein schneller Stromregler (PI, ausgelegt nach dem Betragsoptimum) mit Anti-Windup und Vorsteuerung sowie ein überlagerter Spannungsregler (PI, symmetrisches Optimum), dessen Ausgang den Stromsollwert begrenzt. Eine Ablaufsteuerung in Stateflow bildet die Zustände Inaktiv / Normalbetrieb / Fehler ab — bei Überstrom (> 10 A) wird in den Fehlerzustand gewechselt und der Gatetreiber gesperrt. Der C++-Code wurde automatisch mit Embedded Coder erzeugt und auf den Mikrocontroller geflasht; zur Überwachung diente LabMCT.</p>
     <figure class="pe-figure">
       <img src="hard_software/Digital Control System.png" alt="Digitales Regelsystem" data-i18n-alt="pe-g5" loading="lazy">
       <figcaption data-i18n="pe-g5">Digitales Regelsystem</figcaption>

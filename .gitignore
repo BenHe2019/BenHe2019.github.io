@@ -1,6 +1,14 @@
 # Sensitive personal documents
 *.pdf
 
+# Public CV without phone number or photo (built by _cv/build.py)
+!cv/*.pdf
+
+# Local application material, not for the public site
+lebenslauf_DE.tex
+lebenslauf_EN.tex
+bewerbung_hiwi_phil.md
+
 # Internship report (confidential — full report is not published)
 praktikum/
 

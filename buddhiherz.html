@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Buddhiherz — Cloud-Lagerverwaltungssystem: automatisierte Beleg-Extraktion, Auftragsverwaltung und Versand.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ben He – Buddhiherz">
+<meta property="og:description" content="Buddhiherz — Cloud-Lagerverwaltungssystem: automatisierte Beleg-Extraktion, Auftragsverwaltung und Versand.">
+<meta property="og:url" content="https://benhe2019.github.io/buddhiherz.html">
+<meta property="og:image" content="https://benhe2019.github.io/portrait.jpg">
 <title>Ben He – Buddhiherz</title>
 <link rel="stylesheet" href="styles.css">
 <style>
@@ -111,7 +116,7 @@
   <div class="pe-topbar">
     <a class="pe-back" href="index.html">← <span data-i18n="bz-back">Zurück zur Website</span></a>
     <div class="pe-topbar-right">
-      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light">☀️</span><span class="theme-icon-dark">🌙</span></button>
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="theme-switch" aria-label="Design umschalten" title="Hell/Dunkel Modus"><span class="theme-icon-light"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span><span class="theme-icon-dark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span></button>
       <div class="lang-switcher" role="group" data-i18n-aria="lang-switch" aria-label="Sprache wählen">
       <button type="button" class="lang-option" data-lang="de">DE</button>
       <button type="button" class="lang-option" data-lang="en">EN</button>
@@ -127,13 +132,13 @@
 
   <section class="pe-section">
     <h2 data-i18n="bz-s1-h">Überblick</h2>
-    <p data-i18n="bz-s1">…</p>
-    <p data-i18n="bz-s1b">…</p>
+    <p data-i18n="bz-s1">Ein selbst entwickeltes, cloud-basiertes Lager- und Versandverwaltungssystem für einen kleinen E-Commerce-Betrieb: Von der eingehenden Bestell-Mail über die Belege (Rechnung, Lieferschein, Versandlabel) bis zum fertigen Paket läuft der gesamte Ablauf digital und automatisiert. Die Anwendung ist mobile-first gestaltet — Lagerkräfte bedienen sie direkt am Smartphone.</p>
+    <p data-i18n="bz-s1b">Das System ersetzte einen manuellen Excel- und Papierprozess. Entwicklung und Auslieferung erfolgten innerhalb von vier Monaten (07/2026 – 10/2026).</p>
   </section>
 
   <section class="pe-section">
     <h2 data-i18n="bz-s2-h">Systemarchitektur</h2>
-    <p data-i18n="bz-s2">…</p>
+    <p data-i18n="bz-s2">Die Daten laufen durch eine Pipeline: E-Mail-/Datei-Eingabe → dreistufige Extraktion (L1 Regeln → L2 KI → L3 manuelle Korrektur) → Kerngeschäft (Aufträge, Packplanung, Schichtplanung) → zentrale SQLite-Datenbank → Ausgabe (Belege, Sammel-Druckstücke, Versandlabel, mobile Web-Übersicht).</p>
     <figure class="pe-figure">
       <div class="diagram-dark" data-i18n-img="de">
         <svg viewBox="0 0 1000 720">
@@ -185,19 +190,19 @@
         <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">Dateneingabe</text>
 
         <rect x="42" y="95" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📧 Kundenbestellungen</text>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">Kundenbestellungen</text>
         <text x="121" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">IMAP-Abruf · Anhänge archiviert</text>
 
         <rect x="42" y="175" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">📄 Geschäftsbelege</text>
+        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">Geschäftsbelege</text>
         <text x="121" y="215" fill="#94a3b8" font-size="8.5" text-anchor="middle">Rechnung / Lieferschein / Versandlabel</text>
 
         <rect x="42" y="255" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">📝 Auftragserfassung</text>
+        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">Auftragserfassung</text>
         <text x="121" y="295" fill="#94a3b8" font-size="8.5" text-anchor="middle">Mobiles Formular · Auto-Ausfüllen</text>
 
         <rect x="42" y="335" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📊 Excel-Import</text>
+        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">Excel-Import</text>
         <text x="121" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Historische Aufträge · Katalog</text>
 
         <!-- ===== 边界：三层智能提取 ===== -->
@@ -223,15 +228,15 @@
         <text x="522" y="80" fill="#34d399" font-size="10" font-weight="600">Kerngeschäft</text>
 
         <rect x="522" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📦 Aufträge · Auto-Sortierung</text>
+        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">Aufträge · Auto-Sortierung</text>
         <text x="620" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Adress-Clustering · Belegzuordnung</text>
 
         <rect x="522" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧺 Packplan · Vollständigkeit</text>
+        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">Packplan · Vollständigkeit</text>
         <text x="620" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">Auto-Pakete · Belegprüfung</text>
 
         <rect x="522" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">📅 Schichten · Stammdaten</text>
+        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">Schichten · Stammdaten</text>
         <text x="620" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Kalender / Artikel / Kunden / Personal</text>
 
         <text x="620" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">Heute-Ansicht · Statusfluss</text>
@@ -241,24 +246,24 @@
         <text x="782" y="80" fill="#fb923c" font-size="10" font-weight="600">Ausgabe / Auslieferung</text>
 
         <rect x="782" y="95" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧾 Beleg-Erzeugung</text>
+        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">Beleg-Erzeugung</text>
         <text x="870" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Rechnung / Lieferschein PDF · paketweise</text>
 
         <rect x="782" y="185" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖨️ Sammel-Druckstück</text>
+        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">Sammel-Druckstück</text>
         <text x="870" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">Ein-Klick-Merge · feste Seitenfolge</text>
 
         <rect x="782" y="275" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">🚚 Versand-API</text>
+        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">Versand-API</text>
         <text x="870" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Online-Label · automatisch zugeordnet</text>
 
         <rect x="782" y="335" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 Mobile Web-Übersicht</text>
+        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">Mobile Web-Übersicht</text>
         <text x="870" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Im Lager nutzbar · Excel-Export</text>
 
         <!-- ===== 数据库 ===== -->
         <rect x="560" y="430" width="210" height="110" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ Zentrale Datenbank</text>
+        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">Zentrale Datenbank</text>
         <text x="665" y="475" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite · Backup = eine Datei</text>
         <text x="665" y="493" fill="#a78bfa" font-size="8" text-anchor="middle">Aufträge · Belege · Artikel · Pakete</text>
         <text x="665" y="507" fill="#a78bfa" font-size="8" text-anchor="middle">Schichten · Kunden · Audit-Log</text>
@@ -280,23 +285,23 @@
         <text x="42" y="600" fill="#fbbf24" font-size="10" font-weight="600">Betrieb & Sicherheit</text>
 
         <rect x="42" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ Cloud-Server</text>
+        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Cloud-Server</text>
         <text x="128" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Linux · 24/7 online</text>
 
         <rect x="226" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔒 HTTPS + Login</text>
+        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">HTTPS + Login</text>
         <text x="312" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">TLS-Verschlüsselung · Rollenrechte</text>
 
         <rect x="410" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">💾 Tägliches Backup</text>
+        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Tägliches Backup</text>
         <text x="496" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Zeitgesteuert · 14 Rotationen</text>
 
         <rect x="594" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🛡️ Angriffsschutz</text>
+        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Angriffsschutz</text>
         <text x="680" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">fail2ban · minimale offene Ports</text>
 
         <rect x="778" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧪 Automatisierte Tests</text>
+        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Automatisierte Tests</text>
         <text x="864" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">100+ Regressionstests · laufende Prüfung</text>
       </svg>
       </div>
@@ -350,19 +355,19 @@
         <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">Data Input Layer</text>
 
         <rect x="42" y="95" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📧 Customer order e-mails</text>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">Customer order e-mails</text>
         <text x="121" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">IMAP fetch · attachments archived</text>
 
         <rect x="42" y="175" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">📄 Business documents</text>
+        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">Business documents</text>
         <text x="121" y="215" fill="#94a3b8" font-size="8.5" text-anchor="middle">Invoice / delivery note / shipping label</text>
 
         <rect x="42" y="255" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">📝 Manual order entry</text>
+        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">Manual order entry</text>
         <text x="121" y="295" fill="#94a3b8" font-size="8.5" text-anchor="middle">Mobile form · smart autofill</text>
 
         <rect x="42" y="335" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📊 Excel bulk import</text>
+        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">Excel bulk import</text>
         <text x="121" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Historical orders · catalog</text>
 
         <!-- ===== 边界：三层智能提取 ===== -->
@@ -388,15 +393,15 @@
         <text x="522" y="80" fill="#34d399" font-size="10" font-weight="600">Core Business Logic</text>
 
         <rect x="522" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📦 Orders · auto sorting</text>
+        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">Orders · auto sorting</text>
         <text x="620" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Cluster by address · attach docs</text>
 
         <rect x="522" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧺 Packing plan · completeness</text>
+        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">Packing plan · completeness</text>
         <text x="620" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">Smart boxing · document check</text>
 
         <rect x="522" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">📅 Scheduling · master data</text>
+        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">Scheduling · master data</text>
         <text x="620" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Calendar / products / customers / staff</text>
 
         <text x="620" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">Today view · status flow</text>
@@ -406,24 +411,24 @@
         <text x="782" y="80" fill="#fb923c" font-size="10" font-weight="600">Output / Delivery Layer</text>
 
         <rect x="782" y="95" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧾 Document generation</text>
+        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">Document generation</text>
         <text x="870" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">Invoice / delivery note PDF · per box</text>
 
         <rect x="782" y="185" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖨️ Merged print pack</text>
+        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">Merged print pack</text>
         <text x="870" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">One-click merge · fixed page order</text>
 
         <rect x="782" y="275" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">🚚 Shipping label API</text>
+        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">Shipping label API</text>
         <text x="870" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">Online labels · auto-attach to order</text>
 
         <rect x="782" y="335" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 Mobile web dashboard</text>
+        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">Mobile web dashboard</text>
         <text x="870" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">Shop-floor ready · export</text>
 
         <!-- ===== 数据库 ===== -->
         <rect x="560" y="430" width="210" height="110" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ Unified Database</text>
+        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">Unified Database</text>
         <text x="665" y="475" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite single DB · one-file backup</text>
         <text x="665" y="493" fill="#a78bfa" font-size="8" text-anchor="middle">Orders · docs · products · boxes</text>
         <text x="665" y="507" fill="#a78bfa" font-size="8" text-anchor="middle">Scheduling · customers · audit trail</text>
@@ -445,23 +450,23 @@
         <text x="42" y="600" fill="#fbbf24" font-size="10" font-weight="600">Deployment & Security</text>
 
         <rect x="42" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ Cloud server</text>
+        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Cloud server</text>
         <text x="128" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Linux · 24/7 online</text>
 
         <rect x="226" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔒 HTTPS + authentication</text>
+        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">HTTPS + authentication</text>
         <text x="312" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">TLS encryption · admin/staff roles</text>
 
         <rect x="410" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">💾 Daily automated backup</text>
+        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Daily automated backup</text>
         <text x="496" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Scheduled snapshots · 14 kept</text>
 
         <rect x="594" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🛡️ Intrusion protection</text>
+        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Intrusion protection</text>
         <text x="680" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">fail2ban · minimal open ports</text>
 
         <rect x="778" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧪 Automated tests</text>
+        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">Automated tests</text>
         <text x="864" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">100+ regression cases · continuous</text>
       </svg>
       </div>
@@ -515,19 +520,19 @@
         <text x="42" y="80" fill="#22d3ee" font-size="10" font-weight="600">数据输入层</text>
 
         <rect x="42" y="95" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📧 客户订单邮件</text>
+        <text x="121" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">客户订单邮件</text>
         <text x="121" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">IMAP 手动拉取 · 附件归档</text>
 
         <rect x="42" y="175" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">📄 业务单据文件</text>
+        <text x="121" y="198" fill="white" font-size="11" font-weight="600" text-anchor="middle">业务单据文件</text>
         <text x="121" y="215" fill="#94a3b8" font-size="8.5" text-anchor="middle">发票 / 发货单 / 快递单</text>
 
         <rect x="42" y="255" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">📝 管理员填表建单</text>
+        <text x="121" y="278" fill="white" font-size="11" font-weight="600" text-anchor="middle">管理员填表建单</text>
         <text x="121" y="295" fill="#94a3b8" font-size="8.5" text-anchor="middle">移动端表单 · 智能填充</text>
 
         <rect x="42" y="335" width="158" height="56" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
-        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📊 Excel 批量导入</text>
+        <text x="121" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">Excel 批量导入</text>
         <text x="121" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">历史订单 · 商品名录</text>
 
         <!-- ===== 边界：三层智能提取 ===== -->
@@ -553,15 +558,15 @@
         <text x="522" y="80" fill="#34d399" font-size="10" font-weight="600">核心业务逻辑</text>
 
         <rect x="522" y="95" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">📦 订单管理 · 自动分拣</text>
+        <text x="620" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">订单管理 · 自动分拣</text>
         <text x="620" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">按地址聚类建单 · 单据挂载</text>
 
         <rect x="522" y="185" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧺 装箱方案 · 齐全度</text>
+        <text x="620" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">装箱方案 · 齐全度</text>
         <text x="620" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">智能配箱 · 文件齐全检查</text>
 
         <rect x="522" y="275" width="196" height="56" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
-        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">📅 排班打卡 · 基础数据</text>
+        <text x="620" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">排班打卡 · 基础数据</text>
         <text x="620" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">日历排班 / 商品 / 客户 / 员工</text>
 
         <text x="620" y="365" fill="#94a3b8" font-size="8.5" text-anchor="middle">今日待处理视图 · 状态流转 · 危险操作隔离</text>
@@ -571,24 +576,24 @@
         <text x="782" y="80" fill="#fb923c" font-size="10" font-weight="600">输出 / 交付层</text>
 
         <rect x="782" y="95" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">🧾 单据自动生成</text>
+        <text x="870" y="118" fill="white" font-size="11" font-weight="600" text-anchor="middle">单据自动生成</text>
         <text x="870" y="135" fill="#94a3b8" font-size="8.5" text-anchor="middle">发票 / 发货单 PDF · 拆箱套打</text>
 
         <rect x="782" y="185" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">🖨️ 合成打印件</text>
+        <text x="870" y="208" fill="white" font-size="11" font-weight="600" text-anchor="middle">合成打印件</text>
         <text x="870" y="225" fill="#94a3b8" font-size="8.5" text-anchor="middle">单订单一键合并 · 页序固定</text>
 
         <rect x="782" y="275" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">🚚 快递面单 API</text>
+        <text x="870" y="298" fill="white" font-size="11" font-weight="600" text-anchor="middle">快递面单 API</text>
         <text x="870" y="315" fill="#94a3b8" font-size="8.5" text-anchor="middle">在线出单 · 自动挂载订单</text>
 
         <rect x="782" y="335" width="176" height="56" rx="6" fill="rgba(251, 146, 60, 0.3)" stroke="#fb923c" stroke-width="1.5"/>
-        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">📱 手机网页看板</text>
+        <text x="870" y="358" fill="white" font-size="11" font-weight="600" text-anchor="middle">手机网页看板</text>
         <text x="870" y="375" fill="#94a3b8" font-size="8.5" text-anchor="middle">仓库现场即用 · Excel 导出</text>
 
         <!-- ===== 数据库 ===== -->
         <rect x="560" y="430" width="210" height="110" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">🗄️ 统一数据库</text>
+        <text x="665" y="456" fill="white" font-size="11" font-weight="600" text-anchor="middle">统一数据库</text>
         <text x="665" y="475" fill="#94a3b8" font-size="8.5" text-anchor="middle">SQLite 单库 · 单文件即备份</text>
         <text x="665" y="493" fill="#a78bfa" font-size="8" text-anchor="middle">订单 · 文档 · 商品 · 装箱</text>
         <text x="665" y="507" fill="#a78bfa" font-size="8" text-anchor="middle">排班 · 客户 · 操作留痕</text>
@@ -610,59 +615,59 @@
         <text x="42" y="600" fill="#fbbf24" font-size="10" font-weight="600">部署与安全</text>
 
         <rect x="42" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">☁️ 云服务器</text>
+        <text x="128" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">云服务器</text>
         <text x="128" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">Linux · 7×24 在线</text>
 
         <rect x="226" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🔒 HTTPS + 登录鉴权</text>
+        <text x="312" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">HTTPS + 登录鉴权</text>
         <text x="312" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">证书加密 · 管理员/员工分权</text>
 
         <rect x="410" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">💾 每日自动备份</text>
+        <text x="496" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">每日自动备份</text>
         <text x="496" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">定时快照 · 14 份轮换</text>
 
         <rect x="594" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🛡️ 入侵防护</text>
+        <text x="680" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">入侵防护</text>
         <text x="680" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">fail2ban · 端口最小化</text>
 
         <rect x="778" y="612" width="172" height="56" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
-        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">🧪 自动化测试</text>
+        <text x="864" y="635" fill="white" font-size="10" font-weight="600" text-anchor="middle">自动化测试</text>
         <text x="864" y="652" fill="#94a3b8" font-size="8" text-anchor="middle">100+ 用例回归 · 持续验证</text>
       </svg>
       </div>
-      <figcaption data-i18n="bz-cap">…</figcaption>
+      <figcaption data-i18n="bz-cap">Anonymisierte technische Darstellung — ohne Kunden- und Deploymentsdaten.</figcaption>
     </figure>
   </section>
 
   <section class="pe-section">
     <h2 data-i18n="bz-s3-h">Kernfunktionen</h2>
     <ul>
-      <li data-i18n="bz-s3-1">…</li>
-      <li data-i18n="bz-s3-2">…</li>
-      <li data-i18n="bz-s3-3">…</li>
-      <li data-i18n="bz-s3-4">…</li>
-      <li data-i18n="bz-s3-5">…</li>
-      <li data-i18n="bz-s3-6">…</li>
+      <li data-i18n="bz-s3-1"><strong>Dreistufige Beleg-Extraktion:</strong> Offline-Regeln zuerst (≈0,02 s, keine API-Kosten), dann multimodale KI für Text und Scans mit Fallback-Modell, bei Bedarf eine manuelle Korrektur-Oberfläche.</li>
+      <li data-i18n="bz-s3-2"><strong>Automatische Auftragsbildung:</strong> Adress-Clustering erzeugt Aufträge, Belege werden automatisch zugeordnet; die Vollständigkeit (Versandlabel / Lieferschein / Rechnung) wird geprüft.</li>
+      <li data-i18n="bz-s3-3"><strong>Beleg-Erzeugung:</strong> Rechnungen und Lieferscheine als PDF im nachgebauten Original-Layout, paketweise aufgeteilt, plus Sammel-Druckstück pro Auftrag.</li>
+      <li data-i18n="bz-s3-4"><strong>Versand-Integration:</strong> Versandlabel-API zur Online-Erzeugung von Paketlabels mit automatischer Zuordnung zum Auftrag.</li>
+      <li data-i18n="bz-s3-5"><strong>Lager-Alltag:</strong> Kalender-Schichtplanung, Zeiterfassung, Artikel- und Kundenverwaltung, Packplanung sowie die mobile Ansicht „Heute".</li>
+      <li data-i18n="bz-s3-6"><strong>Datenübersicht:</strong> Durchsuchbare Auftragsübersicht und Excel-Export für die Geschäftsleitung.</li>
     </ul>
   </section>
 
   <section class="pe-section">
     <h2 data-i18n="bz-s4-h">Technologie</h2>
     <ul>
-      <li data-i18n="bz-s4-1">…</li>
-      <li data-i18n="bz-s4-2">…</li>
-      <li data-i18n="bz-s4-3">…</li>
-      <li data-i18n="bz-s4-4">…</li>
+      <li data-i18n="bz-s4-1">Backend: Python · Flask · SQLite · REST-API (Waitress, systemd-Betrieb).</li>
+      <li data-i18n="bz-s4-2">Dokumente: PDF-Analyse (Text + Bilderkennung), PDF-/Word-Erzeugung, Nachbau komplexer Drucklayouts.</li>
+      <li data-i18n="bz-s4-3">KI: multimodale LLM-Extraktion mit Regel-Vorrang und Fallback-Kette; die Kosten werden durch L1-Regeln minimiert.</li>
+      <li data-i18n="bz-s4-4">Betrieb &amp; Sicherheit: nginx + HTTPS, rollenbasierte Anmeldung (Mitarbeitende per E-Mail + PIN), tägliches Backup, fail2ban, 100+ automatisierte Tests.</li>
     </ul>
   </section>
 
   <section class="pe-section">
     <h2 data-i18n="bz-s5-h">Ergebnisse</h2>
     <ul>
-      <li data-i18n="bz-s5-1">…</li>
-      <li data-i18n="bz-s5-2">…</li>
-      <li data-i18n="bz-s5-3">…</li>
-      <li data-i18n="bz-s5-4">…</li>
+      <li data-i18n="bz-s5-1">100+ automatisierte Regressionstests sichern jede Änderung ab.</li>
+      <li data-i18n="bz-s5-2">Manuelle Belegsuche entfällt: Belege hängen direkt am jeweiligen Auftrag.</li>
+      <li data-i18n="bz-s5-3">7×24 Cloud-Betrieb — mobil nutzbar direkt im Lager.</li>
+      <li data-i18n="bz-s5-4">Lückenlose Nachvollziehbarkeit: Löschungen werden protokolliert, Änderungen über Snapshots zurückgesetzt.</li>
     </ul>
   </section>
 
@@ -683,12 +688,12 @@
       'bz-meta': 'Buddhiherz / König Winna GmbH (Ettlingen) · 07/2026 – 10/2026 · ausgeliefert',
       'bz-s1-h': 'Überblick',
       'bz-s1': 'Ein selbst entwickeltes, cloud-basiertes Lager- und Versandverwaltungssystem für einen kleinen E-Commerce-Betrieb: Von der eingehenden Bestell-Mail über die Belege (Rechnung, Lieferschein, Versandlabel) bis zum fertigen Paket läuft der gesamte Ablauf digital und automatisiert. Die Anwendung ist mobile-first gestaltet — Lagerkräfte bedienen sie direkt am Smartphone.',
-      'bz-s1b': 'Das System ersetzte eine manuelle Excel- und Papier-Ablaufschaft und reduziert den manuellen Inventuraufwand um rund 80 %. Entwicklung und Auslieferung erfolgten innerhalb von vier Monaten (07/2026 – 10/2026).',
+      'bz-s1b': 'Das System ersetzte einen manuellen Excel- und Papierprozess. Entwicklung und Auslieferung erfolgten innerhalb von vier Monaten (07/2026 – 10/2026).',
       'bz-s2-h': 'Systemarchitektur',
       'bz-s2': 'Die Daten laufen durch eine Pipeline: E-Mail-/Datei-Eingabe → dreistufige Extraktion (L1 Regeln → L2 KI → L3 manuelle Korrektur) → Kerngeschäft (Aufträge, Packplanung, Schichtplanung) → zentrale SQLite-Datenbank → Ausgabe (Belege, Sammel-Druckstücke, Versandlabel, mobile Web-Übersicht).',
       'bz-cap': 'Anonymisierte technische Darstellung — ohne Kunden- und Deploymentsdaten.',
       'bz-s3-h': 'Kernfunktionen',
-      'bz-s3-1': '<strong>Dreistufige Beleg-Extraktion:</strong> Offline-Regeln zuerst (null Kosten), dann multimodale KI für Text und Scans, bei Bedarf eine manuelle Korrektur-Oberfläche.',
+      'bz-s3-1': '<strong>Dreistufige Beleg-Extraktion:</strong> Offline-Regeln zuerst (≈0,02 s, keine API-Kosten), dann multimodale KI für Text und Scans mit Fallback-Modell, bei Bedarf eine manuelle Korrektur-Oberfläche.',
       'bz-s3-2': '<strong>Automatische Auftragsbildung:</strong> Adress-Clustering erzeugt Aufträge, Belege werden automatisch zugeordnet; die Vollständigkeit (Versandlabel / Lieferschein / Rechnung) wird geprüft.',
       'bz-s3-3': '<strong>Beleg-Erzeugung:</strong> Rechnungen und Lieferscheine als PDF im nachgebauten Original-Layout, paketweise aufgeteilt, plus Sammel-Druckstück pro Auftrag.',
       'bz-s3-4': '<strong>Versand-Integration:</strong> Versandlabel-API zur Online-Erzeugung von Paketlabels mit automatischer Zuordnung zum Auftrag.',
@@ -698,10 +703,10 @@
       'bz-s4-1': 'Backend: Python · Flask · SQLite · REST-API (Waitress, systemd-Betrieb).',
       'bz-s4-2': 'Dokumente: PDF-Analyse (Text + Bilderkennung), PDF-/Word-Erzeugung, Nachbau komplexer Drucklayouts.',
       'bz-s4-3': 'KI: multimodale LLM-Extraktion mit Regel-Vorrang und Fallback-Kette; die Kosten werden durch L1-Regeln minimiert.',
-      'bz-s4-4': 'Betrieb & Sicherheit: nginx + HTTPS, rollenbasierte Anmeldung, tägliches Backup, fail2ban, 100+ automatisierte Tests.',
+      'bz-s4-4': 'Betrieb & Sicherheit: nginx + HTTPS, rollenbasierte Anmeldung (Mitarbeitende per E-Mail + PIN), tägliches Backup, fail2ban, 100+ automatisierte Tests.',
       'bz-s5-h': 'Ergebnisse',
       'bz-s5-1': '100+ automatisierte Regressionstests sichern jede Änderung ab.',
-      'bz-s5-2': 'Manueller Inventuraufwand um ca. 80 % reduziert; die manuelle Belegsuche entfällt vollständig.',
+      'bz-s5-2': 'Manuelle Belegsuche entfällt: Belege hängen direkt am jeweiligen Auftrag.',
       'bz-s5-3': '7×24 Cloud-Betrieb — mobil nutzbar direkt im Lager.',
       'bz-s5-4': 'Lückenlose Nachvollziehbarkeit: Löschungen werden protokolliert, Änderungen über Snapshots zurückgesetzt.'
     },
@@ -713,12 +718,12 @@
       'bz-meta': 'Buddhiherz / König Winna GmbH (Ettlingen) · 07/2026 – 10/2026 · delivered',
       'bz-s1-h': 'Overview',
       'bz-s1': 'A self-developed, cloud-based warehouse and shipping management system for a small e-commerce business: from incoming order e-mails through business documents (invoice, delivery note, shipping label) to the finished package, the entire workflow runs digitally and automatically. The application is mobile-first — warehouse staff operate it directly on their phones.',
-      'bz-s1b': 'The system replaced a manual Excel-and-paper workflow and reduces manual inventory effort by about 80 %. Development and delivery were completed within four months (07/2026 – 10/2026).',
+      'bz-s1b': 'The system replaced a manual Excel-and-paper workflow. Development and delivery were completed within four months (07/2026 – 10/2026).',
       'bz-s2-h': 'System Architecture',
       'bz-s2': 'Data flows through a pipeline: e-mail / file input → three-tier extraction (L1 rules → L2 AI → L3 manual review) → core business (orders, packing, scheduling) → central SQLite database → output (documents, merged print packs, shipping labels, mobile web dashboard).',
       'bz-cap': 'Sanitized technical overview — no customer or deployment details.',
       'bz-s3-h': 'Core Features',
-      'bz-s3-1': '<strong>Three-tier document extraction:</strong> offline rules first (zero cost), then multimodal AI for text and scans, with a manual review workbench as fallback.',
+      'bz-s3-1': '<strong>Three-tier document extraction:</strong> offline rules first (≈0.02 s, no API cost), then multimodal AI for text and scans with a fallback model, and a manual review workbench for edge cases.',
       'bz-s3-2': '<strong>Automated order building:</strong> address clustering creates orders, documents are attached automatically; completeness (label / delivery note / invoice) is checked.',
       'bz-s3-3': '<strong>Document generation:</strong> invoices and delivery notes as PDFs in a replicated original layout, split per package, plus a merged print pack per order.',
       'bz-s3-4': '<strong>Shipping integration:</strong> shipping-label API for online label creation with automatic attachment to the order.',
@@ -728,10 +733,10 @@
       'bz-s4-1': 'Backend: Python · Flask · SQLite · REST API (Waitress, systemd service).',
       'bz-s4-2': 'Documents: PDF parsing (text + vision), PDF/Word generation, replication of complex print layouts.',
       'bz-s4-3': 'AI: multimodal LLM extraction with rules-first priority and a fallback chain; costs minimized via L1 rules.',
-      'bz-s4-4': 'Operations & security: nginx + HTTPS, role-based login, daily backups, fail2ban, 100+ automated tests.',
+      'bz-s4-4': 'Operations & security: nginx + HTTPS, role-based login (staff via email + PIN), daily backups, fail2ban, 100+ automated tests.',
       'bz-s5-h': 'Results',
       'bz-s5-1': '100+ automated regression tests guard every change.',
-      'bz-s5-2': 'Manual inventory effort reduced by about 80 %; manual document searching is fully eliminated.',
+      'bz-s5-2': 'Manual document searching is eliminated: documents are attached directly to each order.',
       'bz-s5-3': '24/7 cloud operation — usable on mobile phones right in the warehouse.',
       'bz-s5-4': 'Full traceability: deletions are logged, changes can be rolled back via snapshots.'
     },
@@ -743,12 +748,12 @@
       'bz-meta': 'Buddhiherz / König Winna GmbH (Ettlingen) · 2026 年 7 月 – 10 月 · 已交付',
       'bz-s1-h': '项目概览',
       'bz-s1': '为小型电商仓储自研的云端仓库与发货管理系统：从客户订单邮件、业务单据（发票/发货单/快递单）到打包出库，全流程数字化、自动化。应用采用移动端优先设计——仓库工人直接用手机操作。',
-      'bz-s1b': '系统替代了原来的手工 Excel + 纸质流程，人工盘点工时减少约 80%。开发与交付在四个月内完成（2026 年 7 月 – 10 月）。',
+      'bz-s1b': '系统替代了原来的手工 Excel + 纸质流程。开发与交付在四个月内完成（2026 年 7 月 – 10 月）。',
       'bz-s2-h': '系统架构',
       'bz-s2': '数据沿流水线运转：邮件/文件输入 → 三层提取（L1 规则 → L2 AI → L3 人工修正）→ 核心业务（订单、装箱、排班）→ 统一 SQLite 数据库 → 输出（单据、合成打印件、快递面单、手机看板）。',
       'bz-cap': '脱敏技术示意图——不含客户数据与部署细节。',
       'bz-s3-h': '核心功能',
-      'bz-s3-1': '<strong>三层单据提取：</strong>离线规则优先（零成本），其次多模态 AI 处理文本与扫描图，疑难件由人工修正工作台兜底。',
+      'bz-s3-1': '<strong>三层单据提取：</strong>离线规则优先（约 0.02 秒，零 API 成本），其次多模态 AI 处理文本与扫描图并带回退模型，疑难件由人工修正工作台兜底。',
       'bz-s3-2': '<strong>自动建单分拣：</strong>按地址聚类生成订单、自动挂载单据，并检查文件齐全度（快递单/发货单/发票）。',
       'bz-s3-3': '<strong>单据生成：</strong>发票与发货单按复刻的原始版式输出 PDF，支持按包裹拆分，并为每单合成一键打印件。',
       'bz-s3-4': '<strong>快递对接：</strong>面单 API 在线生成包裹标签，自动挂载到对应订单。',
@@ -758,10 +763,10 @@
       'bz-s4-1': '后端：Python · Flask · SQLite · REST API（Waitress，systemd 服务）。',
       'bz-s4-2': '文档：PDF 解析（文本 + 视觉识别）、PDF/Word 生成、复杂印刷版式复刻。',
       'bz-s4-3': 'AI：多模态 LLM 结构化提取，规则优先 + 回退链，用 L1 规则把 AI 成本降到最低。',
-      'bz-s4-4': '运维与安全：nginx + HTTPS、分权登录、每日自动备份、fail2ban、100+ 自动化测试。',
+      'bz-s4-4': '运维与安全：nginx + HTTPS、分权登录（员工用邮箱和 PIN）、每日自动备份、fail2ban、100+ 自动化测试。',
       'bz-s5-h': '成果',
       'bz-s5-1': '100+ 自动化回归测试为每次改动保驾护航。',
-      'bz-s5-2': '人工盘点工时减少约 80%，单据查找彻底告别手工。',
+      'bz-s5-2': '单据查找不再靠手工：所有单据直接挂在对应订单上。',
       'bz-s5-3': '7×24 云端运行，仓库现场手机即用。',
       'bz-s5-4': '全流程可追溯：删除留痕，改动可通过快照回退。'
     }

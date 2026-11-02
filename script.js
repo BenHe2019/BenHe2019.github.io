@@ -10,7 +10,7 @@
   const T = {
     de: {
       'about-tag-msc': 'KIT · M.Sc. EEIT (laufend)',
-      'meta-desc': 'Ben He — M.Sc. EEIT @ KIT. Spezialisiert auf KI, Robotik und intelligente Automatisierung. Erfahrung in Digital Twin, ROS 2, LLM-Agenten und Computer Vision.',
+      'meta-desc': 'Ben He — M.Sc.-Student EEIT am KIT. Robotik-Software und angewandte LLM-Systeme: ROS 2, Digital Twins, LLM-Agenten und Embedded Systems. Offen für Werkstudentenstellen, Praktika und Abschlussarbeiten.',
       'nav-home': 'Zur Startseite',
       'nav-main': 'Hauptnavigation',
       'nav-about': 'Über mich',
@@ -24,32 +24,38 @@
       'menu-open': 'Menü öffnen',
       'menu-close': 'Menü schließen',
       'hero-greeting': 'Hallo, ich bin',
-      'hero-subtitle': 'M.Sc. Elektrotechnik und Informationstechnik (EEIT) · KI · Robotik · Intelligente Automatisierung',
+      'hero-title': 'Robotik-Software & angewandte LLM-Systeme',
+      'hero-subtitle': 'M.Sc.-Student Elektrotechnik und Informationstechnik am KIT · Offen für Werkstudentenstellen, Praktika und Abschlussarbeiten',
+      'hero-proof-1': 'Ausgeliefertes Lagerverwaltungssystem mit LLM-Dokumentenextraktion',
+      'hero-proof-2': 'ROS-2-/AAS-Toolchain für Multi-Robot-Digital-Twins (Bachelorarbeit)',
+      'hero-proof-3': 'Selbst gehosteter LLM-Sprachassistent als Gehirn für einen künftigen Hausroboter',
+      'hero-cv': 'Lebenslauf (PDF)',
       'hero-cta': 'Kontakt',
       'scroll': 'Scrollen',
       'about-title': 'Über mich',
-      'about-text': 'Ingenieur am KIT mit Schwerpunkt auf <strong>KI, Robotik und intelligenter Automatisierung</strong>. Ich strebe eine Tätigkeit als <strong>AI Engineer</strong> oder <strong>Robotics Engineer</strong> an — mit Erfahrung in Digital-Twin-Systemen, ROS&nbsp;2, LLM-Agenten, Computer Vision und Hard- und Software-Co-Design.',
+      'about-text': 'M.Sc.-Student der Elektrotechnik und Informationstechnik am KIT mit Schwerpunkt auf <strong>Robotik-Software und angewandten LLM-Systemen</strong>. Mein Hintergrund reicht von Mikrocontrollern und CAN-Bus über ROS&nbsp;2 und Digital Twins bis zu LLM-Agenten im praktischen Einsatz. Ich suche eine <strong>Werkstudentenstelle, ein Praktikum oder eine Abschlussarbeit</strong> in diesem Bereich.',
       'about-photo': 'Persönliche Vorstellung',
       'portrait-alt': 'Portrait von Ben He',
       'edu-title': 'Ausbildung',
       'edu-kit-name': 'Karlsruher Institut für Technologie (KIT)',
       'edu-yz-name': 'Yangtze-Universität',
       'edu-kit-degree': 'B.Sc. Elektrotechnik und Informationstechnik',
-      'edu-kit-note': 'Abschluss: 09/2026',
+      'edu-kit-note': 'Abschluss: 06/2026 · Bachelorarbeit: Note 2,3',
       'edu-kit-msc-degree': 'M.Sc. Elektrotechnik und Informationstechnik (EEIT)',
       'edu-kit-msc-note': 'Schwerpunkt: KI, Robotik & intelligente Automatisierung',
       'edu-kit-msc-date': '10/2026 – heute',
+      'edu-prep-name': 'Studienvorbereitung in Deutschland',
+      'edu-prep-degree': 'telc Deutsch C1 Hochschule (04/2021)',
       'edu-yz-degree': 'Information and Computing Science',
       'edu-yz-note': 'Wechsel ans KIT',
       'exp-title': 'Berufserfahrung',
       'uni-title': 'Universitäre Projekterfahrung',
-      'exp-thesis-title': 'Bachelorarbeit: Design einer Digital-Twin-Infrastruktur für Robotik',
-      'exp-thesis-company': 'Institut für Regelungs- und Steuerungssysteme (IRS), KIT',
-      'exp-thesis-1': 'Entwicklung einer Python-Toolchain (Submodel Generator) zur automatischen Extraktion von URDF-/YAML-Daten in sechs semantische AAS-Teilmodelle: <em>Struktur, Kinematik, Dynamik, Steuerung, Sicherheit, Visualisierung</em>.',
-      'exp-thesis-2': 'Multi-Robot-Generator instanziiert vollautomatisch komplexe ROS-2-Simulationsszenarien aus AAS-Daten — ohne manuelle Konfiguration.',
-      'exp-thesis-3': 'Validierung der plattformübergreifenden Interoperabilität auf heterogenen Robotersystemen (Universal Robots & igus ReBeL): URDF → AAS → Simulation, Ende-zu-Ende.',
-      'exp-thesis-4': 'Formalisierung der AAS-Spezifikation (v3.0) als XML-Schemata und Ableitung einer domänenspezifischen Sprache (DSL) für die semantische Robotmodellierung.',
-      'exp-thesis-5': 'Ergebnis: Vollautomatisierter <em>Digital-Twin-Generator</em>, der aus einer einzigen URDF-Datei eine deploybare ROS-2-Simulation mit AAS-Integration erzeugt.',
+      'exp-thesis-title': 'Bachelorarbeit: Entwurf und Implementierung eines AAS-Submodells für industrielle Robotersysteme',
+      'exp-thesis-company': 'Institut für Regelungs- und Steuerungssysteme (IRS), KIT · Note 2,3',
+      'exp-thesis-1': 'Python-Toolchain (Submodel Generator), die URDF-/YAML-Daten automatisch in sechs semantische AAS-Teilmodelle überführt: <em>Struktur, Kinematik, Dynamik, Steuerung, Sicherheit, Visualisierung</em> — für 12 UR-Modelle und den igus ReBeL.',
+      'exp-thesis-2': 'Multi-Robot-Generator erzeugt aus einer Konfigurationsdatei (Typ, Position, Gelenkgrenzen) und den AAS-Daten automatisch ROS-2-Simulationsszenarien.',
+      'exp-thesis-3': 'Ende-zu-Ende-Validierung in der Simulation: Universal Robots (UR3/UR5) über den Standard-Generator, igus ReBeL über eine erweiterte Pipeline.',
+      'exp-thesis-4': 'Ergebnis: <em>Digital-Twin-Generator</em>, der aus URDF-Beschreibungen und einer Konfigurationsdatei eine ROS-2-Simulation mit AAS-Integration erzeugt.',
       'exp-thesis-more': 'Projektdetails →',
       'exp-praktikum-title': 'Praktikant F&E – Embedded Systems',
       'exp-praktikum-company': 'Dynavin GmbH (Karlsruhe)',
@@ -59,49 +65,50 @@
       'exp-praktikum-more': 'Projektdetails →',
       'exp-buddhiherz-title': 'Entwickler Lagerverwaltungssystem (WMS)',
       'exp-buddhiherz-company': 'Buddhiherz / König Winna GmbH (Ettlingen)',
-      'exp-buddhiherz-1': 'Cloud-basiertes WMS mit dreistufiger Architektur (L1-Regelwerk → L2-KI-Assistent → L3-Datenkorrektur), deployiert auf VPS mit Docker und Flask + SQLite Backend.',
-      'exp-buddhiherz-2': 'Integration der GLS REST API zur automatischen Erzeugung von Versandlabels, Lieferscheinen und Rechnungen.',
-      'exp-buddhiherz-3': 'Entwicklung eines PIN-basierten Authentifizierungsmoduls und Optimierung der Fulfillment-Prozesse; Reduzierung der Auftragsbearbeitungszeit um 80 %. 54/54 Tests bestanden.',
+      'exp-buddhiherz-1': 'Dreistufige Dokumentenextraktion: Offline-Regeln (≈0,02 s, keine API-Kosten), danach LLM-Text- und Bildextraktion mit Fallback-Modell; Problemfälle landen in einem manuellen Korrektur-Workflow.',
+      'exp-buddhiherz-2': 'Auslieferung mit Flask, SQLite, Waitress, systemd und nginx auf einem Linux-VPS; Anbindung der GLS-API für Versandlabels sowie PDF-Erzeugung für Rechnungen und Lieferscheine.',
+      'exp-buddhiherz-3': 'Ersetzt den manuellen Excel- und Papierprozess im Lager; rollenbasierter Login (Mitarbeitende per E-Mail + PIN), tägliche Backups und 100+ automatisierte Regressionstests.',
       'exp-buddhiherz-more': 'Projektdetails →',
       'exp-eti-title': 'Hardware-Design & Leistungselektronik',
       'exp-eti-company': 'Elektrotechnisches Institut (ETI), KIT',
-      'exp-eti-1': 'Entwurf und Simulation eines Buck-Wandlers in MATLAB/Simulink; Erzielung einer Ausgangsspannungswelligkeit <5% unter variablen Lastbedingungen.',
-      'exp-eti-2': 'Vollständige PCB-Schaltplanerstellung, Layout und elektrische Regelprüfung in Altium Designer.',
+      'exp-eti-1': 'Buck-Wandler von der Auslegung bis zur Inbetriebnahme: 40 V Eingang, 1–36 V Ausgang, bis 50 W; Simulation in MATLAB/Simulink (Simscape), Auslegungsziel für den Ausgangsrippel ≤ 0,5 % von U<sub>E</sub>.',
+      'exp-eti-2': 'Mehrlagiges PCB in Altium Designer (Schaltplan, Layout, DRC), manuelle Bestückung und systematische Inbetriebnahme.',
+      'exp-eti-3': 'Kaskadierte PI-Regelung (Strom und Spannung) mit Stateflow-Fehlerabschaltung auf einem STM32; C++-Code per Embedded Coder generiert.',
       'exp-eti-more': 'Projektdetails →',
-      'exp-itiv-title': 'Autonomes Fahren (Prototyp)',
+      'exp-itiv-title': 'Embedded-Modellfahrzeug: Distanzmessung & Lenkung',
       'exp-itiv-company': 'Institut für Technik der Informationsverarbeitung (ITIV), KIT',
-      'exp-itiv-tag': 'Sensorfusion',
-      'exp-itiv-1': 'Entwicklung eingebetteter C++-Software für einen autonomen Fahrzeugprototyp (Maßstab 1:10) mit Echtzeit-Hinderniserkennung und -vermeidung auf einem Dual-Core ARM MCU.',
+      'exp-itiv-1': 'Teamprojekt im Praktikum Informationstechnik I: eigene C++-Module für Ultraschall-Distanzmessung (HC-SR04, Timer-Capture) mit mehrstufiger LED-Warnung und für die Joystick-Lenkung (ADC, Differenzialantrieb) auf einem Tiva-C-Mikrocontroller (TM4C123).',
       'exp-itiv-more': 'Projektdetails →',
       'proj-title': 'Projekte',
 
-      'proj-bennu-title': 'Bennu — AI-Hausroboter',
-      'proj-bennu-meta': 'Persönliches KI-Projekt · seit 09/2026 · Entwicklungszeitraum ~1 Jahr',
-      'proj-bennu-desc': 'Die Vision: ein autonomer Hausroboter mit Umgebungswahrnehmung, Bewegung, langfristigem Gedächtnis und natürlicher Sprachinteraktion. Aktuell entsteht sein „Gehirn": ein selbst gehostetes Lebensassistenz-System mit Sprachassistent (Wake-Word → ASR → LLM-Agent → TTS), Kalender, Buchhaltung, Gesundheitsdaten und Smart-Home-Steuerung — alle Eingänge (Stimme, Web-Dashboard, Android-App, Sensoren) laufen auf eine Datenbank zusammen. Entwicklung seit dem 15.09.2026; der geschätzte Gesamtzeitraum beträgt rund ein Jahr.',
+      'proj-bennu-title': 'Bennu — Selbst gehosteter LLM-Sprachassistent (Roboter-Gehirn)',
+      'proj-bennu-meta': 'Persönliches Projekt · seit 09/2026 · in Entwicklung',
+      'proj-bennu-desc': 'Selbst gehostetes Lebensassistenz-System: Sprachkette (Wake-Word → ASR → LLM-Agent → TTS) mit Schnellpfad für häufige Befehle, dazu Kalender, Buchhaltung, Gesundheitsdaten und Smart-Home-Steuerung. Stimme, Web-Dashboard, Android-App und Sensoren laufen auf eine Datenbank zusammen. Langfristiges Ziel: das Gehirn eines Hausroboters; der Roboter-Körper ist noch in Planung.',
       'proj-bennu-more': 'Projektdetails →',
       'proj-fitlog-title': 'Full-Stack Gesundheits-App „Fitlog"',
       'proj-fitlog-meta': 'Persönliches KI-Projekt · 01/2025 – 06/2026',
-      'proj-fitlog-desc': 'Full-Stack-System mit Android-Client (MVVM) und serverseitiger KI-Pipeline zur automatisierten Kalorienschätzung von Lebensmitteln durch Bilderkennung. REST API + lokale/entfernte Datenbanksynchronisation (Room + Remote DB) mit offlinefähiger Architektur.',
+      'proj-fitlog-desc': 'Android-App (Kotlin/Java, MVVM) mit Room-Datenbank, REST-API und offlinefähiger Synchronisation. Kalorienschätzung aus Essensfotos über ein multimodales LLM; die Ergebnisse werden vor dem Speichern manuell geprüft.',
+      'proj-fitlog-note': 'Repository privat · Einblick auf Anfrage',
 
       'skills-title': 'Kompetenzen',
-      'skills-ai': '🤖 KI & LLM',
-      'skills-prog': '💻 Programmierung',
-      'skills-robo': '🦾 Robotik',
-      'skills-mobile': '📱 Mobile & Web',
-      'skills-hw': '⚙️ Hardware',
-      'skills-tools': '🛠 Tools & DevOps',
-      'skills-lang': '🌐 Sprachen',
+      'skills-ai': 'KI & LLM',
+      'skills-prog': 'Programmierung',
+      'skills-robo': 'Robotik',
+      'skills-mobile': 'Mobile & Web',
+      'skills-hw': 'Hardware',
+      'skills-tools': 'Tools & DevOps',
+      'skills-lang': 'Sprachen',
+      'skill-llm': 'LLM-Agenten',
+      'skill-mm': 'Multimodale LLMs',
       'lang-zh': 'Chinesisch (Muttersprache)',
-      'lang-de': 'Deutsch (C1 / DSH-3)',
-      'lang-en': 'Englisch (B2 / Fachkundig)',
+      'lang-de': 'Deutsch (C1, telc C1 Hochschule)',
+      'lang-en': 'Englisch (B2 / Gute Kenntnisse)',
 
-      'awards-title': 'Auszeichnungen',
-      'award-1': 'Top 10, MATLAB-Programmierwettbewerb, Yangtze-Universität (2019)',
-      'award-2': 'Zweiter Preis, Mathematischer Theorem-Wettbewerb, Yangtze-Universität (2018)',
       'contact-title': 'Kontakt',
-      'contact-intro': 'Ich bin immer offen für neue Möglichkeiten und spannende Projekte. Sprechen Sie mich gerne an!',
+      'contact-intro': 'Für Werkstudentenstellen, Praktika und Abschlussarbeiten erreichen Sie mich am besten per E-Mail.',
       'contact-email': 'E-Mail',
-      'contact-phone': 'Telefon',
+      'contact-cv': 'Lebenslauf',
+      'contact-cv-val': 'PDF herunterladen',
       'contact-loc': 'Standort',
       'contact-loc-val': 'Karlsruhe, Deutschland',
       'footer-text': '© 2026 Ben He. Alle Rechte vorbehalten.',
@@ -109,7 +116,7 @@
     },
     en: {
       'about-tag-msc': 'KIT · M.Sc. EEIT (in progress)',
-      'meta-desc': 'Ben He — M.Sc. EEIT @ KIT. Specialized in AI, robotics and intelligent automation. Experience in digital twins, ROS 2, LLM agents and computer vision.',
+      'meta-desc': 'Ben He — M.Sc. student in EEIT at KIT. Robotics software and applied LLM systems: ROS 2, digital twins, LLM agents and embedded systems. Open to working-student roles, internships and thesis projects.',
       'nav-home': 'Home',
       'nav-main': 'Main navigation',
       'nav-about': 'About',
@@ -123,32 +130,38 @@
       'menu-open': 'Open menu',
       'menu-close': 'Close menu',
       'hero-greeting': "Hello, I'm",
-      'hero-subtitle': 'M.Sc. Electrical Engineering & Information Technology (EEIT) · AI · Robotics · Intelligent Automation',
+      'hero-title': 'Robotics Software & Applied LLM Systems',
+      'hero-subtitle': 'M.Sc. student in Electrical Engineering & Information Technology at KIT · Open to working-student roles, internships and thesis projects',
+      'hero-proof-1': 'Delivered warehouse management system with LLM document extraction',
+      'hero-proof-2': 'ROS 2 / AAS toolchain for multi-robot digital twins (bachelor\'s thesis)',
+      'hero-proof-3': 'Self-hosted LLM voice assistant as the brain for a future home robot',
+      'hero-cv': 'CV (PDF)',
       'hero-cta': 'Contact',
       'scroll': 'Scroll',
       'about-title': 'About Me',
-      'about-text': 'Engineer at KIT specializing in <strong>AI, robotics and intelligent automation</strong>. I am pursuing a career as an <strong>AI Engineer</strong> or <strong>Robotics Engineer</strong> — with experience in digital twin systems, ROS&nbsp;2, LLM agents, computer vision and hardware–software co-design.',
+      'about-text': 'M.Sc. student in Electrical Engineering & Information Technology at KIT, focused on <strong>robotics software and applied LLM systems</strong>. My background spans microcontrollers and CAN bus, ROS&nbsp;2 and digital twins, and LLM agents in practical use. I am looking for a <strong>working-student role, internship or thesis project</strong> in this area.',
       'about-photo': 'Personal introduction',
       'portrait-alt': 'Portrait of Ben He',
       'edu-title': 'Education',
       'edu-kit-name': 'Karlsruhe Institute of Technology (KIT)',
       'edu-yz-name': 'Yangtze University',
       'edu-kit-degree': 'B.Sc. Electrical Engineering and Information Technology',
-      'edu-kit-note': 'Graduated: 09/2026',
+      'edu-kit-note': 'Graduated: 06/2026 · Thesis grade: 2.3 (German scale)',
       'edu-kit-msc-degree': 'M.Sc. Electrical Engineering & Information Technology (EEIT)',
       'edu-kit-msc-note': 'Focus: AI, Robotics & Intelligent Automation',
       'edu-kit-msc-date': '10/2026 – present',
+      'edu-prep-name': 'Study Preparation in Germany',
+      'edu-prep-degree': 'telc Deutsch C1 Hochschule (04/2021)',
       'edu-yz-degree': 'Information and Computing Science',
       'edu-yz-note': 'Transferred to KIT',
       'exp-title': 'Professional Experience',
       'uni-title': 'University Project Experience',
-      'exp-thesis-title': "Bachelor's Thesis: Design of a Digital Twin Infrastructure for Robotics",
-      'exp-thesis-company': 'Institute of Control Systems (IRS), KIT',
-      'exp-thesis-1': 'Development of a Python toolchain (Submodel Generator) for automatic extraction of URDF/YAML data into six semantic AAS submodels: <em>Structure, Kinematics, Dynamics, Control, Safety, Visualization</em>.',
-      'exp-thesis-2': 'Multi-robot generator that fully automatically instantiates complex ROS 2 simulation scenarios from AAS data — no manual configuration required.',
-      'exp-thesis-3': 'Validation of cross-platform interoperability on heterogeneous robot systems (Universal Robots & igus ReBeL): URDF → AAS → Simulation, end-to-end.',
-      'exp-thesis-4': 'Formalization of the AAS specification (v3.0) as XML schemas and derivation of a domain-specific language (DSL) for semantic robot modeling.',
-      'exp-thesis-5': 'Result: Fully automated <em>Digital Twin Generator</em> that produces a deployable ROS 2 simulation with AAS integration from a single URDF file.',
+      'exp-thesis-title': 'Bachelor\'s Thesis: Design and Implementation of an AAS Submodel for Industrial Robotic Systems',
+      'exp-thesis-company': 'Institute of Control Systems (IRS), KIT · Grade 2.3',
+      'exp-thesis-1': 'Python toolchain (Submodel Generator) that automatically converts URDF/YAML data into six semantic AAS submodels: <em>Structure, Kinematics, Dynamics, Control, Safety, Visualization</em> — for 12 UR models and the igus ReBeL.',
+      'exp-thesis-2': 'Multi-robot generator that automatically builds ROS 2 simulation scenes from a configuration file (type, position, joint limits) and the AAS data.',
+      'exp-thesis-3': 'End-to-end validation in simulation: Universal Robots (UR3/UR5) via the standard generator, igus ReBeL via an extended pipeline.',
+      'exp-thesis-4': 'Result: a <em>digital twin generator</em> that produces a ROS 2 simulation with AAS integration from URDF descriptions and a configuration file.',
       'exp-thesis-more': 'Project details →',
       'exp-praktikum-title': 'R&D Intern – Embedded Systems',
       'exp-praktikum-company': 'Dynavin GmbH (Karlsruhe)',
@@ -158,49 +171,50 @@
       'exp-praktikum-more': 'Project details →',
       'exp-buddhiherz-title': 'Warehouse Management System Developer',
       'exp-buddhiherz-company': 'Buddhiherz / König Winna GmbH (Ettlingen)',
-      'exp-buddhiherz-1': 'Cloud-based WMS with three-tier architecture (L1 rule engine → L2 AI assistant → L3 data correction), deployed on VPS with Docker and Flask + SQLite backend.',
-      'exp-buddhiherz-2': 'Integrated GLS REST API to automate the generation of shipping labels, delivery notes, and invoices.',
-      'exp-buddhiherz-3': 'Developed a PIN-based authentication module and optimized fulfillment workflows, reducing order processing time by 80%. 54/54 tests passed.',
+      'exp-buddhiherz-1': 'Three-stage document extraction: offline rules (≈0.02 s, no API cost), then LLM text and image extraction with a fallback model; edge cases go to a manual correction workflow.',
+      'exp-buddhiherz-2': 'Delivered with Flask, SQLite, Waitress, systemd and nginx on a Linux VPS; integrated the GLS API for shipping labels and built PDF generation for invoices and delivery notes.',
+      'exp-buddhiherz-3': 'Replaces the manual Excel and paper process in the warehouse; role-based login (staff via email + PIN), daily backups and 100+ automated regression tests.',
       'exp-buddhiherz-more': 'Project details →',
       'exp-eti-title': 'Hardware Design & Power Electronics',
       'exp-eti-company': 'Institute of Electrical Engineering (ETI), KIT',
-      'exp-eti-1': 'Design and simulation of a buck converter in MATLAB/Simulink; achieved output voltage ripple <5% under variable load conditions.',
-      'exp-eti-2': 'Complete PCB schematic design, layout and electrical rule checking in Altium Designer.',
+      'exp-eti-1': 'Buck converter from design to commissioning: 40 V input, 1–36 V output, up to 50 W; simulated in MATLAB/Simulink (Simscape), design target for output ripple ≤ 0.5 % of V<sub>in</sub>.',
+      'exp-eti-2': 'Multi-layer PCB in Altium Designer (schematic, layout, DRC), hand assembly and systematic commissioning.',
+      'exp-eti-3': 'Cascaded PI control (current and voltage) with Stateflow fault shutdown on an STM32; C++ code generated with Embedded Coder.',
       'exp-eti-more': 'Project details →',
-      'exp-itiv-title': 'Autonomous Driving Prototype',
+      'exp-itiv-title': 'Embedded Model Car: Distance Sensing & Steering',
       'exp-itiv-company': 'Institute for Information Processing Technology (ITIV), KIT',
-      'exp-itiv-tag': 'Sensor Fusion',
-      'exp-itiv-1': 'Development of embedded C++ software for a 1:10 scale autonomous vehicle prototype with real-time obstacle detection and avoidance on a dual-core ARM MCU.',
+      'exp-itiv-1': 'Team project in the Information Technology I lab: my own C++ modules for ultrasonic distance sensing (HC-SR04, timer capture) with multi-level LED warning and for joystick steering (ADC, differential drive) on a Tiva C microcontroller (TM4C123).',
       'exp-itiv-more': 'Project details →',
       'proj-title': 'Projects',
 
-      'proj-bennu-title': 'Bennu — AI Home Robot',
-      'proj-bennu-meta': 'Personal AI project · since 09/2026 · ~1-year development cycle',
-      'proj-bennu-desc': 'The vision: an autonomous home robot with environment perception, mobility, long-term memory and natural voice interaction. Its "brain" is currently taking shape: a self-hosted life-assistance system with a voice assistant (wake word → ASR → LLM agent → TTS), calendar, bookkeeping, health data and smart-home control — all inputs (voice, web dashboard, Android app, sensors) converge into a single database. Development started on 15.09.2026; the estimated total duration is about one year.',
+      'proj-bennu-title': 'Bennu — Self-Hosted LLM Voice Assistant (Robot Brain)',
+      'proj-bennu-meta': 'Personal project · since 09/2026 · in development',
+      'proj-bennu-desc': 'Self-hosted life assistant: voice chain (wake word → ASR → LLM agent → TTS) with a fast path for common commands, plus calendar, bookkeeping, health data and smart-home control. Voice, web dashboard, Android app and sensors all feed into one database. Long-term goal: the brain of a home robot; the robot body is still in planning.',
       'proj-bennu-more': 'Project details →',
       'proj-fitlog-title': 'Full-Stack Health App "Fitlog"',
       'proj-fitlog-meta': 'Personal AI Project · 01/2025 – 06/2026',
-      'proj-fitlog-desc': 'Full-stack system with Android client (MVVM) and server-side AI pipeline for automated calorie estimation from food images. REST API + local/remote database synchronization (Room + Remote DB) with offline-capable architecture.',
+      'proj-fitlog-desc': 'Android app (Kotlin/Java, MVVM) with a Room database, REST API and offline-capable sync. Estimates calories from food photos via a multimodal LLM; results are reviewed by the user before saving.',
+      'proj-fitlog-note': 'Private repository · access on request',
 
       'skills-title': 'Skills',
-      'skills-ai': '🤖 AI & LLM',
-      'skills-prog': '💻 Programming',
-      'skills-robo': '🦾 Robotics',
-      'skills-mobile': '📱 Mobile & Web',
-      'skills-hw': '⚙️ Hardware',
-      'skills-tools': '🛠 Tools & DevOps',
-      'skills-lang': '🌐 Languages',
+      'skills-ai': 'AI & LLM',
+      'skills-prog': 'Programming',
+      'skills-robo': 'Robotics',
+      'skills-mobile': 'Mobile & Web',
+      'skills-hw': 'Hardware',
+      'skills-tools': 'Tools & DevOps',
+      'skills-lang': 'Languages',
+      'skill-llm': 'LLM agents',
+      'skill-mm': 'Multimodal LLMs',
       'lang-zh': 'Chinese (Native)',
-      'lang-de': 'German (C1 / DSH-3)',
-      'lang-en': 'English (B2 / Proficient)',
+      'lang-de': 'German (C1, telc C1 Hochschule)',
+      'lang-en': 'English (B2 / Upper-Intermediate)',
 
-      'awards-title': 'Awards',
-      'award-1': 'Top 10, MATLAB Programming Competition, Yangtze University (2019)',
-      'award-2': 'Second Prize, Mathematical Theorem Competition, Yangtze University (2018)',
       'contact-title': 'Contact',
-      'contact-intro': "I'm always open to new opportunities and exciting projects. Feel free to reach out!",
+      'contact-intro': 'For working-student roles, internships and thesis projects, email is the best way to reach me.',
       'contact-email': 'Email',
-      'contact-phone': 'Phone',
+      'contact-cv': 'CV',
+      'contact-cv-val': 'Download PDF',
       'contact-loc': 'Location',
       'contact-loc-val': 'Karlsruhe, Germany',
       'footer-text': '© 2026 Ben He. All rights reserved.',
@@ -208,7 +222,7 @@
     },
     zh: {
       'about-tag-msc': 'KIT · M.Sc. EEIT 在读',
-      'meta-desc': 'Ben He — M.Sc. EEIT @ KIT. 专注人工智能、机器人和智能自动化。具备数字孪生、ROS 2、LLM Agent 和计算机视觉经验。',
+      'meta-desc': 'Ben He — KIT 电气工程与信息技术硕士在读。机器人软件和 LLM 应用系统：ROS 2、数字孪生、LLM 智能体和嵌入式系统。寻找 Werkstudent、实习和毕业论文机会。',
       'nav-home': '返回首页',
       'nav-main': '主导航',
       'nav-about': '关于我',
@@ -222,32 +236,38 @@
       'menu-open': '打开菜单',
       'menu-close': '关闭菜单',
       'hero-greeting': '你好，我是',
-      'hero-subtitle': '电气工程与信息技术硕士 (EEIT) · 人工智能 · 机器人 · 智能自动化',
+      'hero-title': '机器人软件与 LLM 应用系统',
+      'hero-subtitle': 'KIT 电气工程与信息技术硕士在读 · 寻找 Werkstudent、实习和毕业论文机会',
+      'hero-proof-1': '已交付的仓库管理系统，含 LLM 单据提取',
+      'hero-proof-2': 'ROS 2 / AAS 多机器人数字孪生工具链（本科论文）',
+      'hero-proof-3': '自托管 LLM 语音助手，作为未来家用机器人的大脑',
+      'hero-cv': '简历 PDF（英文）',
       'hero-cta': '联系我',
       'scroll': '向下滚动',
       'about-title': '关于我',
-      'about-text': 'KIT 工程师，专注于<strong>人工智能、机器人和智能自动化</strong>。致力于成为 <strong>AI 工程师</strong>或<strong>机器人工程师</strong>——具备数字孪生系统、ROS&nbsp;2、LLM Agent、计算机视觉和软硬件协同设计方面的经验。',
+      'about-text': 'KIT 电气工程与信息技术硕士在读，专注<strong>机器人软件和 LLM 应用系统</strong>。经验覆盖微控制器和 CAN 总线、ROS&nbsp;2 和数字孪生，以及实际运行的 LLM 智能体。正在寻找这一方向的 <strong>Werkstudent、实习或毕业论文</strong>机会。',
       'about-photo': '个人介绍',
       'portrait-alt': 'Ben He 肖像',
       'edu-title': '教育背景',
       'edu-kit-name': '卡尔斯鲁厄理工学院 (KIT)',
       'edu-yz-name': '长江大学',
       'edu-kit-degree': 'B.Sc. 电气工程与信息技术',
-      'edu-kit-note': '毕业时间：2026年9月',
+      'edu-kit-note': '毕业时间：2026 年 6 月 · 毕业论文成绩 2.3（德国评分）',
       'edu-kit-msc-degree': '电气工程与信息技术硕士 (EEIT)',
       'edu-kit-msc-note': '方向：人工智能、机器人与智能自动化',
       'edu-kit-msc-date': '10/2026 – 至今',
+      'edu-prep-name': '赴德学习准备',
+      'edu-prep-degree': 'telc Deutsch C1 Hochschule（2021 年 4 月）',
       'edu-yz-degree': '信息与计算科学',
       'edu-yz-note': '转学至 KIT',
       'exp-title': '职业经历',
       'uni-title': '大学项目经验',
-      'exp-thesis-title': '本科毕业论文：面向机器人的数字孪生基础设施设计',
-      'exp-thesis-company': '控制与调节系统研究所（IRS），KIT',
-      'exp-thesis-1': '开发 Python 工具链（子模型生成器），自动从 URDF/YAML 数据中提取六个语义化 AAS 子模型：<em>结构、运动学、动力学、控制、安全、可视化</em>。',
-      'exp-thesis-2': '多机器人生成器，从 AAS 数据全自动实例化复杂的 ROS 2 仿真场景——无需手动配置。',
-      'exp-thesis-3': '在异构机器人系统（Universal Robots 和 igus ReBeL）上验证跨平台互操作性：URDF → AAS → 仿真，端到端。',
-      'exp-thesis-4': '将 AAS 规范（v3.0）形式化为 XML Schema，并推导出用于语义化机器人建模的领域特定语言（DSL）。',
-      'exp-thesis-5': '成果：<em>数字孪生生成器</em>，可从单个 URDF 文件自动生成带 AAS 集成的可部署 ROS 2 仿真环境。',
+      'exp-thesis-title': '本科毕业论文：工业机器人系统 AAS 子模型的设计与实现',
+      'exp-thesis-company': '控制与调节系统研究所（IRS），KIT · 成绩 2.3',
+      'exp-thesis-1': '开发 Python 工具链（子模型生成器），把 URDF/YAML 数据自动转换为六个语义化 AAS 子模型：<em>结构、运动学、动力学、控制、安全、可视化</em>，覆盖 12 款 UR 机器人和 igus ReBeL。',
+      'exp-thesis-2': '多机器人生成器：读取配置文件（机器人类型、位置、关节限位）和 AAS 数据，自动生成 ROS 2 仿真场景。',
+      'exp-thesis-3': '在仿真中完成端到端验证：Universal Robots（UR3/UR5）走标准生成器，igus ReBeL 走扩展流水线。',
+      'exp-thesis-4': '成果：<em>数字孪生生成器</em>，根据 URDF 描述和配置文件生成带 AAS 集成的 ROS 2 仿真。',
       'exp-thesis-more': '项目详情 →',
       'exp-praktikum-title': '研发实习 – 嵌入式系统',
       'exp-praktikum-company': 'Dynavin GmbH（卡尔斯鲁厄）',
@@ -255,51 +275,52 @@
       'exp-praktikum-2': '检测车间中的硬件组装、系统化排障与控制器维修；导航系统功能测试。',
       'exp-praktikum-3': '协助后装系统的整车集成，并在客户车辆中诊断 CAN 总线部件。',
       'exp-praktikum-more': '项目详情 →',
-      'exp-buddhiherz-title': '仓库管理系统开发工程师',
+      'exp-buddhiherz-title': '仓库管理系统开发',
       'exp-buddhiherz-company': 'Buddhiherz / König Winna GmbH (Ettlingen)',
-      'exp-buddhiherz-1': '云端仓库管理系统，三层架构（L1 规则引擎 → L2 AI 助手 → L3 数据修正），部署在 VPS 上，使用 Docker 和 Flask + SQLite 后端。',
-      'exp-buddhiherz-2': '集成 GLS REST API，自动生成运输标签、送货单和发票。',
-      'exp-buddhiherz-3': '开发 PIN 认证模块，优化履行流程，订单处理时间减少 80%。通过 54/54 测试用例。',
+      'exp-buddhiherz-1': '三级单据提取流水线：先走离线规则（约 0.02 秒，零 API 成本），再走 LLM 文本和图像提取并带回退模型，疑难件进入人工修正流程。',
+      'exp-buddhiherz-2': '基于 Flask、SQLite、Waitress、systemd 和 nginx 部署在 Linux VPS 上；对接 GLS API 生成运单，并实现发票和送货单 PDF 生成。',
+      'exp-buddhiherz-3': '取代仓库原有的 Excel 和纸质流程；按角色登录（员工用邮箱和 PIN）、每日自动备份、100+ 自动化回归测试。',
       'exp-buddhiherz-more': '项目详情 →',
       'exp-eti-title': '硬件设计与电力电子',
       'exp-eti-company': '电气工程研究所（ETI），KIT',
-      'exp-eti-1': '在 MATLAB/Simulink 中设计并仿真 Buck 变换器；在可变负载条件下实现输出电压纹波 <5%。',
-      'exp-eti-2': '在 Altium Designer 中完成完整的 PCB 原理图设计、布局和电气规则检查。',
+      'exp-eti-1': 'Buck 变换器从设计到调试完整实现：40 V 输入、1–36 V 输出、最大 50 W；在 MATLAB/Simulink（Simscape）中仿真，输出纹波设计指标 ≤ 0.5% U<sub>E</sub>。',
+      'exp-eti-2': '在 Altium Designer 中完成多层 PCB（原理图、布局、DRC），手工装配并按流程调试。',
+      'exp-eti-3': '在 STM32 上实现电流/电压级联 PI 控制和 Stateflow 故障保护；C++ 代码由 Embedded Coder 生成。',
       'exp-eti-more': '项目详情 →',
-      'exp-itiv-title': '自动驾驶（原型）',
+      'exp-itiv-title': '嵌入式模型车：测距与转向驱动',
       'exp-itiv-company': '信息技术处理研究所（ITIV），KIT',
-      'exp-itiv-tag': '传感器融合',
-      'exp-itiv-1': '为 1:10 比例自动驾驶原型车开发嵌入式 C++ 软件，在双核 ARM MCU 上实现实时障碍物检测与避障。',
+      'exp-itiv-1': '信息技术 I 实验课团队项目：独立实现 C++ 模块，包括超声波测距（HC-SR04，定时器捕获）及多级 LED 预警、摇杆转向（ADC，差速驱动），运行于 Tiva C 微控制器（TM4C123）。',
       'exp-itiv-more': '项目详情 →',
       'proj-title': '项目',
 
-      'proj-bennu-title': 'Bennu —— AI 家用机器人',
-      'proj-bennu-meta': '个人 AI 项目 · 2026 年 9 月起 · 开发周期约 1 年',
-      'proj-bennu-desc': '构想：一台具备环境感知、移动、长期记忆与自然语音交互能力的家庭智能机器人。目前正在打造它的「大脑」：自托管的生活助手系统——语音助手（唤醒词 → ASR → LLM 智能体 → TTS）、日程、记账、健康数据与智能家居控制，所有入口（语音、网页仪表盘、Android App、传感器）汇入同一份数据库。开发于 2026 年 9 月 15 日启动，预计总开发周期约一年。',
+      'proj-bennu-title': 'Bennu —— 自托管 LLM 语音助手（机器人大脑）',
+      'proj-bennu-meta': '个人项目 · 2026 年 9 月起 · 开发中',
+      'proj-bennu-desc': '自托管的生活助手系统：语音链（唤醒词 → ASR → LLM 智能体 → TTS），常用指令走快通道，并覆盖日程、记账、健康数据和智能家居控制。语音、网页看板、Android App 和传感器汇入同一份数据库。长期目标是成为家用机器人的大脑；机器人本体还在规划中。',
       'proj-bennu-more': '项目详情 →',
       'proj-fitlog-title': '全栈健康 App "Fitlog"',
       'proj-fitlog-meta': '个人 AI 项目 · 2025年1月 – 2026年6月',
-      'proj-fitlog-desc': '全栈系统：Android 客户端 (MVVM) + 服务端 AI 管线，通过图像识别自动估算食物热量。REST API + 本地/远程数据库同步 (Room + Remote DB)，支持离线架构。',
+      'proj-fitlog-desc': 'Android App（Kotlin/Java，MVVM），使用 Room 数据库、REST API 和离线同步。通过多模态 LLM 从食物照片估算热量，用户确认后才保存。',
+      'proj-fitlog-note': '代码仓库未公开，可按需提供',
 
       'skills-title': '技能',
-      'skills-ai': '🤖 人工智能 & LLM',
-      'skills-prog': '💻 编程',
-      'skills-robo': '🦾 机器人',
-      'skills-mobile': '📱 移动端 & Web',
-      'skills-hw': '⚙️ 硬件',
-      'skills-tools': '🛠 工具 & DevOps',
-      'skills-lang': '🌐 语言',
+      'skills-ai': '人工智能 & LLM',
+      'skills-prog': '编程',
+      'skills-robo': '机器人',
+      'skills-mobile': '移动端 & Web',
+      'skills-hw': '硬件',
+      'skills-tools': '工具 & DevOps',
+      'skills-lang': '语言',
+      'skill-llm': 'LLM 智能体',
+      'skill-mm': '多模态 LLM',
       'lang-zh': '中文（母语）',
-      'lang-de': '德语 (C1 / DSH-3)',
-      'lang-en': '英语 (B2 / 熟练)',
+      'lang-de': '德语（C1，telc C1 Hochschule）',
+      'lang-en': '英语（B2 / 中高级）',
 
-      'awards-title': '奖项',
-      'award-1': '长江大学 MATLAB 程序设计竞赛 Top 10（2019）',
-      'award-2': '长江大学数学定理竞赛二等奖（2018）',
       'contact-title': '联系方式',
-      'contact-intro': '我始终对新机会和有趣的项目持开放态度。欢迎联系我！',
+      'contact-intro': 'Werkstudent、实习和毕业论文机会，欢迎发邮件联系。',
       'contact-email': '邮箱',
-      'contact-phone': '电话',
+      'contact-cv': '简历',
+      'contact-cv-val': '下载 PDF（英文）',
       'contact-loc': '所在地',
       'contact-loc-val': '德国 卡尔斯鲁厄',
       'footer-text': '© 2026 Ben He. 保留所有权利。',
@@ -307,26 +328,11 @@
     },
   };
 
-  // Typewriter titles per language
-  const typewriterTitles = {
-    de: [
-      'AI & Robotics Engineer',
-      'Digital Twin & ROS 2',
-      'Intelligente Automatisierung',
-      'Embedded Systems & Full-Stack',
-    ],
-    en: [
-      'AI & Robotics Engineer',
-      'Digital Twin & ROS 2',
-      'Intelligent Automation',
-      'Embedded Systems & Full-Stack',
-    ],
-    zh: [
-      'AI 与机器人工程师',
-      '数字孪生 & ROS 2',
-      '智能自动化',
-      '嵌入式系统 & 全栈',
-    ],
+  // CV download per language (no Chinese CV exists)
+  const CV_FILES = {
+    de: 'cv/Ben_He_Lebenslauf.pdf',
+    en: 'cv/Ben_He_CV.pdf',
+    zh: 'cv/Ben_He_CV.pdf',
   };
 
   // Language cycle order
@@ -344,7 +350,6 @@
     DOM.langSwitcher = document.getElementById('langSwitcher');
     DOM.langOptions = document.querySelectorAll('.lang-option');
     DOM.scrollProgress = document.getElementById('scrollProgress');
-    DOM.heroTitle = document.getElementById('heroTitle');
     DOM.heroParticles = document.getElementById('heroParticles');
     DOM.backToTop = document.querySelector('.back-to-top');
     DOM.projectCards = document.querySelectorAll('.project-card');
@@ -354,13 +359,15 @@
 
   // ─── i18n System ───────────────────────────────────────
   let currentLang = 'de';
-  let typewriterTimer = null;
 
   function getLang() {
+    const fromUrl = new URLSearchParams(window.location.search).get('lang');
+    if (fromUrl === 'de' || fromUrl === 'en' || fromUrl === 'zh') return fromUrl;
     const saved = localStorage.getItem('lang');
     if (saved === 'de' || saved === 'en' || saved === 'zh') return saved;
     const browserLang = (navigator.language || '').split('-')[0];
     if (browserLang === 'de') return 'de';
+    if (browserLang === 'en') return 'en';
     if (browserLang === 'zh') return 'zh';
     return 'de'; // default DE
   }
@@ -414,16 +421,10 @@
       metaDesc.setAttribute('content', T[lang]['meta-desc']);
     }
 
-    // Restart typewriter
-    if (DOM.heroTitle) {
-      if (typewriterTimer) clearTimeout(typewriterTimer);
-      typewriter(DOM.heroTitle, typewriterTitles[lang], {
-        typeSpeed: 55,
-        deleteSpeed: 30,
-        pauseBetween: 2800,
-        pauseAfterDelete: 350,
-      });
-    }
+    // Point CV links at the file for this language
+    document.querySelectorAll('[data-cv-link]').forEach((el) => {
+      el.setAttribute('href', CV_FILES[lang]);
+    });
   }
 
   function initLangSwitcher() {
@@ -449,51 +450,6 @@
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
-  }
-
-  // ─── Typewriter Effect ──────────────────────────────────
-  function typewriter(element, texts, opts = {}) {
-    const {
-      typeSpeed = 60,
-      deleteSpeed = 35,
-      pauseBetween = 2500,
-      pauseAfterDelete = 400,
-    } = opts;
-
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function tick() {
-      const currentText = texts[textIndex];
-
-      if (isDeleting) {
-        element.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        element.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-      }
-
-      const cursor = document.createElement('span');
-      cursor.className = 'cursor';
-      element.appendChild(cursor);
-
-      let delay = isDeleting ? deleteSpeed : typeSpeed;
-
-      if (!isDeleting && charIndex === currentText.length) {
-        delay = pauseBetween;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-        delay = pauseAfterDelete;
-      }
-
-      typewriterTimer = setTimeout(tick, delay);
-    }
-
-    tick();
   }
 
   // ─── Hero Particles Canvas ───────────────────────────────
@@ -733,40 +689,6 @@
     );
   }
 
-  // ─── Visitor Counter (privacy-friendly) ──────────────────
-  const VISIT_LABELS = { de: 'Besuche: ', en: 'Visits: ', zh: '访问量: ' };
-  function initVisitorCounter() {
-    const storageKey = 'benhe_visits';
-    const now = Date.now();
-
-    let data;
-    try {
-      data = JSON.parse(localStorage.getItem(storageKey)) || { count: 0, firstVisit: now, lastVisit: 0 };
-    } catch {
-      data = { count: 0, firstVisit: now, lastVisit: 0 };
-    }
-
-    if (now - data.lastVisit > 30 * 60 * 1000) {
-      data.count++;
-    }
-    data.lastVisit = now;
-    localStorage.setItem(storageKey, JSON.stringify(data));
-
-    const footer = document.querySelector('.footer-content');
-    if (footer && data.count > 0) {
-      const span = document.createElement('span');
-      span.style.cssText = 'font-size:0.85rem;color:var(--color-text-muted);';
-      span.textContent = (VISIT_LABELS[currentLang] || VISIT_LABELS.de) + data.count;
-      span.id = 'visitorCount';
-      const btt = footer.querySelector('.back-to-top');
-      if (btt) {
-        footer.insertBefore(span, btt);
-      } else {
-        footer.appendChild(span);
-      }
-    }
-  }
-
   // ─── Init Everything ─────────────────────────────────────
   function init() {
     cacheDom();
@@ -784,7 +706,6 @@
     initProjectCardGlow();
     initBackToTop();
     initParticles();
-    initVisitorCounter();
 
     // Theme toggle
     if (DOM.themeToggle) {
