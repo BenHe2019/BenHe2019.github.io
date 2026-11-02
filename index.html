@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" data-i18n="meta-desc" content="Ben He — AI Engineer & Robotics Engineer. Elektrotechnik-Student am KIT mit Schwerpunkt auf KI, Robotik und intelligenter Automatisierung.">
-  <title>Ben He | Portfolio</title>
+  <meta name="description" data-i18n="meta-desc" content="Ben He — M.Sc. EEIT @ KIT. Spezialisiert auf KI, Robotik und intelligente Automatisierung. Erfahrung in Digital Twin, ROS 2, LLM-Agenten und Computer Vision.">
+  <title>Ben He — AI &amp; Robotics Engineer | KIT</title>
+  <link rel="canonical" href="https://benhe2019.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benhe2019.github.io/">
+  <meta property="og:title" content="Ben He — AI &amp; Robotics Engineer | KIT">
+  <meta property="og:description" content="Ben He — M.Sc. EEIT @ KIT. Spezialisiert auf KI, Robotik und intelligente Automatisierung. Erfahrung in Digital Twin, ROS 2, LLM-Agenten und Computer Vision.">
+  <meta property="og:image" content="https://benhe2019.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Ben He", "url": "https://benhe2019.github.io/", "image": "https://benhe2019.github.io/portrait.jpg", "jobTitle": "AI & Robotics Engineer", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Karlsruher Institut für Technologie"}, "address": {"@type": "PostalAddress", "addressLocality": "Karlsruhe", "addressCountry": "DE"}, "sameAs": ["https://github.com/BenHe2019"], "knowsAbout": ["Artificial Intelligence", "Robotics", "ROS 2", "Digital Twin", "LLM Agents", "Computer Vision"]}</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
 
@@ -22,9 +31,9 @@
       <a href="#hero" class="nav-logo" data-i18n-aria="nav-home" aria-label="Zur Startseite">BH</a>
       <nav class="nav-links" id="navLinks" role="navigation" data-i18n-aria="nav-main" aria-label="Hauptnavigation">
         <a href="#about" data-section="about" data-i18n="nav-about">Über mich</a>
-        <a href="#education" data-section="education" data-i18n="nav-edu">Ausbildung</a>
         <a href="#experience" data-section="experience" data-i18n="nav-exp">Erfahrung</a>
         <a href="#projects" data-section="projects" data-i18n="nav-proj">Projekte</a>
+        <a href="#education" data-section="education" data-i18n="nav-edu">Ausbildung</a>
         <a href="#skills" data-section="skills" data-i18n="nav-skills">Kompetenzen</a>
         <a href="#contact" data-section="contact" data-i18n="nav-contact">Kontakt</a>
       </nav>
@@ -55,13 +64,14 @@
       <div class="container hero-content">
         <p class="hero-greeting" data-i18n="hero-greeting">Hallo, ich bin</p>
         <h1 class="hero-name">Ben He</h1>
-        <p class="hero-title" id="heroTitle"></p>
+        <p class="hero-title" id="heroTitle">AI &amp; Robotics Engineer</p>
         <p class="hero-subtitle" data-i18n="hero-subtitle">M.Sc. Elektrotechnik und Informationstechnik (EEIT) · KI · Robotik · Intelligente Automatisierung</p>
         <div class="hero-cta">
           <a href="https://github.com/BenHe2019" target="_blank" rel="noopener" class="btn btn-primary">
             <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
+          <a href="mailto:ben.he1999@outlook.com?subject=Lebenslauf%20Ben%20He" class="btn btn-outline" data-i18n="hero-cv">Lebenslauf anfordern</a>
           <a href="#contact" class="btn btn-outline" data-i18n="hero-cta">Kontakt</a>
         </div>
       </div>
@@ -80,12 +90,12 @@
         <div class="about-layout">
           <div class="about-content">
             <p data-i18n="about-text">
-              Ingenieur am KIT mit Schwerpunkt auf <strong>KI, Robotik und intelligenter Automatisierung</strong>. Ich strebe eine Tätigkeit als <strong>AI Engineer</strong> oder <strong>Robotics Engineer</strong> an — mit Erfahrung in Digital-Twin-Systemen, ROS&nbsp;2, LLM-Agenten, Computer Vision und Hard- und Software-Co-Design.
+              M.Sc.-Student am KIT mit Schwerpunkt auf <strong>KI, Robotik und intelligenter Automatisierung</strong>. Ich strebe eine Tätigkeit als <strong>AI Engineer</strong> oder <strong>Robotics Engineer</strong> an — mit Erfahrung in Digital-Twin-Systemen, ROS&nbsp;2, LLM-Agenten, Computer Vision und Hard- und Software-Co-Design.
             </p>
           </div>
           <aside class="about-photo-card" data-i18n-aria="about-photo" aria-label="Persönliche Vorstellung">
             <div class="photo-frame">
-              <picture><source srcset="portrait.webp" type="image/webp"><img src="portrait.jpg" data-i18n-alt="portrait-alt" alt="Portrait von Ben He"></picture>
+              <picture><source srcset="portrait.webp" type="image/webp"><img src="portrait.jpg" width="600" height="826" data-i18n-alt="portrait-alt" alt="Portrait von Ben He"></picture>
             </div>
             <div class="about-badges">
               <span class="tag tag-skill" data-i18n="about-tag-msc">KIT · M.Sc. EEIT (laufend)</span>
@@ -98,10 +108,179 @@
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="section section-alt" id="education">
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
       <div class="container">
-        <h2 class="section-title"><span class="section-num">02</span> <span data-i18n="edu-title">Ausbildung</span></h2>
+        <h2 class="section-title"><span class="section-num">02</span> <span data-i18n="exp-title">Berufserfahrung</span></h2>
+        <div class="exp-grid">
+          <!-- Buddhiherz -->
+          <article class="exp-card">
+            <a href="buddhiherz.html" class="exp-card-link">
+            <div class="exp-card-header">
+              <h3 data-i18n="exp-buddhiherz-title">Entwickler Lagerverwaltungssystem (WMS)</h3>
+              <span class="exp-date">07/2026 – 10/2026</span>
+            </div>
+            <p class="exp-company" data-i18n="exp-buddhiherz-company">Buddhiherz / König Winna GmbH (Ettlingen)</p>
+            <div class="exp-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Docker</span>
+                <span class="tag">GLS API</span>
+            </div>
+            <ul class="exp-details">
+              <li data-i18n="exp-buddhiherz-1">Cloud-basiertes WMS mit dreistufiger Architektur (L1-Regelwerk → L2-KI-Assistent → L3-Datenkorrektur), deployiert auf VPS mit Docker und Flask + SQLite Backend.</li>
+              <li data-i18n="exp-buddhiherz-2">Integration der GLS REST API zur automatischen Erzeugung von Versandlabels, Lieferscheinen und Rechnungen.</li>
+              <li data-i18n="exp-buddhiherz-3">Entwicklung eines PIN-basierten Authentifizierungsmoduls und Optimierung der Fulfillment-Prozesse; Reduzierung der Auftragsbearbeitungszeit um 80 %.</li>
+            </ul>
+            <span class="exp-card-more" data-i18n="exp-buddhiherz-more">Projektdetails →</span>
+            </a>
+          </article>
+          <!-- Praktikum Dynavin -->
+          <article class="exp-card">
+            <a href="praktikum.html" class="exp-card-link">
+              <div class="exp-card-header">
+                <h3 data-i18n="exp-praktikum-title">Praktikant F&amp;E – Embedded Systems</h3>
+                <span class="exp-date">12/2025 – 02/2026</span>
+              </div>
+              <p class="exp-company" data-i18n="exp-praktikum-company">Dynavin GmbH (Karlsruhe)</p>
+              <div class="exp-tags">
+                <span class="tag">MCU</span>
+                <span class="tag">CAN-Bus</span>
+                <span class="tag">C/C++</span>
+                <span class="tag">Debugging</span>
+              </div>
+              <ul class="exp-details">
+                <li data-i18n="exp-praktikum-1">Analyse elektronischer Schaltungen für Fahrzeug-Nachrüstsysteme: 32-Bit-Mikrocontroller, CAN-Bus-Schnittstelle, Spannungsversorgung und Ein-/Ausgangsstufen.</li>
+                <li data-i18n="exp-praktikum-2">Hardware-Montage, systematische Fehlersuche und Reparatur von Steuergeräten in der Prüfwerkstatt; Funktionstests von Navigationssystemen.</li>
+                <li data-i18n="exp-praktikum-3">Unterstützung bei der Fahrzeugintegration von Nachrüstsystemen und Diagnose von CAN-Bus-Komponenten in Kundenfahrzeugen.</li>
+              </ul>
+              <span class="exp-card-more" data-i18n="exp-praktikum-more">Projektdetails →</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- University Project Experience Section -->
+    <section class="section" id="uni">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">03</span> <span data-i18n="uni-title">Universitäre Projekterfahrung</span></h2>
+        <div class="exp-grid">
+          <!-- Bachelor Thesis -->
+          <article class="exp-card">
+            <a href="bachelorarbeit.html" class="exp-card-link">
+              <div class="exp-card-header">
+                <h3 data-i18n="exp-thesis-title">Bachelorarbeit: Design einer Digital-Twin-Infrastruktur für Robotik</h3>
+                <span class="exp-date">06/2025 – 12/2025</span>
+              </div>
+              <p class="exp-company" data-i18n="exp-thesis-company">Institut für Regelungs- und Steuerungssysteme (IRS), KIT</p>
+              <div class="exp-tags">
+                <span class="tag">Python</span>
+                <span class="tag">ROS 2</span>
+                <span class="tag">AAS (v3.0)</span>
+                <span class="tag">URDF</span>
+                <span class="tag">XML</span>
+              </div>
+              <ul class="exp-details">
+                <li data-i18n="exp-thesis-1">Entwicklung einer Python-Toolchain (Submodel Generator) zur automatischen Extraktion von URDF-/YAML-Daten in sechs semantische AAS-Teilmodelle: <em>Struktur, Kinematik, Dynamik, Steuerung, Sicherheit, Visualisierung</em>.</li>
+                <li data-i18n="exp-thesis-2">Multi-Robot-Generator instanziiert vollautomatisch komplexe ROS-2-Simulationsszenarien aus AAS-Daten — ohne manuelle Konfiguration.</li>
+                <li data-i18n="exp-thesis-3">Validierung der plattformübergreifenden Interoperabilität auf heterogenen Robotersystemen (Universal Robots &amp; igus ReBeL): URDF → AAS → Simulation, Ende-zu-Ende.</li>
+                <li data-i18n="exp-thesis-4">Formalisierung der AAS-Spezifikation (v3.0) als XML-Schemata und Ableitung einer domänenspezifischen Sprache (DSL) für die semantische Robotmodellierung.</li>
+                <li data-i18n="exp-thesis-5">Ergebnis: Vollautomatisierter <em>Digital-Twin-Generator</em>, der aus einer einzigen URDF-Datei eine deploybare ROS-2-Simulation mit AAS-Integration erzeugt.</li>
+              </ul>
+              <span class="exp-card-more" data-i18n="exp-thesis-more">Projektdetails →</span>
+            </a>
+          </article>
+          <!-- ETI -->
+          <article class="exp-card">
+            <a href="power-electronics.html" class="exp-card-link">
+              <div class="exp-card-header">
+                <h3 data-i18n="exp-eti-title">Hardware-Design &amp; Leistungselektronik</h3>
+                <span class="exp-date">05/2024 – 09/2024</span>
+              </div>
+              <p class="exp-company" data-i18n="exp-eti-company">Elektrotechnisches Institut (ETI), KIT</p>
+              <div class="exp-tags">
+                <span class="tag">MATLAB/Simulink</span>
+                <span class="tag">Altium Designer</span>
+              </div>
+              <ul class="exp-details">
+                <li data-i18n="exp-eti-1">Entwurf und Simulation eines Buck-Wandlers in MATLAB/Simulink; Erzielung einer Ausgangsspannungswelligkeit &lt;5% unter variablen Lastbedingungen.</li>
+                <li data-i18n="exp-eti-2">Vollständige PCB-Schaltplanerstellung, Layout und elektrische Regelprüfung in Altium Designer.</li>
+              </ul>
+              <span class="exp-card-more" data-i18n="exp-eti-more">Projektdetails →</span>
+            </a>
+          </article>
+          <!-- ITIV -->
+          <article class="exp-card">
+            <a href="pit-autopilot.html" class="exp-card-link">
+              <div class="exp-card-header">
+                <h3 data-i18n="exp-itiv-title">Autonomes Fahren (Prototyp)</h3>
+                <span class="exp-date">05/2023 – 07/2023</span>
+              </div>
+              <p class="exp-company" data-i18n="exp-itiv-company">Institut für Technik der Informationsverarbeitung (ITIV), KIT</p>
+              <div class="exp-tags">
+                <span class="tag">C++</span>
+                <span class="tag" data-i18n="exp-itiv-tag">Sensorfusion</span>
+              <span class="tag">Embedded Systems</span>
+              </div>
+              <ul class="exp-details">
+                <li data-i18n="exp-itiv-1">Entwicklung eingebetteter C++-Software für einen autonomen Fahrzeugprototyp (Maßstab 1:10) mit Echtzeit-Hinderniserkennung und -vermeidung auf einem Dual-Core ARM MCU.</li>
+              </ul>
+              <span class="exp-card-more" data-i18n="exp-itiv-more">Projektdetails →</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">04</span> <span data-i18n="proj-title">Projekte</span></h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-icon">🤖</div>
+            <h3 data-i18n="proj-bennu-title">Bennu — AI-Hausroboter</h3>
+            <p class="project-meta" data-i18n="proj-bennu-meta">Persönliches KI-Projekt · seit 09/2026 · Entwicklungszeitraum ~1 Jahr</p>
+            <p class="project-desc" data-i18n="proj-bennu-desc">Die Vision: ein autonomer Hausroboter mit Umgebungswahrnehmung, Bewegung, langfristigem Gedächtnis und natürlicher Sprachinteraktion. Aktuell entsteht sein „Gehirn": ein selbst gehostetes Lebensassistenz-System mit Sprachassistent (Wake-Word → ASR → LLM-Agent → TTS), Kalender, Buchhaltung, Gesundheitsdaten und Smart-Home-Steuerung — alle Eingänge (Stimme, Web-Dashboard, Android-App, Sensoren) laufen auf eine Datenbank zusammen. Entwicklung seit dem 15.09.2026; der geschätzte Gesamtzeitraum beträgt rund ein Jahr.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LLM Agents</span>
+              <span class="tag">STT/TTS</span>
+              <span class="tag">Android</span>
+              <span class="tag">Smart Home</span>
+            </div>
+            <a href="bennu.html" class="project-link">
+              <span data-i18n="proj-bennu-more">Projektdetails →</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">📱</div>
+            <h3 data-i18n="proj-fitlog-title">Full-Stack Gesundheits-App „Fitlog"</h3>
+            <p class="project-meta" data-i18n="proj-fitlog-meta">Persönliches KI-Projekt · 01/2025 – 06/2026</p>
+            <p class="project-desc" data-i18n="proj-fitlog-desc">Full-Stack-System mit Android-Client (MVVM) und serverseitiger KI-Pipeline zur automatisierten Kalorienschätzung von Lebensmitteln durch Bilderkennung. REST API + lokale/entfernte Datenbanksynchronisation (Room + Remote DB) mit offlinefähiger Architektur.</p>
+            <div class="project-tags">
+              <span class="tag">Kotlin/Java</span>
+              <span class="tag">Python</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Android Studio</span>
+            </div>
+            <a href="https://github.com/BenHe2019/Fitlog" target="_blank" rel="noopener" class="project-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              github.com/BenHe2019/Fitlog
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">05</span> <span data-i18n="edu-title">Ausbildung</span></h2>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-marker"></div>
@@ -139,175 +318,6 @@
               <p class="timeline-note" data-i18n="edu-yz-note">Wechsel ans KIT</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-      <div class="container">
-        <h2 class="section-title"><span class="section-num">03</span> <span data-i18n="exp-title">Berufserfahrung</span></h2>
-        <div class="exp-grid">
-          <!-- Buddhiherz -->
-          <article class="exp-card">
-            <a href="buddhiherz.html" class="exp-card-link" aria-label="Buddhiherz Cloud-Lagerverwaltungssystem – Details">
-            <div class="exp-card-header">
-              <h3 data-i18n="exp-buddhiherz-title">Entwickler Lagerverwaltungssystem (WMS)</h3>
-              <span class="exp-date">07/2026 – 10/2026</span>
-            </div>
-            <p class="exp-company" data-i18n="exp-buddhiherz-company">Buddhiherz / König Winna GmbH (Ettlingen)</p>
-            <div class="exp-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Flask</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">Docker</span>
-                <span class="tag">GLS API</span>
-            </div>
-            <ul class="exp-details">
-              <li data-i18n="exp-buddhiherz-1">Cloud-basiertes WMS mit dreistufiger Architektur (L1-Regelwerk → L2-KI-Assistent → L3-Datenkorrektur), deployiert auf VPS mit Docker und Flask + SQLite Backend.</li>
-              <li data-i18n="exp-buddhiherz-2">Integration der GLS REST API zur automatischen Erzeugung von Versandlabels, Lieferscheinen und Rechnungen.</li>
-              <li data-i18n="exp-buddhiherz-3">Entwicklung eines PIN-basierten Authentifizierungsmoduls und Optimierung der Fulfillment-Prozesse; Reduzierung der Auftragsbearbeitungszeit um 80 %. 54/54 Tests bestanden.</li>
-            </ul>
-            <span class="exp-card-more" data-i18n="exp-buddhiherz-more">Projektdetails →</span>
-            </a>
-          </article>
-          <!-- Praktikum Dynavin -->
-          <article class="exp-card">
-            <a href="praktikum.html" class="exp-card-link" aria-label="Praktikant F&amp;E – Embedded Systems – Details">
-              <div class="exp-card-header">
-                <h3 data-i18n="exp-praktikum-title">Praktikant F&amp;E – Embedded Systems</h3>
-                <span class="exp-date">12/2025 – 02/2026</span>
-              </div>
-              <p class="exp-company" data-i18n="exp-praktikum-company">Dynavin GmbH (Karlsruhe)</p>
-              <div class="exp-tags">
-                <span class="tag">MCU</span>
-                <span class="tag">CAN-Bus</span>
-                <span class="tag">C/C++</span>
-                <span class="tag">Debugging</span>
-              </div>
-              <ul class="exp-details">
-                <li data-i18n="exp-praktikum-1">Analyse elektronischer Schaltungen für Fahrzeug-Nachrüstsysteme: 32-Bit-Mikrocontroller, CAN-Bus-Schnittstelle, Spannungsversorgung und Ein-/Ausgangsstufen.</li>
-                <li data-i18n="exp-praktikum-2">Hardware-Montage, systematische Fehlersuche und Reparatur von Steuergeräten in der Prüfwerkstatt; Funktionstests von Navigationssystemen.</li>
-                <li data-i18n="exp-praktikum-3">Unterstützung bei der Fahrzeugintegration von Nachrüstsystemen und Diagnose von CAN-Bus-Komponenten in Kundenfahrzeugen.</li>
-              </ul>
-              <span class="exp-card-more" data-i18n="exp-praktikum-more">Projektdetails →</span>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- University Project Experience Section -->
-    <section class="section section-alt" id="uni">
-      <div class="container">
-        <h2 class="section-title"><span class="section-num">04</span> <span data-i18n="uni-title">Universitäre Projekterfahrung</span></h2>
-        <div class="exp-grid">
-          <!-- Bachelor Thesis -->
-          <article class="exp-card">
-            <a href="bachelorarbeit.html" class="exp-card-link" aria-label="Bachelorarbeit: Digital-Twin-Infrastruktur – Details">
-              <div class="exp-card-header">
-                <h3 data-i18n="exp-thesis-title">Bachelorarbeit: Design einer Digital-Twin-Infrastruktur für Robotik</h3>
-                <span class="exp-date">06/2025 – 12/2025</span>
-              </div>
-              <p class="exp-company" data-i18n="exp-thesis-company">Institut für Regelungs- und Steuerungssysteme (IRS), KIT</p>
-              <div class="exp-tags">
-                <span class="tag">Python</span>
-                <span class="tag">ROS 2</span>
-                <span class="tag">AAS (v3.0)</span>
-                <span class="tag">URDF</span>
-                <span class="tag">XML</span>
-              </div>
-              <ul class="exp-details">
-                <li data-i18n="exp-thesis-1">Entwicklung einer Python-Toolchain (Submodel Generator) zur automatischen Extraktion von URDF-/YAML-Daten in sechs semantische AAS-Teilmodelle: <em>Struktur, Kinematik, Dynamik, Steuerung, Sicherheit, Visualisierung</em>.</li>
-                <li data-i18n="exp-thesis-2">Multi-Robot-Generator instanziiert vollautomatisch komplexe ROS-2-Simulationsszenarien aus AAS-Daten — ohne manuelle Konfiguration.</li>
-                <li data-i18n="exp-thesis-3">Validierung der plattformübergreifenden Interoperabilität auf heterogenen Robotersystemen (Universal Robots &amp; igus ReBeL): URDF → AAS → Simulation, Ende-zu-Ende.</li>
-                <li data-i18n="exp-thesis-4">Formalisierung der AAS-Spezifikation (v3.0) als XML-Schemata und Ableitung einer domänenspezifischen Sprache (DSL) für die semantische Robotmodellierung.</li>
-                <li data-i18n="exp-thesis-5">Ergebnis: Vollautomatisierter <em>Digital-Twin-Generator</em>, der aus einer einzigen URDF-Datei eine deploybare ROS-2-Simulation mit AAS-Integration erzeugt.</li>
-              </ul>
-              <span class="exp-card-more" data-i18n="exp-thesis-more">Projektdetails →</span>
-            </a>
-          </article>
-          <!-- ETI -->
-          <article class="exp-card">
-            <a href="power-electronics.html" class="exp-card-link" aria-label="Hardware-Design & Leistungselektronik – Details">
-              <div class="exp-card-header">
-                <h3 data-i18n="exp-eti-title">Hardware-Design &amp; Leistungselektronik</h3>
-                <span class="exp-date">05/2024 – 09/2024</span>
-              </div>
-              <p class="exp-company" data-i18n="exp-eti-company">Elektrotechnisches Institut (ETI), KIT</p>
-              <div class="exp-tags">
-                <span class="tag">MATLAB/Simulink</span>
-                <span class="tag">Altium Designer</span>
-              </div>
-              <ul class="exp-details">
-                <li data-i18n="exp-eti-1">Entwurf und Simulation eines Buck-Wandlers in MATLAB/Simulink; Erzielung einer Ausgangsspannungswelligkeit &lt;5% unter variablen Lastbedingungen.</li>
-                <li data-i18n="exp-eti-2">Vollständige PCB-Schaltplanerstellung, Layout und elektrische Regelprüfung in Altium Designer.</li>
-              </ul>
-              <span class="exp-card-more" data-i18n="exp-eti-more">Projektdetails →</span>
-            </a>
-          </article>
-          <!-- ITIV -->
-          <article class="exp-card">
-            <a href="pit-autopilot.html" class="exp-card-link" aria-label="Autonomes Fahren (Prototyp) – Details">
-              <div class="exp-card-header">
-                <h3 data-i18n="exp-itiv-title">Autonomes Fahren (Prototyp)</h3>
-                <span class="exp-date">05/2023 – 07/2023</span>
-              </div>
-              <p class="exp-company" data-i18n="exp-itiv-company">Institut für Technik der Informationsverarbeitung (ITIV), KIT</p>
-              <div class="exp-tags">
-                <span class="tag">C++</span>
-                <span class="tag" data-i18n="exp-itiv-tag">Sensorfusion</span>
-              <span class="tag">Embedded Systems</span>
-              </div>
-              <ul class="exp-details">
-                <li data-i18n="exp-itiv-1">Entwicklung eingebetteter C++-Software für einen autonomen Fahrzeugprototyp (Maßstab 1:10) mit Echtzeit-Hinderniserkennung und -vermeidung auf einem Dual-Core ARM MCU.</li>
-              </ul>
-              <span class="exp-card-more" data-i18n="exp-itiv-more">Projektdetails →</span>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-      <div class="container">
-        <h2 class="section-title"><span class="section-num">05</span> <span data-i18n="proj-title">Projekte</span></h2>
-        <div class="projects-grid">
-
-          <article class="project-card">
-            <div class="project-icon">🤖</div>
-            <h3 data-i18n="proj-bennu-title">Bennu — AI-Hausroboter</h3>
-            <p class="project-meta" data-i18n="proj-bennu-meta">Persönliches KI-Projekt · seit 09/2026 · Entwicklungszeitraum ~1 Jahr</p>
-            <p class="project-desc" data-i18n="proj-bennu-desc">Die Vision: ein autonomer Hausroboter mit Umgebungswahrnehmung, Bewegung, langfristigem Gedächtnis und natürlicher Sprachinteraktion. Aktuell entsteht sein „Gehirn": ein selbst gehostetes Lebensassistenz-System mit Sprachassistent (Wake-Word → ASR → LLM-Agent → TTS), Kalender, Buchhaltung, Gesundheitsdaten und Smart-Home-Steuerung — alle Eingänge (Stimme, Web-Dashboard, Android-App, Sensoren) laufen auf eine Datenbank zusammen. Entwicklung seit dem 15.09.2026; der geschätzte Gesamtzeitraum beträgt rund ein Jahr.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">LLM Agents</span>
-              <span class="tag">STT/TTS</span>
-              <span class="tag">Android</span>
-              <span class="tag">Smart Home</span>
-            </div>
-            <a href="bennu.html" class="project-link">
-              <span data-i18n="proj-bennu-more">Projektdetails →</span>
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-icon">📱</div>
-            <h3 data-i18n="proj-fitlog-title">Full-Stack Gesundheits-App „Fitlog"</h3>
-            <p class="project-meta" data-i18n="proj-fitlog-meta">Persönliches KI-Projekt · 01/2025 – 06/2026</p>
-            <p class="project-desc" data-i18n="proj-fitlog-desc">Full-Stack-System mit Android-Client (MVVM) und serverseitiger KI-Pipeline zur automatisierten Kalorienschätzung von Lebensmitteln durch Bilderkennung. REST API + lokale/entfernte Datenbanksynchronisation (Room + Remote DB) mit offlinefähiger Architektur.</p>
-            <div class="project-tags">
-              <span class="tag">Kotlin/Java</span>
-              <span class="tag">Python</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Android Studio</span>
-            </div>
-            <a href="https://github.com/BenHe2019/Fitlog" target="_blank" rel="noopener" class="project-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              github.com/BenHe2019/Fitlog
-            </a>
-          </article>
         </div>
       </div>
     </section>
@@ -394,7 +404,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact">
+    <section class="section section-alt" id="contact">
       <div class="container">
         <h2 class="section-title"><span class="section-num">08</span> <span data-i18n="contact-title">Kontakt</span></h2>
         <p class="contact-intro" data-i18n="contact-intro">Ich bin immer offen für neue Möglichkeiten und spannende Projekte. Sprechen Sie mich gerne an!</p>
@@ -403,11 +413,6 @@
             <div class="contact-icon">✉️</div>
             <h3 data-i18n="contact-email">E-Mail</h3>
             <p>ben.he1999@outlook.com</p>
-          </a>
-          <a href="tel:+4915568616003" class="contact-card">
-            <div class="contact-icon">📞</div>
-            <h3 data-i18n="contact-phone">Telefon</h3>
-            <p>+49 155 68616003</p>
           </a>
           <a href="https://github.com/BenHe2019" target="_blank" rel="noopener" class="contact-card">
             <div class="contact-icon">
@@ -430,6 +435,7 @@
   <footer class="footer">
     <div class="container footer-content">
       <p data-i18n="footer-text">&copy; 2026 Ben He. Alle Rechte vorbehalten.</p>
+      <a href="https://benhe.online" class="footer-link">benhe.online</a>
       <a href="#hero" class="back-to-top" data-i18n-aria="back-top" aria-label="Zurück nach oben">↑</a>
     </div>
   </footer>
