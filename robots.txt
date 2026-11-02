@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benhe2019.github.io/sitemap.xml

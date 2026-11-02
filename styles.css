@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('fonts/inter-latin.woff2') format('woff2');
+}
+
 /* ============================================================
    Personal Website — Ben He
    Design System & Styles
@@ -321,6 +329,8 @@ ul {
     padding: 2px;
   }
   .lang-option {
+    min-width: 32px;
+    min-height: 32px;
     padding: 3px 8px;
     font-size: 0.68rem;
   }
@@ -1062,6 +1072,15 @@ a.contact-card:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.footer-link:hover {
+  color: var(--color-primary);
 }
 
 .footer-content p {
